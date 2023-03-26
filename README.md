@@ -20,7 +20,7 @@ Following links have been completed and opened for viewing
 * 3x3 Beginner PLL
 * 3x3 Beginner OLL
 
-The following will be completed by May 31
+The following will be completed by July 31
 * 2x2 Advanced CLL
 
-Website was Launched at https://adarsh-crazy-cubing.github.io/Cube-Website/ on 9/3/23
+Website was Launched at https://adarshcrazycubing.github.io/Website/ on 9/3/23
