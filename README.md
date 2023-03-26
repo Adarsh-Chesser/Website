@@ -1,4 +1,4 @@
-# Happy News
+## Happy News
 
 Hi everyone! Good Morning!
 This is Adarsh Crazy Cubing
