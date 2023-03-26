@@ -1,0 +1,110 @@
+No. Of Lines
+
+030941 - 3x3 Adv OLL
+030117 - 3x3 Adv OLL (Numb)
+011599 - 3X3 Adv PLL
+011395 - 3x3 Adv PLL (Alpha)
+042249 - 3x3 Adv LL 
+005552 - 3x3 Beg OLL 
+003516 - 3x3 Beg PLL
+000000 - 3x3 Mas COLL \\*
+______
+135369 - 3x3 Total
+______
+
+----------
+
+001309 - 2x2 Beg PLL
+003834 - 2x2 Beg OLL 
+002836 - 2x2 Int Ortega PBL 
+003836 - 2x2 Int Ortega OLL 
+000615 - 2x2 Adv CLL \\
+000627 - 2x2 Mas EG-1 \\*
+000627 - 2x2 Mas EG-2 \\*
+000000 - 2x2 Mas Full EG \\*
+______
+011815 - 2x2 Total
+______
+
+----------
+
+000000 - 4-6 Adv Parity PLL \\*
+______
+000000 - 4-6 Total
+______
+
+----------
+
+001332 - 4-7 Beg Parity
+______
+001332 - 4-7 Total
+______
+
+----------
+
+000421 - Algpage CSS &
+000193 - Algpage $
+000186 - Index $
+______
+000812 - Others Total
+______
+
+148510 - Algorithms Total
+149322 - Grand Total
+
+-----------------------
+
+No. Of Algorithms
+
+057 - 3x3 Adv OLL
+057 - 3x3 Adv OLL (Numb)
+021 - 3x3 Adv PLL
+021 - 3x3 Adv PLL (Alpha)
+078 - 3x3 Adv LL 
+010 - 3x3 Beg OLL 
+006 - 3x3 Beg PLL
+049 - 3x3 Mas COLL \\*
+___
+250 - 3x3 Total
+___
+
+----------
+
+002 - 2x2 Beg PLL
+007 - 2x2 Beg OLL 
+005 - 2x2 Int Ortega PBL 
+007 - 2x2 Int Ortega OLL 
+042 - 2x2 Adv CLL \\*
+043 - 2x2 Mas EG-1 \\*
+043 - 2x2 Mas EG-2 \\*
+128 - 2x2 Mas Full EG \\*
+___
+021 - 2x2 Total
+___
+
+----------
+
+022 - 4-6 Adv Parity PLL \\*
+___
+000 - 4-6 Total
+___
+
+----------
+
+002 - 4-7 Beg Parity
+___
+002 - 4-7 Total
+___
+
+----------
+
+273 - Grand Total
+
+-----------------------
+
+Avg line for each alg = 544.0
+
+\\ - Not Counted
+* - Not Started
+$ - On Updates and bugs
+& - Will be Reduced

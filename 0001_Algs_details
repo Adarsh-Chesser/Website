@@ -1,0 +1,60 @@
+#DDDDDD - GREY 33
+#99CCFF
+#4C8080
+#003300
+
+#DDDDDD - GREY 22
+#FFCC66
+#806666
+#000066
+
+#DDDDDD - GREY 44, 46, 47
+#99FF33
+#8C801A
+#800000
+
+7D7D7D - Grey
+FAE600 - Yellow
+EFEFEF - White
+EF272C - Red
+0064FF - Blue
+EF8E1F - Orange
+32A032 - Green
+
+FFFFFF - White
+00B666 - Completed
+575757 - None
+FFCC00 - Learning
+FF0000 - Delete
+
+button.cubealgbutton22 {
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: clr_1;
+  border: clr_3;
+  color: clr_3;
+}
+
+button.cubealgbutton22:hover {
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: clr_3;
+  border: clr_1;
+  color: clr_1;
+}
+
+452 Ln JS;
+47 Ln HTML;
+Total - 499 Lines(APPROX)
+a - 1;
+b - 2;
+c - 3;
+d - 4;
+e - 5;
+f - 6;
+g - 7;
+h - 8;
+i - 9;
+z - 0;
