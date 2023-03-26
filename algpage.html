@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cube Algorithms</title>
+        <link rel="stylesheet" href="algpage.css">
+
+    </head>
+
+    <body onload="algp_wprld()">
+
+        <script>
+
+            // On Load
+
+            function algp_wprld() {
+            header_style();
+            footer_style();
+            header_total_algp();
+            }
+            
+            // Header and Footer - Style
+
+            function header_style() {
+            document.getElementById('headermain').style.backgroundColor = '#FAFAFA';
+            document.getElementById('headermain').style.border = '5px double #FF9933';
+            document.getElementById('headhone').style.color = '#33CC33';
+            }
+            
+            function footer_style() {
+            document.getElementById('footermain').style.backgroundColor = '#FAFAFA';
+            document.getElementById('footermain').style.border = '5px double #FF5050';
+            document.getElementById('footp_a').style.color = '#33CCCC';
+            document.getElementById('footp_b').style.color = '#33CCCC';
+            document.getElementById('footp_c').style.color = '#33CCCC';
+            }
+
+            // Header Buttons - Hover
+
+            function header_total_algp() {
+            algp_down();
+            hmep_down();
+            }
+            
+            function algp_hover() {
+            document.getElementById('hdbut_algp').style.color = '#FFFF00';
+            document.getElementById('hdbut_algp').style.border = '2px solid #FFFF00';
+            document.getElementById('hdbut_algp').style.backgroundColor = '#006600';
+            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
+            document.getElementById('hdbut_algp').style.paddingRight = '12px';
+            }
+            
+            function algp_down() {
+            document.getElementById('hdbut_algp').style.color = '#006600';
+            document.getElementById('hdbut_algp').style.border = '2px solid #006600';
+            document.getElementById('hdbut_algp').style.backgroundColor = '#FFFF00';
+            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
+            document.getElementById('hdbut_algp').style.paddingRight = '12px';
+            }
+            
+            function hmep_hover() {
+            document.getElementById('hdbut_hmep').style.color = '#FFFF00';
+            document.getElementById('hdbut_hmep').style.border = '2px solid #FFFF00';
+            document.getElementById('hdbut_hmep').style.backgroundColor = '#006600';
+            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
+            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
+            }
+            
+            function hmep_down() {
+            document.getElementById('hdbut_hmep').style.color = '#006600';
+            document.getElementById('hdbut_hmep').style.border = '2px solid #006600';
+            document.getElementById('hdbut_hmep').style.backgroundColor = '#FFFF00';
+            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
+            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
+            }
+            
+        </script>
+
+        <header id='headermain' style='text-align: center;'>
+
+            <h1 id='headhone'>Adarsh Crazy Cubing</h1>
+        
+            <button class='hdbutint' id='hdbut_algp' onmouseover='algp_hover()' onmouseout='algp_down()' onclick="document.location='algpage.html'"> <h3> Algorithm Page </h3> </button>
+            <button class='hdbutint' id='hdbut_hmep' onmouseover='hmep_hover()' onmouseout='hmep_down()' onclick="document.location='index.html'"> <h3> Home Page </h3> </button>
+            
+            <br><br>
+            
+        </header>
+
+        <br><br><br>
+
+        <div class='algpageheading22'>
+
+        <h2 style='color: #000066; text-align: center;'>2x2 Algorithms</h2>
+
+        <h3 style='color: #806666; text-align: center;'>Beginner Algorithms</h3>
+        <br><br>
+
+        <button type="button" class="button22alglink" onclick="document.location='22_beg_oll_cor.html'"> <h3> Beginner OLL(7 Algorithms) </h3> </button>
+        <br><br>
+        <button type="button" class="button22alglink" onclick="document.location='22_beg_pll_cor.html'"> <h3> Beginner PLL(2 Algorithms) </h3> </button>
+        <br><br>
+
+        <h3 style='color: #806666; text-align: center;'>Intermediate Algorithms</h3>
+        <br><br>
+
+        <button type="button" class="button22alglink" onclick="document.location='22_int_ortoll_cor.html'"> <h3> Ortega OLL(7 Algorithms) </h3> </button>
+        <br><br>
+        <button type="button" class="button22alglink" onclick="document.location='22_int_ortpbl_cor.html'"> <h3> Ortega PBL(5 Algorithms) </h3> </button>
+        <br><br>
+
+        <h3 style='color: #806666; text-align: center;'>Advanced Algorithms</h3>
+        <br><br>
+            
+        <button type="button" class="button22alglink" onclick="document.location='22_adv_cll_cor.html'"> <h3> CLL(42 Algorithms) </h3> </button>
+        <br><br>
+
+        <h3 style='color: #806666; text-align: center;'>Master Algorithms</h3>
+        <br><br>
+
+        <button type="button" class="button22alglink" onclick="document.location='22_mas_eg1_cor.html'"> <h3> EG-1(43 Algorithms) </h3> </button>
+        <br><br>
+        <button type="button" class="button22alglink" onclick="document.location='22_mas_eg2_cor.html'"> <h3> EG-2(43 Algorithms) </h3> </button>
+        <br><br>
+
+        </div>
+
+        <br><br><br>
+
+        <div class='algpageheading33'>
+
+        <h2 style='color: #003300; text-align: center;'>3x3 Algorithms</h2>
+
+        <h3 style='color: #4C8080; text-align: center;'>Beginner Algorithms</h3>
+        <br><br>
+
+        <button type="button" class="button33alglink" onclick="document.location='33_beg_oll_both.html'"> <h3> Beginner OLL - Edges and Corners(3+7 Algorithms) </h3> </button>
+        <br><br>
+        <button type="button" class="button33alglink" onclick="document.location='33_beg_pll_both.html'"> <h3> Beginner PLL - Corners and Edges(2+4 Algorithms) </h3> </button>
+        <br><br>
+
+        <h3 style='color: #4C8080; text-align: center;'>Advanced Algorithms</h3>
+        <br><br>
+            
+        <button type="button" class="button33alglink" onclick="document.location='33_adv_oll_both.html'"> <h3> Advanced OLL(57 Algorithms) </h3> </button>
+        <br><br>
+        <button type="button" class="button33alglink" onclick="document.location='33_adv_pll_both.html'"> <h3> Advanced PLL(21 Algorithms) </h3> </button>
+        <br><br>
+        <button type="button" class="button33alglink" onclick="document.location='33_adv_ll_both.html'"> <h3> Advanced LL(57+21 Algorithms) </h3> </button>
+        <br><br>
+
+        <h3 style='color: #4C8080; text-align: center;'>Master Algorithms</h3>
+        <br><br>
+
+        <button type="button" class="button33alglink" onclick="document.location='mas_eg1_both.html'"> <h3> COLL (42+7 Algorithms) </h3> </button>
+        <br><br>
+        <button type="button" class="button33alglink" onclick="document.location='mas_eg1_both.html'"> <h3> CMLL - Roux Corners(42 Algorithms) </h3> </button>
+        <br><br>
+
+        </div>
+
+        <br><br><br>
+
+        <div class='algpageheading44'>
+
+        <h2 style='color: #800000; text-align: center;'>4x4+ Algorithms</h2>
+
+        <h3 style='color: #8C801A; text-align: center;'>Parity Algorithms</h3>
+        <br><br>
+
+        <button type="button" class="button44alglink" onclick="document.location='47_beg_both_parity.html'"> <h3> OLL and PLL Parity(2 algorithms) </h3> </button>
+        <br><br>
+
+        </div>
+
+        <br><br><br>
+
+        <footer id='footermain' style='text-align: center;'>
+                
+            <p id='footp_a'>Thank you for viewing my page</p>
+            
+            <p id='footp_b'>Requesting you to visit our page again</p>
+            
+            <p id='footp_c'>Email at: <b>adarsh30k@gmail.com</b> </p>
+            
+        </footer>
+
+    </body>
+
+</html>
