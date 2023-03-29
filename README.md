@@ -11,12 +11,11 @@ Following links have been completed and opened for viewing
 
 * 3x3 Advanced OLL 
 * 2x2 Beginner PLL
-* 4x4 Beginner Parity Algs
+* 4x4+ Beginner Parity Algs
 * 3x3 Advanced PLL
 * 2x2 Beginner OLL
-* 2x2 Intermediate Ortega OLL
+* 2x2 Intermediate Ortega OLL & PBL
 * 3x3 Advanced LL
-* 2x2 Intermediate Ortega PLL
 * 3x3 Beginner PLL
 * 3x3 Beginner OLL
 
