@@ -12,6 +12,76 @@
 
     <body onload="begpll_2_wprld()">
 
+        <style>
+
+            body {
+            font-family: Arial, Helvetica, sans-serif;
+            }
+    
+            .header_link {
+            overflow: hidden;
+            background-color: #333333;
+            }
+    
+            .header_link a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .x22pdrop, .x33pdrop, .x44pdrop {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .x22pdrop .x22pbtn, .x33pdrop .x33pbtn, .x44pdrop .x44pbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .header_link a:hover, .x22pdrop:hover .x22pbtn, .x33pdrop:hover .x33pbtn, .x44pdrop:hover .x44pbtn {
+            background-color: #FF0000;
+            }
+    
+            .x22pdrop-content, .x33pdrop-content, .x44pdrop-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .x22pdrop-content a, .x33pdrop-content a, .x44pdrop-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .x22pdrop-content a:hover, .x33pdrop-content a:hover, .x44pdrop-content a:hover {
+            background-color: #DDDDDD;
+            color: #FF0000;
+            font-weight: bold;
+            }
+    
+            .x22pdrop:hover .x22pdrop-content, .x33pdrop:hover .x33pdrop-content, .x44pdrop:hover .x44pdrop-content {
+            display: block;
+            }
+    
+        </style>
+            
         <script>
 
             // On Load
@@ -30,11 +100,9 @@
             // Header and Footer - Style
     
             function header_style() {
-            document.getElementById('headermain').style.backgroundColor = '#FAFAFA';
-            document.getElementById('headermain').style.border = '5px double #FF9933';
-            document.getElementById('headhone').style.color = '#33CC33';
+            document.getElementById('headhone').style.color = '#FF0000';
             }
-            
+        
             function footer_style() {
             document.getElementById('footermain').style.backgroundColor = '#FAFAFA';
             document.getElementById('footermain').style.border = '5px double #FF5050';
@@ -1153,12 +1221,46 @@
             
         <header id='headermain' style='text-align: center;'>
 
-            <h1 id='headhone'>Adarsh Crazy Cubing</h1>
+        <h1 id='headhone'>Adarsh Crazy Cubing</h1>
            
-            <button class='hdbutint' id='hdbut_algp' onmouseover='algp_hover()' onmouseout='algp_down()' onclick="document.location='algpage.html'"> <h3> Algorithm Page </h3> </button>
-            <button class='hdbutint' id='hdbut_hmep' onmouseover='hmep_hover()' onmouseout='hmep_down()' onclick="document.location='index.html'"> <h3> Home Page </h3> </button>
-            
-            <br><br>
+        <div class="header_link">
+
+            <a href="index.html">Homepage</a>
+
+            <div class="x22pdrop">
+                <button class="x22pbtn">2x2 Algorithms</button>
+                <div class="x22pdrop-content">
+                    <a href="22_beg_oll_cor.html">Beginner OLL</a>
+                    <a href="22_beg_pll_cor.html">Beginner PLL</a>
+                    <a href="22_int_ort_cor.html">Ortega OLL & PBL</a>
+                    <a href="22_adv_cll_cor.html">CLL</a>
+                    <a href="22_mas_eg1_cor.html">EG-1</a>
+                    <a href="22_mas_eg2_cor.html">EG-2</a>
+                    <a href="22_mas_eg_cor.html">Full EG</a>
+                </div>
+            </div> 
+
+            <div class="x33pdrop">
+                <button class="x33pbtn">3x3 Algorithms</button>
+                <div class="x33pdrop-content">
+                    <a href="33_beg_oll_both.html">Beginner OLL</a>
+                    <a href="33_beg_pll_both.html">Beginner PLL</a>
+                    <a href="33_adv_oll_both.html">Advanced OLL</a>
+                    <a href="33_adv_pll_both.html">Advanced PLL</a>
+                    <a href="33_adv_oll_both.html">Full LL</a>
+                    <a href="33_mas_col_both.html">COLL</a>
+                </div>
+            </div> 
+
+            <div class="x44pdrop">
+                <button class="x44pbtn">4x4+ Algorithms</button>
+                <div class="x44pdrop-content">
+                    <a href="47_beg_both_parity.html">OLL & PLL Parity</a>
+                    <a href="46_mas_pll_parity.html">Parity + PLL</a>
+                </div>
+            </div> 
+
+        </div>
             
         </header>
         
@@ -1166,7 +1268,7 @@
         
         <h1 style='text-align:center;' id='bodyhone'>2x2</h1>
         
-        <h2 style='text-align:center;' id='bodyhtwo'><i>Beginner PLL Algorithms </h2>
+        <h2 style='text-align:center;' id='bodyhtwo'><i>Beginner PLL</i> Algorithms </h2>
 
         <br><br>
         
