@@ -10,75 +10,2653 @@
     
     </head>
     
-    <body onload="intort_2_wprld()">
+    <body id='bodyb' onload="intort_2_wprld()">
 
         <style>
 
-        body {
-        font-family: Arial, Helvetica, sans-serif;
-        }
+            /* Header */
 
-        .header_link {
-        overflow: hidden;
-        background-color: #333333;
-        }
+            .header_link {
+            overflow: hidden;
+            background-color: #333333;
+            }
 
-        .header_link a {
-        float: left;
-        font-size: 16px;
-        color: #FFFFFF;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        }
+            .header_link a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
 
-        .x22pdrop, .x33pdrop, .x44pdrop {
-        float: left;
-        overflow: hidden;
-        }
+            .x22pdrop, .x33pdrop, .x44pdrop {
+            float: left;
+            overflow: hidden;
+            }
 
-        .x22pdrop .x22pbtn, .x33pdrop .x33pbtn, .x44pdrop .x44pbtn {
-        font-size: 16px;  
-        border: none;
-        outline: none;
-        color: #FFFFFF;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        }
+            .x22pdrop .x22pbtn, .x33pdrop .x33pbtn, .x44pdrop .x44pbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
 
-        .header_link a:hover, .x22pdrop:hover .x22pbtn, .x33pdrop:hover .x33pbtn, .x44pdrop:hover .x44pbtn {
-        background-color: #CC3399;
-        }
+            .header_link a:hover, .x22pdrop:hover .x22pbtn, .x33pdrop:hover .x33pbtn, .x44pdrop:hover .x44pbtn {
+            background-color: #FF0000;
+            }
 
-        .x22pdrop-content, .x33pdrop-content, .x44pdrop-content {
-        display: none;
-        position: absolute;
-        background-color: #F9F9F9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        }
+            .x22pdrop-content, .x33pdrop-content, .x44pdrop-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
 
-        .x22pdrop-content a, .x33pdrop-content a, .x44pdrop-content a {
-        float: none;
-        color: #000000;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-        }
+            .x22pdrop-content a, .x33pdrop-content a, .x44pdrop-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
 
-        .x22pdrop-content a:hover, .x33pdrop-content a:hover, .x44pdrop-content a:hover {
-        background-color: #DDDDDD;
-        color: #CC3399;
-        font-weight: bold;
-        }
+            .x22pdrop-content a:hover, .x33pdrop-content a:hover, .x44pdrop-content a:hover {
+            background-color: #DDDDDD;
+            color: #FF0000;
+            font-weight: bold;
+            }
 
-        .x22pdrop:hover .x22pdrop-content, .x33pdrop:hover .x33pdrop-content, .x44pdrop:hover .x44pdrop-content {
-        display: block;
-        }
+            .x22pdrop:hover .x22pdrop-content, .x33pdrop:hover .x33pdrop-content, .x44pdrop:hover .x44pdrop-content {
+            display: block;
+            }
+
+            /* sun - Style */
+
+            /* Status */
+
+            .sundiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .sundiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .sundropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .sundropa .sunbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .sundiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .sundropa:hover .sunbtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .sundropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .sundropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .sundropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .sundropa:hover .sundropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .sundivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .sundivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .sundropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .sundropb .sunbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .sundivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .sundropb:hover .sunbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .sundropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .sundropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .sundropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .sundropb:hover .sundropb-content {
+            display: block;
+            }
+
+            .sundivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .sundropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .sundropb .sunbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .sundivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .sundropb:hover .sunbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .sundropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .sundropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .sundropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .sundropb:hover .sundropb-content {
+            display: block;
+            }
+
+            /* asu - Style */
+
+            /* Status */
+
+            .asudiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .asudiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .asudropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .asudropa .asubtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .asudiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .asudropa:hover .asubtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .asudropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .asudropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .asudropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .asudropa:hover .asudropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .asudivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .asudivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .asudropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .asudropb .asubtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .asudivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .asudropb:hover .asubtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .asudropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .asudropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .asudropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .asudropb:hover .asudropb-content {
+            display: block;
+            }
+
+            .asudivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .asudropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .asudropb .asubtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .asudivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .asudropb:hover .asubtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .asudropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .asudropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .asudropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .asudropb:hover .asudropb-content {
+            display: block;
+            }
+
+            /* hhh - Style */
+
+            /* Status */
+
+            .hhhdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .hhhdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .hhhdropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .hhhdropa .hhhbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .hhhdiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .hhhdropa:hover .hhhbtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .hhhdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .hhhdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .hhhdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .hhhdropa:hover .hhhdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .hhhdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .hhhdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .hhhdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .hhhdropb .hhhbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .hhhdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .hhhdropb:hover .hhhbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .hhhdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .hhhdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .hhhdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .hhhdropb:hover .hhhdropb-content {
+            display: block;
+            }
+
+            .hhhdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .hhhdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .hhhdropb .hhhbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .hhhdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .hhhdropb:hover .hhhbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .hhhdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .hhhdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .hhhdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .hhhdropb:hover .hhhdropb-content {
+            display: block;
+            }
+
+            /* ppi - Style */
+
+            /* Status */
+
+            .ppidiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .ppidiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .ppidropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .ppidropa .ppibtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .ppidiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .ppidropa:hover .ppibtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .ppidropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .ppidropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .ppidropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .ppidropa:hover .ppidropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .ppidivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .ppidivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .ppidropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .ppidropb .ppibtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .ppidivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .ppidropb:hover .ppibtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .ppidropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .ppidropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .ppidropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .ppidropb:hover .ppidropb-content {
+            display: block;
+            }
+
+            .ppidivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .ppidropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .ppidropb .ppibtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .ppidivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .ppidropb:hover .ppibtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .ppidropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .ppidropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .ppidropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .ppidropb:hover .ppidropb-content {
+            display: block;
+            }
+
+            /* lll - Style */
+
+            /* Status */
+
+            .llldiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .llldiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .llldropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .llldropa .lllbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .llldiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .llldropa:hover .lllbtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .llldropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .llldropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .llldropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .llldropa:hover .llldropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .llldivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .llldivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .llldropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .llldropb .lllbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .llldivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .llldropb:hover .lllbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .llldropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .llldropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .llldropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .llldropb:hover .llldropb-content {
+            display: block;
+            }
+
+            .llldivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .llldropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .llldropb .lllbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .llldivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .llldropb:hover .lllbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .llldropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .llldropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .llldropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .llldropb:hover .llldropb-content {
+            display: block;
+            }
+
+            /* ttt - Style */
+
+            /* Status */
+
+            .tttdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .tttdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .tttdropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .tttdropa .tttbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .tttdiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .tttdropa:hover .tttbtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .tttdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .tttdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .tttdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .tttdropa:hover .tttdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .tttdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .tttdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .tttdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .tttdropb .tttbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .tttdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .tttdropb:hover .tttbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .tttdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .tttdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .tttdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .tttdropb:hover .tttdropb-content {
+            display: block;
+            }
+
+            .tttdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .tttdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .tttdropb .tttbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .tttdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .tttdropb:hover .tttbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .tttdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .tttdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .tttdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .tttdropb:hover .tttdropb-content {
+            display: block;
+            }
+
+            /* uuu - Style */
+
+            /* Status */
+
+            .uuudiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .uuudiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .uuudropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .uuudropa .uuubtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .uuudiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .uuudropa:hover .uuubtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .uuudropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .uuudropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .uuudropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .uuudropa:hover .uuudropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .uuudivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .uuudivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .uuudropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .uuudropb .uuubtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .uuudivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .uuudropb:hover .uuubtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .uuudropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .uuudropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .uuudropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .uuudropb:hover .uuudropb-content {
+            display: block;
+            }
+
+            .uuudivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .uuudropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .uuudropb .uuubtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .uuudivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .uuudropb:hover .uuubtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .uuudropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .uuudropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .uuudropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .uuudropb:hover .uuudropb-content {
+            display: block;
+            }
+
+            /* ana - Style */
+
+            /* Status */
+
+            .anadiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .anadiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .anadropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .anadropa .anabtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .anadiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .anadropa:hover .anabtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .anadropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .anadropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .anadropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .anadropa:hover .anadropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .anadivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .anadivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .anadropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .anadropb .anabtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .anadivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .anadropb:hover .anabtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .anadropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .anadropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .anadropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .anadropb:hover .anadropb-content {
+            display: block;
+            }
+
+            .anadivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .anadropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .anadropb .anabtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .anadivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .anadropb:hover .anabtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .anadropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .anadropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .anadropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .anadropb:hover .anadropb-content {
+            display: block;
+            }
+
+            /* dnb - Style */
+
+            /* Status */
+
+            .dnbdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .dnbdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .dnbdropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .dnbdropa .dnbbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .dnbdiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .dnbdropa:hover .dnbbtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .dnbdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .dnbdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .dnbdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .dnbdropa:hover .dnbdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .dnbdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .dnbdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .dnbdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .dnbdropb .dnbbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .dnbdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .dnbdropb:hover .dnbbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .dnbdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .dnbdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .dnbdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .dnbdropb:hover .dnbdropb-content {
+            display: block;
+            }
+
+            .dnbdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .dnbdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .dnbdropb .dnbbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .dnbdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .dnbdropb:hover .dnbbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .dnbdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .dnbdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .dnbdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .dnbdropb:hover .dnbdropb-content {
+            display: block;
+            }
+
+            /* aac - Style */
+
+            /* Status */
+
+            .aacdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .aacdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .aacdropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .aacdropa .aacbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .aacdiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .aacdropa:hover .aacbtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .aacdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .aacdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .aacdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .aacdropa:hover .aacdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .aacdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .aacdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .aacdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .aacdropb .aacbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .aacdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .aacdropb:hover .aacbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .aacdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .aacdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .aacdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .aacdropb:hover .aacdropb-content {
+            display: block;
+            }
+
+            .aacdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .aacdropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .aacdropb .aacbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .aacdivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .aacdropb:hover .aacbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .aacdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .aacdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .aacdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .aacdropb:hover .aacdropb-content {
+            display: block;
+            }
+
+            /* add - Style */
+
+            /* Status */
+
+            .adddiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .adddiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .adddropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .adddropa .addbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .adddiva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .adddropa:hover .addbtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .adddropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .adddropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .adddropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .adddropa:hover .adddropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .adddivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .adddivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .adddropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .adddropb .addbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .adddivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .adddropb:hover .addbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .adddropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .adddropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .adddropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .adddropb:hover .adddropb-content {
+            display: block;
+            }
+
+            .adddivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .adddropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .adddropb .addbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .adddivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .adddropb:hover .addbtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .adddropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .adddropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .adddropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .adddropb:hover .adddropb-content {
+            display: block;
+            }
+
+            /* dde - Style */
+
+            /* Status */
+
+            .ddediva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .ddediva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .ddedropa {
+            float: left;
+            overflow: hidden;
+            }
+
+            .ddedropa .ddebtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .ddediva a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .ddedropa:hover .ddebtna {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .ddedropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .ddedropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .ddedropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .ddedropa:hover .ddedropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .ddedivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+
+            .ddedivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .ddedropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .ddedropb .ddebtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .ddedivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .ddedropb:hover .ddebtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .ddedropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .ddedropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .ddedropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+
+            .ddedropb:hover .ddedropb-content {
+            display: block;
+            }
+
+            .ddedivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .ddedropb {
+            float: left;
+            overflow: hidden;
+            }
+
+            .ddedropb .ddebtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .ddedivb a:hover {
+            background-color: #FFCC66;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .ddedropb:hover .ddebtnb {
+            color: #FFCC66;
+            border: 2px dotted #FFCC66;
+            background-color: #000066;
+            }
+
+            .ddedropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .ddedropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .ddedropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+
+            .ddedropb:hover .ddedropb-content {
+            display: block;
+            }
 
         </style>
         
@@ -97,12 +2675,13 @@
             headinglink_colours();
             triggerbutton_colours_part_a();
             triggerbutton_colours_part_b();
+            document.getElementById('bodyb').style.fontFamily = 'Arial, Helvetica, sans-serif';
             }
             
             // Header and Footer - Style
 
             function header_style() {
-            document.getElementById('headhone').style.color = '#CC3399';
+            document.getElementById('headhone').style.color = '#FF0000';
             }
         
             function footer_style() {
@@ -6066,47 +8645,36 @@
         
         <div id='sun' class='two_intermediate_ortega_algs'>
             
-        <h3 class='algname22'>Sune</h3>
+            <h3 class='algname22'>Sune</h3>
             
-        <img src='22_int_ort_oll_sune.png' class='221limgs' alt='Sune' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='sunt'> <b class='two_intermediate_ortega_algs'> R U R' U R U2 R' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_sun_' onclick='completed_sun_()' 
-        onmouseover='sun_com_hover()' onmouseout='sun_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_sun_' onclick='trash_sun_()' 
-        onmouseover='sun_del_hover()' onmouseout='sun_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_sun_' onclick='learn_sun_()' 
-        onmouseover='sun_lea_hover()' onmouseout='sun_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_sun_' onclick='none_sun_()' 
-        onmouseover='sun_non_hover()' onmouseout='sun_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_sun_' onclick='triggeryes_sun_()'
-        onmouseover='sun_ytr_hover()' onmouseout='sun_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For Sune Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_sun_' onclick='triggerno_sun_()' 
-        onmouseover='sun_ntr_hover()' onmouseout='sun_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For Sune Only
-        </button>
-        
-        <br>
-        <br>
+            <img src='22_int_ort_oll_sune.png' class='221limgs' alt='Sune' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='sunt'> <b class='two_intermediate_ortega_algs'> R U R' U R U2 R' </b> </h3>
+                
+            <div class="sundiva" id="sundiva">
+
+                <div class="sundropa" id="sundiva">
+                    <button class="sunbtna" id="sunbtna" onmouseover="sunbtna_h()" onmouseout="sunbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="sundropa-content">
+                        <a id="sunbtna_a" onclick="sunbtna_a_cl()" onmouseover="sunbtna_a_h()" onmouseout="sunbtna_a_d()">Learning</a>
+                        <a id="sunbtna_b" onclick="sunbtna_b_cl()" onmouseover="sunbtna_b_h()" onmouseout="sunbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="sundivb" id="sundivb">
+
+                <div class="sundropb" id="sundivb">
+                    <button class="sunbtnb" id="sunbtnb" onmouseover="sunbtnb_h()" onmouseout="sunbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="sundropb-content">
+                        <a id="sunbtnb_a" onclick="sunbtnb_a_cl()" onmouseover="sunbtnb_a_h()" onmouseout="sunbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
             
         </div>
             
@@ -6114,47 +8682,36 @@
 
         <div id='asu' class='two_intermediate_ortega_algs'>
             
-        <h3 class='algname22'>Antisune</h3>
+            <h3 class='algname22'>Antisune</h3>
         
-        <img src='22_int_ort_oll_antisune.png' class='221limgs' alt='Antisune' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='asut'> <b class='two_intermediate_ortega_algs'> L' U' L U' L' U2 L </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_asu_' onclick='completed_asu_()' 
-        onmouseover='asu_com_hover()' onmouseout='asu_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_asu_' onclick='trash_asu_()' 
-        onmouseover='asu_del_hover()' onmouseout='asu_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_asu_' onclick='learn_asu_()' 
-        onmouseover='asu_lea_hover()' onmouseout='asu_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_asu_' onclick='none_asu_()' 
-        onmouseover='asu_non_hover()' onmouseout='asu_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_asu_' onclick='triggeryes_asu_()'
-        onmouseover='asu_ytr_hover()' onmouseout='asu_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For Antisune Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_asu_' onclick='triggerno_asu_()' 
-        onmouseover='asu_ntr_hover()' onmouseout='asu_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For Antisune Only
-        </button>
-        
-        <br>
-        <br>
+            <img src='22_int_ort_oll_antisune.png' class='221limgs' alt='Antisune' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='asut'> <b class='two_intermediate_ortega_algs'> L' U' L U' L' U2 L </b> </h3>
+                
+            <div class="asudiva" id="asudiva">
+
+                <div class="asudropa" id="asudiva">
+                    <button class="asubtna" id="asubtna" onmouseover="asubtna_h()" onmouseout="asubtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="asudropa-content">
+                        <a id="asubtna_a" onclick="asubtna_a_cl()" onmouseover="asubtna_a_h()" onmouseout="asubtna_a_d()">Learning</a>
+                        <a id="asubtna_b" onclick="asubtna_b_cl()" onmouseover="asubtna_b_h()" onmouseout="asubtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="asudivb" id="asudivb">
+
+                <div class="asudropb" id="asudivb">
+                    <button class="asubtnb" id="asubtnb" onmouseover="asubtnb_h()" onmouseout="asubtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="asudropb-content">
+                        <a id="asubtnb_a" onclick="asubtnb_a_cl()" onmouseover="asubtnb_a_h()" onmouseout="asubtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6162,47 +8719,36 @@
         
         <div id='hhh' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>H-shaped</h3>
+            <h3 class='algname22'>H-shaped</h3>
         
-        <img src='22_int_ort_oll_h-shaped.png' class='221limgs' alt='H-shaped' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='hhht'> <b class='two_intermediate_ortega_algs'> F (R U R' U')3 F' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_hhh_' onclick='completed_hhh_()' 
-        onmouseover='hhh_com_hover()' onmouseout='hhh_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_hhh_' onclick='trash_hhh_()' 
-        onmouseover='hhh_del_hover()' onmouseout='hhh_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_hhh_' onclick='learn_hhh_()' 
-        onmouseover='hhh_lea_hover()' onmouseout='hhh_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_hhh_' onclick='none_hhh_()' 
-        onmouseover='hhh_non_hover()' onmouseout='hhh_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_hhh_' onclick='triggeryes_hhh_()'
-        onmouseover='hhh_ytr_hover()' onmouseout='hhh_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For H-shaped Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_hhh_' onclick='triggerno_hhh_()' 
-        onmouseover='hhh_ntr_hover()' onmouseout='hhh_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For H-shaped Only
-        </button>
-        
-        <br>
-        <br>
+            <img src='22_int_ort_oll_h-shaped.png' class='221limgs' alt='H-shaped' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='hhht'> <b class='two_intermediate_ortega_algs'> F (R U R' U')3 F' </b> </h3>
+                
+            <div class="hhhdiva" id="hhhdiva">
+
+                <div class="hhhdropa" id="hhhdiva">
+                    <button class="hhhbtna" id="hhhbtna" onmouseover="hhhbtna_h()" onmouseout="hhhbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="hhhdropa-content">
+                        <a id="hhhbtna_a" onclick="hhhbtna_a_cl()" onmouseover="hhhbtna_a_h()" onmouseout="hhhbtna_a_d()">Learning</a>
+                        <a id="hhhbtna_b" onclick="hhhbtna_b_cl()" onmouseover="hhhbtna_b_h()" onmouseout="hhhbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="hhhdivb" id="hhhdivb">
+
+                <div class="hhhdropb" id="hhhdivb">
+                    <button class="hhhbtnb" id="hhhbtnb" onmouseover="hhhbtnb_h()" onmouseout="hhhbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="hhhdropb-content">
+                        <a id="hhhbtnb_a" onclick="hhhbtnb_a_cl()" onmouseover="hhhbtnb_a_h()" onmouseout="hhhbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6210,47 +8756,36 @@
         
         <div id='ppi' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>Pi</h3>
+            <h3 class='algname22'>Pi</h3>
         
-        <img src='22_int_ort_oll_pi.png' class='221limgs' alt='Pi' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='ppit'> <b class='two_intermediate_ortega_algs'> F (R U R' U')2 F' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_ppi_' onclick='completed_ppi_()' 
-        onmouseover='ppi_com_hover()' onmouseout='ppi_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_ppi_' onclick='trash_ppi_()' 
-        onmouseover='ppi_del_hover()' onmouseout='ppi_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_ppi_' onclick='learn_ppi_()' 
-        onmouseover='ppi_lea_hover()' onmouseout='ppi_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_ppi_' onclick='none_ppi_()' 
-        onmouseover='ppi_non_hover()' onmouseout='ppi_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_ppi_' onclick='triggeryes_ppi_()'
-        onmouseover='ppi_ytr_hover()' onmouseout='ppi_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For Pi Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_ppi_' onclick='triggerno_ppi_()' 
-        onmouseover='ppi_ntr_hover()' onmouseout='ppi_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For Pi Only
-        </button>
-        
-        <br>
-        <br>
+            <img src='22_int_ort_oll_pi.png' class='221limgs' alt='Pi' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='ppit'> <b class='two_intermediate_ortega_algs'> F (R U R' U')2 F' </b> </h3>
+                
+            <div class="ppidiva" id="ppidiva">
+
+                <div class="ppidropa" id="ppidiva">
+                    <button class="ppibtna" id="ppibtna" onmouseover="ppibtna_h()" onmouseout="ppibtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ppidropa-content">
+                        <a id="ppibtna_a" onclick="ppibtna_a_cl()" onmouseover="ppibtna_a_h()" onmouseout="ppibtna_a_d()">Learning</a>
+                        <a id="ppibtna_b" onclick="ppibtna_b_cl()" onmouseover="ppibtna_b_h()" onmouseout="ppibtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="ppidivb" id="ppidivb">
+
+                <div class="ppidropb" id="ppidivb">
+                    <button class="ppibtnb" id="ppibtnb" onmouseover="ppibtnb_h()" onmouseout="ppibtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ppidropb-content">
+                        <a id="ppibtnb_a" onclick="ppibtnb_a_cl()" onmouseover="ppibtnb_a_h()" onmouseout="ppibtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6258,47 +8793,36 @@
         
         <div id='lll' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>8-shaped</h3>
-        
-        <img src='22_int_ort_oll_8-shaped.png' class='221limgs' alt='8-shaped' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='lllt'> <b class='two_intermediate_ortega_algs'> F R' F' R U R U' R' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_lll_' onclick='completed_lll_()' 
-        onmouseover='lll_com_hover()' onmouseout='lll_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_lll_' onclick='trash_lll_()' 
-        onmouseover='lll_del_hover()' onmouseout='lll_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_lll_' onclick='learn_lll_()' 
-        onmouseover='lll_lea_hover()' onmouseout='lll_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_lll_' onclick='none_lll_()' 
-        onmouseover='lll_non_hover()' onmouseout='lll_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_lll_' onclick='triggeryes_lll_()'
-        onmouseover='lll_ytr_hover()' onmouseout='lll_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For 8-Shaped Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_lll_' onclick='triggerno_lll_()' 
-        onmouseover='lll_ntr_hover()' onmouseout='lll_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For 8-Shaped Only
-        </button>
-        
-        <br>
-        <br>
+            <h3 class='algname22'>8-shaped</h3>
+            
+            <img src='22_int_ort_oll_8-shaped.png' class='221limgs' alt='8-shaped' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='lllt'> <b class='two_intermediate_ortega_algs'> F R' F' R U R U' R' </b> </h3>
+                
+            <div class="llldiva" id="llldiva">
+
+                <div class="llldropa" id="llldiva">
+                    <button class="lllbtna" id="lllbtna" onmouseover="lllbtna_h()" onmouseout="lllbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="llldropa-content">
+                        <a id="lllbtna_a" onclick="lllbtna_a_cl()" onmouseover="lllbtna_a_h()" onmouseout="lllbtna_a_d()">Learning</a>
+                        <a id="lllbtna_b" onclick="lllbtna_b_cl()" onmouseover="lllbtna_b_h()" onmouseout="lllbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="llldivb" id="llldivb">
+
+                <div class="llldropb" id="llldivb">
+                    <button class="lllbtnb" id="lllbtnb" onmouseover="lllbtnb_h()" onmouseout="lllbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="llldropb-content">
+                        <a id="lllbtnb_a" onclick="lllbtnb_a_cl()" onmouseover="lllbtnb_a_h()" onmouseout="lllbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6311,42 +8835,31 @@
         <img src='22_int_ort_oll_t-shaped.png' class='221limgs' alt='T-shaped' style='height: 125px; width: 125px;'> </img>
         <br><br>
         <h3 id='tttt'> <b class='two_intermediate_ortega_algs'> R U R' U' R' F R F' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_ttt_' onclick='completed_ttt_()' 
-        onmouseover='ttt_com_hover()' onmouseout='ttt_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_ttt_' onclick='trash_ttt_()' 
-        onmouseover='ttt_del_hover()' onmouseout='ttt_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_ttt_' onclick='learn_ttt_()' 
-        onmouseover='ttt_lea_hover()' onmouseout='ttt_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_ttt_' onclick='none_ttt_()' 
-        onmouseover='ttt_non_hover()' onmouseout='ttt_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
+                
+        <div class="tttdiva" id="tttdiva">
+
+            <div class="tttdropa" id="tttdiva">
+                <button class="tttbtna" id="tttbtna" onmouseover="tttbtna_h()" onmouseout="tttbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                <div class="tttdropa-content">
+                    <a id="tttbtna_a" onclick="tttbtna_a_cl()" onmouseover="tttbtna_a_h()" onmouseout="tttbtna_a_d()">Learning</a>
+                    <a id="tttbtna_b" onclick="tttbtna_b_cl()" onmouseover="tttbtna_b_h()" onmouseout="tttbtna_b_d()">Completed</a>
+                </div>
+            </div>
+
+        </div>
+
         <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_ttt_' onclick='triggeryes_ttt_()'
-        onmouseover='ttt_ytr_hover()' onmouseout='ttt_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For T-Shaped Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_ttt_' onclick='triggerno_ttt_()' 
-        onmouseover='ttt_ntr_hover()' onmouseout='ttt_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For T-Shaped Only
-        </button>
-        
-        <br>
-        <br>
+
+        <div class="tttdivb" id="tttdivb">
+
+            <div class="tttdropb" id="tttdivb">
+                <button class="tttbtnb" id="tttbtnb" onmouseover="tttbtnb_h()" onmouseout="tttbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                <div class="tttdropb-content">
+                    <a id="tttbtnb_a" onclick="tttbtnb_a_cl()" onmouseover="tttbtnb_a_h()" onmouseout="tttbtnb_a_d()">Hide Triggers</a>
+                </div>
+            </div>
+
+        </div>
         
         </div>
         
@@ -6354,47 +8867,36 @@
         
         <div id='uuu' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>U-shaped</h3>
-        
-        <img src='22_int_ort_oll_u-shaped.png' class='221limgs' alt='U-shaped' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='uuut'> <b class='two_intermediate_ortega_algs'> F R U R' U' F' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_uuu_' onclick='completed_uuu_()' 
-        onmouseover='uuu_com_hover()' onmouseout='uuu_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_uuu_' onclick='trash_uuu_()' 
-        onmouseover='uuu_del_hover()' onmouseout='uuu_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_uuu_' onclick='learn_uuu_()' 
-        onmouseover='uuu_lea_hover()' onmouseout='uuu_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_uuu_' onclick='none_uuu_()' 
-        onmouseover='uuu_non_hover()' onmouseout='uuu_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_uuu_' onclick='triggeryes_uuu_()'
-        onmouseover='uuu_ytr_hover()' onmouseout='uuu_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For U-Shaped Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_uuu_' onclick='triggerno_uuu_()' 
-        onmouseover='uuu_ntr_hover()' onmouseout='uuu_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For U-Shaped Only
-        </button>
-        
-        <br>
-        <br>
+            <h3 class='algname22'>U-shaped</h3>
+            
+            <img src='22_int_ort_oll_u-shaped.png' class='221limgs' alt='U-shaped' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='uuut'> <b class='two_intermediate_ortega_algs'> F R U R' U' F' </b> </h3>
+                
+            <div class="uuudiva" id="uuudiva">
+
+                <div class="uuudropa" id="uuudiva">
+                    <button class="uuubtna" id="uuubtna" onmouseover="uuubtna_h()" onmouseout="uuubtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="uuudropa-content">
+                        <a id="uuubtna_a" onclick="uuubtna_a_cl()" onmouseover="uuubtna_a_h()" onmouseout="uuubtna_a_d()">Learning</a>
+                        <a id="uuubtna_b" onclick="uuubtna_b_cl()" onmouseover="uuubtna_b_h()" onmouseout="uuubtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="uuudivb" id="uuudivb">
+
+                <div class="uuudropb" id="uuudivb">
+                    <button class="uuubtnb" id="uuubtnb" onmouseover="uuubtnb_h()" onmouseout="uuubtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="uuudropb-content">
+                        <a id="uuubtnb_a" onclick="uuubtnb_a_cl()" onmouseover="uuubtnb_a_h()" onmouseout="uuubtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6423,49 +8925,38 @@
         
         <div id='ana' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>PBL 1 - Adjacent/None</h3>
-        
-        <img src='22_int_ort_pbl_adj-none-1.png' class='221limgs' alt='Adjacent/None' style='height: 125px; width: 125px;'> </img>
-        <br>
-        <img src='22_int_ort_pbl_adj-none-2.png' class='221limgs' alt='Adjacent/None' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='anat'> <b class='two_intermediate_ortega_algs'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_ana_' onclick='completed_ana_()' 
-        onmouseover='ana_com_hover()' onmouseout='ana_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_ana_' onclick='trash_ana_()' 
-        onmouseover='ana_del_hover()' onmouseout='ana_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_ana_' onclick='learn_ana_()' 
-        onmouseover='ana_lea_hover()' onmouseout='ana_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_ana_' onclick='none_ana_()' 
-        onmouseover='ana_non_hover()' onmouseout='ana_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_ana_' onclick='triggeryes_ana_()'
-        onmouseover='ana_ytr_hover()' onmouseout='ana_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For PBL 1 Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_ana_' onclick='triggerno_ana_()' 
-        onmouseover='ana_ntr_hover()' onmouseout='ana_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For PBL 1 Only
-        </button>
-        
-        <br>
-        <br>
+            <h3 class='algname22'>PBL 1 - Adjacent/None</h3>
+            
+            <img src='22_int_ort_pbl_adj-none-1.png' class='221limgs' alt='Adjacent/None' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <img src='22_int_ort_pbl_adj-none-2.png' class='221limgs' alt='Adjacent/None' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='anat'> <b class='two_intermediate_ortega_algs'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
+                
+            <div class="anadiva" id="anadiva">
+
+                <div class="anadropa" id="anadiva">
+                    <button class="anabtna" id="anabtna" onmouseover="anabtna_h()" onmouseout="anabtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="anadropa-content">
+                        <a id="anabtna_a" onclick="anabtna_a_cl()" onmouseover="anabtna_a_h()" onmouseout="anabtna_a_d()">Learning</a>
+                        <a id="anabtna_b" onclick="anabtna_b_cl()" onmouseover="anabtna_b_h()" onmouseout="anabtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="anadivb" id="anadivb">
+
+                <div class="anadropb" id="anadivb">
+                    <button class="anabtnb" id="anabtnb" onmouseover="anabtnb_h()" onmouseout="anabtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="anadropb-content">
+                        <a id="anabtnb_a" onclick="anabtnb_a_cl()" onmouseover="anabtnb_a_h()" onmouseout="anabtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6473,49 +8964,38 @@
         
         <div id='dnb' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>PBL 2 - Diagonal/None</h3>
-        
-        <img src='22_int_ort_pbl_dia-none-1.png' class='221limgs' alt='Diagonal/None' style='height: 125px; width: 125px;'> </img>
-        <br>
-        <img src='22_int_ort_pbl_dia-none-2.png' class='221limgs' alt='Diagonal/None' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='dnbt'> <b class='two_intermediate_ortega_algs'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_dnb_' onclick='completed_dnb_()' 
-        onmouseover='dnb_com_hover()' onmouseout='dnb_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_dnb_' onclick='trash_dnb_()' 
-        onmouseover='dnb_del_hover()' onmouseout='dnb_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_dnb_' onclick='learn_dnb_()' 
-        onmouseover='dnb_lea_hover()' onmouseout='dnb_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_dnb_' onclick='none_dnb_()' 
-        onmouseover='dnb_non_hover()' onmouseout='dnb_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_dnb_' onclick='triggeryes_dnb_()'
-        onmouseover='dnb_ytr_hover()' onmouseout='dnb_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For PBL 2 Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_dnb_' onclick='triggerno_dnb_()' 
-        onmouseover='dnb_ntr_hover()' onmouseout='dnb_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For PBL 2 Only
-        </button>
-        
-        <br>
-        <br>
+            <h3 class='algname22'>PBL 2 - Diagonal/None</h3>
+            
+            <img src='22_int_ort_pbl_dia-none-1.png' class='221limgs' alt='Diagonal/None' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <img src='22_int_ort_pbl_dia-none-2.png' class='221limgs' alt='Diagonal/None' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='dnbt'> <b class='two_intermediate_ortega_algs'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
+                
+            <div class="dnbdiva" id="dnbdiva">
+
+                <div class="dnbdropa" id="dnbdiva">
+                    <button class="dnbbtna" id="dnbbtna" onmouseover="dnbbtna_h()" onmouseout="dnbbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="dnbdropa-content">
+                        <a id="dnbbtna_a" onclick="dnbbtna_a_cl()" onmouseover="dnbbtna_a_h()" onmouseout="dnbbtna_a_d()">Learning</a>
+                        <a id="dnbbtna_b" onclick="dnbbtna_b_cl()" onmouseover="dnbbtna_b_h()" onmouseout="dnbbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="dnbdivb" id="dnbdivb">
+
+                <div class="dnbdropb" id="dnbdivb">
+                    <button class="dnbbtnb" id="dnbbtnb" onmouseover="dnbbtnb_h()" onmouseout="dnbbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="dnbdropb-content">
+                        <a id="dnbbtnb_a" onclick="dnbbtnb_a_cl()" onmouseover="dnbbtnb_a_h()" onmouseout="dnbbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6523,49 +9003,38 @@
         
         <div id='aac' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>PBL 3 - Adjacent/Adjacent</h3>
-        
-        <img src='22_int_ort_pbl_adj-adj-1.png' class='221limgs' alt='Adjacent/Adjacent' style='height: 125px; width: 125px;'> </img>
-        <br>
-        <img src='22_int_ort_pbl_adj-adj-2.png' class='221limgs' alt='Adjacent/Adjacent' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='aact'> <b class='two_intermediate_ortega_algs'> R2 U' B2 U2 R2 U' R2 </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_aac_' onclick='completed_aac_()' 
-        onmouseover='aac_com_hover()' onmouseout='aac_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_aac_' onclick='trash_aac_()' 
-        onmouseover='aac_del_hover()' onmouseout='aac_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_aac_' onclick='learn_aac_()' 
-        onmouseover='aac_lea_hover()' onmouseout='aac_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_aac_' onclick='none_aac_()' 
-        onmouseover='aac_non_hover()' onmouseout='aac_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_aac_' onclick='triggeryes_aac_()'
-        onmouseover='aac_ytr_hover()' onmouseout='aac_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For PBL 3 Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_aac_' onclick='triggerno_aac_()' 
-        onmouseover='aac_ntr_hover()' onmouseout='aac_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For PBL 3 Only
-        </button>
-        
-        <br>
-        <br>
+            <h3 class='algname22'>PBL 3 - Adjacent/Adjacent</h3>
+            
+            <img src='22_int_ort_pbl_adj-adj-1.png' class='221limgs' alt='Adjacent/Adjacent' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <img src='22_int_ort_pbl_adj-adj-2.png' class='221limgs' alt='Adjacent/Adjacent' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='aact'> <b class='two_intermediate_ortega_algs'> R2 U' B2 U2 R2 U' R2 </b> </h3>
+                
+            <div class="aacdiva" id="aacdiva">
+
+                <div class="aacdropa" id="aacdiva">
+                    <button class="aacbtna" id="aacbtna" onmouseover="aacbtna_h()" onmouseout="aacbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aacdropa-content">
+                        <a id="aacbtna_a" onclick="aacbtna_a_cl()" onmouseover="aacbtna_a_h()" onmouseout="aacbtna_a_d()">Learning</a>
+                        <a id="aacbtna_b" onclick="aacbtna_b_cl()" onmouseover="aacbtna_b_h()" onmouseout="aacbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="aacdivb" id="aacdivb">
+
+                <div class="aacdropb" id="aacdivb">
+                    <button class="aacbtnb" id="aacbtnb" onmouseover="aacbtnb_h()" onmouseout="aacbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aacdropb-content">
+                        <a id="aacbtnb_a" onclick="aacbtnb_a_cl()" onmouseover="aacbtnb_a_h()" onmouseout="aacbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6573,49 +9042,38 @@
         
         <div id='add' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>PBL 4 - Adjacent/Diagonal</h3>
-        
-        <img src='22_int_ort_pbl_adj-dia-1.png' class='221limgs' alt='Adjacent/Diagonal' style='height: 125px; width: 125px;'> </img>
-        <br>
-        <img src='22_int_ort_pbl_adj-dia-2.png' class='221limgs' alt='Adjacent/Diagonal' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='addt'> <b class='two_intermediate_ortega_algs'> R U' R F2 R' U R' </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_add_' onclick='completed_add_()' 
-        onmouseover='add_com_hover()' onmouseout='add_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_add_' onclick='trash_add_()' 
-        onmouseover='add_del_hover()' onmouseout='add_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_add_' onclick='learn_add_()' 
-        onmouseover='add_lea_hover()' onmouseout='add_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_add_' onclick='none_add_()' 
-        onmouseover='add_non_hover()' onmouseout='add_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_add_' onclick='triggeryes_add_()'
-        onmouseover='add_ytr_hover()' onmouseout='add_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For PBL 4 Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_add_' onclick='triggerno_add_()' 
-        onmouseover='add_ntr_hover()' onmouseout='add_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For PBL 4 Only
-        </button>
-        
-        <br>
-        <br>
+            <h3 class='algname22'>PBL 4 - Adjacent/Diagonal</h3>
+            
+            <img src='22_int_ort_pbl_adj-dia-1.png' class='221limgs' alt='Adjacent/Diagonal' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <img src='22_int_ort_pbl_adj-dia-2.png' class='221limgs' alt='Adjacent/Diagonal' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='addt'> <b class='two_intermediate_ortega_algs'> R U' R F2 R' U R' </b> </h3>
+                
+            <div class="adddiva" id="adddiva">
+
+                <div class="adddropa" id="adddiva">
+                    <button class="addbtna" id="addbtna" onmouseover="addbtna_h()" onmouseout="addbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="adddropa-content">
+                        <a id="addbtna_a" onclick="addbtna_a_cl()" onmouseover="addbtna_a_h()" onmouseout="addbtna_a_d()">Learning</a>
+                        <a id="addbtna_b" onclick="addbtna_b_cl()" onmouseover="addbtna_b_h()" onmouseout="addbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="adddivb" id="adddivb">
+
+                <div class="adddropb" id="adddivb">
+                    <button class="addbtnb" id="addbtnb" onmouseover="addbtnb_h()" onmouseout="addbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="adddropb-content">
+                        <a id="addbtnb_a" onclick="addbtnb_a_cl()" onmouseover="addbtnb_a_h()" onmouseout="addbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
@@ -6623,49 +9081,38 @@
         
         <div id='dde' class='two_intermediate_ortega_algs'>
         
-        <h3 class='algname22'>PBL 5 - Diagonal/Diagonal</h3>
+            <h3 class='algname22'>PBL 5 - Diagonal/Diagonal</h3>
         
-        <img src='22_int_ort_pbl_dia-dia-1.png' class='221limgs' alt='Diagonal/Diagonal' style='height: 125px; width: 125px;'> </img>
-        <br>
-        <img src='22_int_ort_pbl_adj-dia-2.png' class='221limgs' alt='Adjacent/Diagonal' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3 id='ddet'> <b class='two_intermediate_ortega_algs'> R2 F2 R2 </b> </h3>
-        
-        <button type='button' class='cubealgbutton22' id='completed_dde_' onclick='completed_dde_()' 
-        onmouseover='dde_com_hover()' onmouseout='dde_com_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='trash_dde_' onclick='trash_dde_()' 
-        onmouseover='dde_del_hover()' onmouseout='dde_del_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton22' id='learn_dde_' onclick='learn_dde_()' 
-        onmouseover='dde_lea_hover()' onmouseout='dde_lea_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton22_none' id='none_dde_' onclick='none_dde_()' 
-        onmouseover='dde_non_hover()' onmouseout='dde_non_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_xmark_none.png'> None 
-        </button>
-        
-        <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton22' style='width:250px;' id='triggeryes_dde_' onclick='triggeryes_dde_()'
-        onmouseover='dde_ytr_hover()' onmouseout='dde_ytr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_bracket_normal.png'> Show Triggers For PBL 5 Only
-        </button>
-        
-        <button type='button' class='cubealgbutton22_trigno' style='width:250px;' id='triggerno_dde_' onclick='triggerno_dde_()' 
-        onmouseover='dde_ntr_hover()' onmouseout='dde_ntr_down()'>
-        <img class='imgbut22' height='20px' width='20px' src='22_notrig_notrig.png'> Hide Triggers For PBL 5 Only
-        </button>
-        
-        <br>
-        <br>
+            <img src='22_int_ort_pbl_dia-dia-1.png'  class='221limgs' alt='Diagonal/Diagonal' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <img src='22_int_ort_pbl_adj-dia-2.png' class='221limgs' alt='Adjacent/Diagonal' style='height: 125px; width: 125px;'> </img>
+            <br><br>
+            <h3 id='ddet'> <b class='two_intermediate_ortega_algs'> R2 F2 R2 </b> </h3>
+                
+            <div class="ddediva" id="ddediva">
+
+                <div class="ddedropa" id="ddediva">
+                    <button class="ddebtna" id="ddebtna" onmouseover="ddebtna_h()" onmouseout="ddebtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ddedropa-content">
+                        <a id="ddebtna_a" onclick="ddebtna_a_cl()" onmouseover="ddebtna_a_h()" onmouseout="ddebtna_a_d()">Learning</a>
+                        <a id="ddebtna_b" onclick="ddebtna_b_cl()" onmouseover="ddebtna_b_h()" onmouseout="ddebtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="ddedivb" id="ddedivb">
+
+                <div class="ddedropb" id="ddedivb">
+                    <button class="ddebtnb" id="ddebtnb" onmouseover="ddebtnb_h()" onmouseout="ddebtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ddedropb-content">
+                        <a id="ddebtnb_a" onclick="ddebtnb_a_cl()" onmouseover="ddebtnb_a_h()" onmouseout="ddebtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
         
         </div>
         
