@@ -10,7 +10,7 @@
     
     </head>
 
-    <body onload="begpll_2_wprld()">
+    <body onload="begpll_2_wprld()" id='bodyb'>
 
         <style>
 
@@ -515,15 +515,28 @@
             // On Load
     
             function begpll_2_wprld() {
+            totalstylings();
             plf_part_a();
             atop_style();
             header_style();
             footer_style();
             title_colours();
             introduction_style();
-            header_total_2_begpll();
             triggerbutton_colours();
+            }
+
+            // Styling JS
+
+            function totalstylings() {
             document.getElementById('bodyb').style.fontFamily = 'Arial, Helvetica, sans-serif';
+            document.getElementsByTagName("div").getElementsByClassName("begpll_2_css").style.borderColor = '#806666';
+            document.getElementsByTagName("div").getElementsByClassName("begpll_2_css").style.border = '2px solid';
+            document.getElementsByTagName("b").getElementsByClassName("begpll_2_css").style.paddingLeft = '5px';
+            document.getElementsByTagName("b").getElementsByClassName("begpll_2_css").style.color = '#000066';
+            document.getElementsByTagName("h3").getElementsByClassName("algname22").style.color = '#FFCC66';
+            document.getElementsByTagName("img").getElementsByClassName("two1limgs").style.height = '125px';
+            document.getElementsByTagName("img").getElementsByClassName("two1limgs").style.width = '125px';
+            document.getElementsByTagName("img").getElementsByClassName("two1limgs").style.paddingLeft = '5px';
             }
             
             // Header and Footer - Style
@@ -647,45 +660,6 @@
             document.getElementById('atop_xxa').style.textDecoration = 'none';
             }
 
-            // Header Buttons - Hover
-
-            function header_total_2_begpll() {
-            algp_down();
-            hmep_down();
-            }
-            
-            function algp_hover() {
-            document.getElementById('hdbut_algp').style.color = '#FFFF00';
-            document.getElementById('hdbut_algp').style.border = '2px solid #FFFF00';
-            document.getElementById('hdbut_algp').style.backgroundColor = '#006600';
-            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
-            document.getElementById('hdbut_algp').style.paddingRight = '12px';
-            }
-            
-            function algp_down() {
-            document.getElementById('hdbut_algp').style.color = '#006600';
-            document.getElementById('hdbut_algp').style.border = '2px solid #006600';
-            document.getElementById('hdbut_algp').style.backgroundColor = '#FFFF00';
-            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
-            document.getElementById('hdbut_algp').style.paddingRight = '12px';
-            }
-            
-            function hmep_hover() {
-            document.getElementById('hdbut_hmep').style.color = '#FFFF00';
-            document.getElementById('hdbut_hmep').style.border = '2px solid #FFFF00';
-            document.getElementById('hdbut_hmep').style.backgroundColor = '#006600';
-            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
-            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
-            }
-            
-            function hmep_down() {
-            document.getElementById('hdbut_hmep').style.color = '#006600';
-            document.getElementById('hdbut_hmep').style.border = '2px solid #006600';
-            document.getElementById('hdbut_hmep').style.backgroundColor = '#FFFF00';
-            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
-            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
-            }
-    
             // Trigger Button - Hover
             
             function show_hide_ooa_d() {
@@ -807,13 +781,10 @@
                 document.getElementById('acsbtna').style.fontWeight = 'bold';
                 if (acslsa == "acsnl") {
                     document.getElementById('acsbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    acsbtna_h();
                 } else if (acslsa == "acslg") {
                     document.getElementById('acsbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    acsbtna_h();
                 } else if (acslsa == "acscd") {
                     document.getElementById('acsbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    acsbtna_h();
                 } else {
                     localStorage.setItem("acsvara", "acsnl");
                     acs_var_initiation();
@@ -829,7 +800,6 @@
                     document.getElementById('acsbtna').style.borderColor = '#660033';
                     document.getElementById('acsbtna').style.fontWeight = 'bold';
                     document.getElementById('acsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    acsbtna_d();
                 } else if (acslsa == "acslg") {
                     document.getElementById('acsbtna').style.color = '#CCCC00';
                     document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
@@ -837,7 +807,6 @@
                     document.getElementById('acsbtna').style.borderColor = '#CCCC00';
                     document.getElementById('acsbtna').style.fontWeight = 'bold';
                     document.getElementById('acsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    acsbtna_d();
                 } else if (acslsa == "acscd") {
                     document.getElementById('acsbtna').style.color = '#00B666';
                     document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
@@ -845,7 +814,6 @@
                     document.getElementById('acsbtna').style.borderColor = '#00B666';
                     document.getElementById('acsbtna').style.fontWeight = 'bold';
                     document.getElementById('acsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    acsbtna_d();
                 } else {
                     localStorage.setItem("acsvara", "acsnl");
                     acs_var_initiation();
@@ -860,13 +828,10 @@
                 document.getElementById('acsbtna_a').style.borderColor = '#FFCC66';
                 if (acslsa == "acsnl") {
                     document.getElementById('acsbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    acsbtna_a_h();
                 } else if (acslsa == "acslg") {
                     document.getElementById('acsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    acsbtna_a_h();
                 } else if (acslsa == "acscd") {
                     document.getElementById('acsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    acsbtna_a_h();
                 } else {
                     localStorage.setItem("acsvara", "acsnl");
                     acs_var_initiation();
@@ -880,13 +845,10 @@
                 document.getElementById('acsbtna_a').style.border = 'none';
                 if (acslsa == "acsnl") {
                     document.getElementById('acsbtna_a').innerHTML = 'Learning';
-                    acsbtna_a_d();
                 } else if (acslsa == "acslg") {
                     document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
-                    acsbtna_a_d();
                 } else if (acslsa == "acscd") {
                     document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
-                    acsbtna_a_d();
                 } else {
                     localStorage.setItem("acsvara", "acsnl");
                     acs_var_initiation();
@@ -901,13 +863,10 @@
                 document.getElementById('acsbtna_b').style.borderColor = '#FFCC66';
                 if (acslsa == "acsnl") {
                     document.getElementById('acsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    acsbtna_b_h();
                 } else if (acslsa == "acslg") {
                     document.getElementById('acsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    acsbtna_b_h();
                 } else if (acslsa == "acscd") {
                     document.getElementById('acsbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    acsbtna_b_h();
                 } else {
                     localStorage.setItem("acsvara", "acsnl");
                     acs_var_initiation();
@@ -921,13 +880,10 @@
                 document.getElementById('acsbtna_b').style.border = 'none';
                 if (acslsa == "acsnl") {
                     document.getElementById('acsbtna_b').innerHTML = 'Completed';
-                    acsbtna_b_d();
                 } else if (acslsa == "acslg") {
                     document.getElementById('acsbtna_b').innerHTML = 'Completed';
-                    acsbtna_b_d();
                 } else if (acslsa == "acscd") {
                     document.getElementById('acsbtna_b').innerHTML = 'Learning';
-                    acsbtna_b_d();
                 } else {
                     localStorage.setItem("acsvara", "acsnl");
                     acs_var_initiation();
@@ -976,6 +932,7 @@
                     acs_var_initiation();
                     acsbtna_a_cl();
                 }
+                acsbtna_a_h();
             }
 
             function acsbtna_b_cl() {
@@ -1017,6 +974,7 @@
                     acs_var_initiation();
                     acsbtna_b_cl();
                 }
+                acsbtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -1192,13 +1150,10 @@
                 document.getElementById('dcsbtna').style.fontWeight = 'bold';
                 if (dcslsa == "dcsnl") {
                     document.getElementById('dcsbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    dcsbtna_h();
                 } else if (dcslsa == "dcslg") {
                     document.getElementById('dcsbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    dcsbtna_h();
                 } else if (dcslsa == "dcscd") {
                     document.getElementById('dcsbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    dcsbtna_h();
                 } else {
                     localStorage.setItem("dcsvara", "dcsnl");
                     dcs_var_initiation();
@@ -1214,7 +1169,6 @@
                     document.getElementById('dcsbtna').style.borderColor = '#660033';
                     document.getElementById('dcsbtna').style.fontWeight = 'bold';
                     document.getElementById('dcsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    dcsbtna_d();
                 } else if (dcslsa == "dcslg") {
                     document.getElementById('dcsbtna').style.color = '#CCCC00';
                     document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
@@ -1222,7 +1176,6 @@
                     document.getElementById('dcsbtna').style.borderColor = '#CCCC00';
                     document.getElementById('dcsbtna').style.fontWeight = 'bold';
                     document.getElementById('dcsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    dcsbtna_d();
                 } else if (dcslsa == "dcscd") {
                     document.getElementById('dcsbtna').style.color = '#00B666';
                     document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
@@ -1230,7 +1183,6 @@
                     document.getElementById('dcsbtna').style.borderColor = '#00B666';
                     document.getElementById('dcsbtna').style.fontWeight = 'bold';
                     document.getElementById('dcsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    dcsbtna_d();
                 } else {
                     localStorage.setItem("dcsvara", "dcsnl");
                     dcs_var_initiation();
@@ -1245,13 +1197,10 @@
                 document.getElementById('dcsbtna_a').style.borderColor = '#FFCC66';
                 if (dcslsa == "dcsnl") {
                     document.getElementById('dcsbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    dcsbtna_a_h();
                 } else if (dcslsa == "dcslg") {
                     document.getElementById('dcsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    dcsbtna_a_h();
                 } else if (dcslsa == "dcscd") {
                     document.getElementById('dcsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    dcsbtna_a_h();
                 } else {
                     localStorage.setItem("dcsvara", "dcsnl");
                     dcs_var_initiation();
@@ -1265,13 +1214,10 @@
                 document.getElementById('dcsbtna_a').style.border = 'none';
                 if (dcslsa == "dcsnl") {
                     document.getElementById('dcsbtna_a').innerHTML = 'Learning';
-                    dcsbtna_a_d();
                 } else if (dcslsa == "dcslg") {
                     document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
-                    dcsbtna_a_d();
                 } else if (dcslsa == "dcscd") {
                     document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
-                    dcsbtna_a_d();
                 } else {
                     localStorage.setItem("dcsvara", "dcsnl");
                     dcs_var_initiation();
@@ -1286,13 +1232,10 @@
                 document.getElementById('dcsbtna_b').style.borderColor = '#FFCC66';
                 if (dcslsa == "dcsnl") {
                     document.getElementById('dcsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    dcsbtna_b_h();
                 } else if (dcslsa == "dcslg") {
                     document.getElementById('dcsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    dcsbtna_b_h();
                 } else if (dcslsa == "dcscd") {
                     document.getElementById('dcsbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    dcsbtna_b_h();
                 } else {
                     localStorage.setItem("dcsvara", "dcsnl");
                     dcs_var_initiation();
@@ -1306,13 +1249,10 @@
                 document.getElementById('dcsbtna_b').style.border = 'none';
                 if (dcslsa == "dcsnl") {
                     document.getElementById('dcsbtna_b').innerHTML = 'Completed';
-                    dcsbtna_b_d();
                 } else if (dcslsa == "dcslg") {
                     document.getElementById('dcsbtna_b').innerHTML = 'Completed';
-                    dcsbtna_b_d();
                 } else if (dcslsa == "dcscd") {
                     document.getElementById('dcsbtna_b').innerHTML = 'Learning';
-                    dcsbtna_b_d();
                 } else {
                     localStorage.setItem("dcsvara", "dcsnl");
                     dcs_var_initiation();
@@ -1361,6 +1301,7 @@
                     dcs_var_initiation();
                     dcsbtna_a_cl();
                 }
+                dcsbtna_a_h();
             }
 
             function dcsbtna_b_cl() {
@@ -1402,6 +1343,7 @@
                     dcs_var_initiation();
                     dcsbtna_b_cl();
                 }
+                dcsbtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -1591,13 +1533,13 @@
         
         <br><br>
         
-        <div id='acs' class='two_beginner_pll_algs'>
+        <div id='acs' class='begpll_2_css'>
         
             <h3 class='algname22'>Adjacent Corner Swap</h3>
             
-            <img src='22_beg_pll_adjacent-swap.png' class='221limgs' alt='Adjacent/None' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_pll_adjacent-swap.png' class='two1limgs' alt='Adjacent/None' style='height: 125px; width: 125px;'> </img>
             <br>
-            <h3 id='acst'> <b class='two_beginner_pll_algs'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
+            <h3 id='acst'> <b class='begpll_2_css'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
                 
             <div class="acsdiva" id="acsdiva">
 
@@ -1628,13 +1570,13 @@
         
         <br><br><br>
         
-        <div id='dcs' class='two_beginner_pll_algs'>
+        <div id='dcs' class='begpll_2_css'>
         
         <h3 class='algname22'>Diagonal Corner Swap</h3>
         
-        <img src='22_beg_pll_diagonal-swap.png' class='221limgs' alt='Diagonal/None' style='height: 125px; width: 125px;'> </img>
+        <img src='22_beg_pll_diagonal-swap.png' class='two1limgs' alt='Diagonal/None' style='height: 125px; width: 125px;'> </img>
         <br>
-        <h3 id='dcst'> <b class='two_beginner_pll_algs'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
+        <h3 id='dcst'> <b class='begpll_2_css'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
                 
             <div class="dcsdiva" id="dcsdiva">
 
