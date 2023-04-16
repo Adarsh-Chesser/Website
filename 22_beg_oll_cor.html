@@ -1590,15 +1590,28 @@
             // On Load
     
             function begoll_2_wprld() {
+            totalstylings();
             olf_part_a();
             atop_style();
             header_style();
             footer_style();
             title_colours();
             introduction_style();
-            header_total_2_begoll();
             triggerbutton_colours();
+            }
+
+            // Styling JS
+
+            function totalstylings() {
             document.getElementById('bodyb').style.fontFamily = 'Arial, Helvetica, sans-serif';
+            document.getElementsByTagName("div").getElementsByClassName("begoll_2_css").style.borderColor = '#806666';
+            document.getElementsByTagName("div").getElementsByClassName("begoll_2_css").style.border = '2px solid';
+            document.getElementsByTagName("b").getElementsByClassName("begoll_2_css").style.paddingLeft = '5px';
+            document.getElementsByTagName("b").getElementsByClassName("begoll_2_css").style.color = '#000066';
+            document.getElementsByTagName("h3").getElementsByClassName("algname22").style.color = '#FFCC66';
+            document.getElementsByTagName("img").getElementsByClassName("two1limgs").style.height = '125px';
+            document.getElementsByTagName("img").getElementsByClassName("two1limgs").style.width = '125px';
+            document.getElementsByTagName("img").getElementsByClassName("two1limgs").style.paddingLeft = '5px';
             }
             
             // Header and Footer - Style
@@ -1727,45 +1740,6 @@
             document.getElementById('atop_xxa').style.textDecoration = 'none';
             }
 
-            // Header Buttons - Hover
-
-            function header_total_2_begoll() {
-            algp_down();
-            hmep_down();
-            }
-            
-            function algp_hover() {
-            document.getElementById('hdbut_algp').style.color = '#FFFF00';
-            document.getElementById('hdbut_algp').style.border = '2px solid #FFFF00';
-            document.getElementById('hdbut_algp').style.backgroundColor = '#006600';
-            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
-            document.getElementById('hdbut_algp').style.paddingRight = '12px';
-            }
-            
-            function algp_down() {
-            document.getElementById('hdbut_algp').style.color = '#006600';
-            document.getElementById('hdbut_algp').style.border = '2px solid #006600';
-            document.getElementById('hdbut_algp').style.backgroundColor = '#FFFF00';
-            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
-            document.getElementById('hdbut_algp').style.paddingRight = '12px';
-            }
-            
-            function hmep_hover() {
-            document.getElementById('hdbut_hmep').style.color = '#FFFF00';
-            document.getElementById('hdbut_hmep').style.border = '2px solid #FFFF00';
-            document.getElementById('hdbut_hmep').style.backgroundColor = '#006600';
-            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
-            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
-            }
-            
-            function hmep_down() {
-            document.getElementById('hdbut_hmep').style.color = '#006600';
-            document.getElementById('hdbut_hmep').style.border = '2px solid #006600';
-            document.getElementById('hdbut_hmep').style.backgroundColor = '#FFFF00';
-            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
-            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
-            }
-    
             // Trigger Button - Hover
             
             function show_hide_ooa_d() {
@@ -1887,13 +1861,10 @@
                 document.getElementById('sunbtna').style.fontWeight = 'bold';
                 if (sunlsa == "sunnl") {
                     document.getElementById('sunbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    sunbtna_h();
                 } else if (sunlsa == "sunlg") {
                     document.getElementById('sunbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    sunbtna_h();
                 } else if (sunlsa == "suncd") {
                     document.getElementById('sunbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    sunbtna_h();
                 } else {
                     localStorage.setItem("sunvara", "sunnl");
                     sun_var_initiation();
@@ -1909,7 +1880,6 @@
                     document.getElementById('sunbtna').style.borderColor = '#660033';
                     document.getElementById('sunbtna').style.fontWeight = 'bold';
                     document.getElementById('sunbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    sunbtna_d();
                 } else if (sunlsa == "sunlg") {
                     document.getElementById('sunbtna').style.color = '#CCCC00';
                     document.getElementById('sunbtna').style.backgroundColor = '#FFFFFF';
@@ -1917,7 +1887,6 @@
                     document.getElementById('sunbtna').style.borderColor = '#CCCC00';
                     document.getElementById('sunbtna').style.fontWeight = 'bold';
                     document.getElementById('sunbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    sunbtna_d();
                 } else if (sunlsa == "suncd") {
                     document.getElementById('sunbtna').style.color = '#00B666';
                     document.getElementById('sunbtna').style.backgroundColor = '#FFFFFF';
@@ -1925,7 +1894,6 @@
                     document.getElementById('sunbtna').style.borderColor = '#00B666';
                     document.getElementById('sunbtna').style.fontWeight = 'bold';
                     document.getElementById('sunbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    sunbtna_d();
                 } else {
                     localStorage.setItem("sunvara", "sunnl");
                     sun_var_initiation();
@@ -1940,13 +1908,10 @@
                 document.getElementById('sunbtna_a').style.borderColor = '#FFCC66';
                 if (sunlsa == "sunnl") {
                     document.getElementById('sunbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    sunbtna_a_h();
                 } else if (sunlsa == "sunlg") {
                     document.getElementById('sunbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    sunbtna_a_h();
                 } else if (sunlsa == "suncd") {
                     document.getElementById('sunbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    sunbtna_a_h();
                 } else {
                     localStorage.setItem("sunvara", "sunnl");
                     sun_var_initiation();
@@ -1960,13 +1925,10 @@
                 document.getElementById('sunbtna_a').style.border = 'none';
                 if (sunlsa == "sunnl") {
                     document.getElementById('sunbtna_a').innerHTML = 'Learning';
-                    sunbtna_a_d();
                 } else if (sunlsa == "sunlg") {
                     document.getElementById('sunbtna_a').innerHTML = 'Not Learned';
-                    sunbtna_a_d();
                 } else if (sunlsa == "suncd") {
                     document.getElementById('sunbtna_a').innerHTML = 'Not Learned';
-                    sunbtna_a_d();
                 } else {
                     localStorage.setItem("sunvara", "sunnl");
                     sun_var_initiation();
@@ -1981,13 +1943,10 @@
                 document.getElementById('sunbtna_b').style.borderColor = '#FFCC66';
                 if (sunlsa == "sunnl") {
                     document.getElementById('sunbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    sunbtna_b_h();
                 } else if (sunlsa == "sunlg") {
                     document.getElementById('sunbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    sunbtna_b_h();
                 } else if (sunlsa == "suncd") {
                     document.getElementById('sunbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    sunbtna_b_h();
                 } else {
                     localStorage.setItem("sunvara", "sunnl");
                     sun_var_initiation();
@@ -2001,13 +1960,10 @@
                 document.getElementById('sunbtna_b').style.border = 'none';
                 if (sunlsa == "sunnl") {
                     document.getElementById('sunbtna_b').innerHTML = 'Completed';
-                    sunbtna_b_d();
                 } else if (sunlsa == "sunlg") {
                     document.getElementById('sunbtna_b').innerHTML = 'Completed';
-                    sunbtna_b_d();
                 } else if (sunlsa == "suncd") {
                     document.getElementById('sunbtna_b').innerHTML = 'Learning';
-                    sunbtna_b_d();
                 } else {
                     localStorage.setItem("sunvara", "sunnl");
                     sun_var_initiation();
@@ -2056,6 +2012,7 @@
                     sun_var_initiation();
                     sunbtna_a_cl();
                 }
+                sunbtna_a_h();
             }
 
             function sunbtna_b_cl() {
@@ -2097,6 +2054,7 @@
                     sun_var_initiation();
                     sunbtna_b_cl();
                 }
+                sunbtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -2272,13 +2230,10 @@
                 document.getElementById('asubtna').style.fontWeight = 'bold';
                 if (asulsa == "asunl") {
                     document.getElementById('asubtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    asubtna_h();
                 } else if (asulsa == "asulg") {
                     document.getElementById('asubtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    asubtna_h();
                 } else if (asulsa == "asucd") {
                     document.getElementById('asubtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    asubtna_h();
                 } else {
                     localStorage.setItem("asuvara", "asunl");
                     asu_var_initiation();
@@ -2294,7 +2249,6 @@
                     document.getElementById('asubtna').style.borderColor = '#660033';
                     document.getElementById('asubtna').style.fontWeight = 'bold';
                     document.getElementById('asubtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    asubtna_d();
                 } else if (asulsa == "asulg") {
                     document.getElementById('asubtna').style.color = '#CCCC00';
                     document.getElementById('asubtna').style.backgroundColor = '#FFFFFF';
@@ -2302,7 +2256,6 @@
                     document.getElementById('asubtna').style.borderColor = '#CCCC00';
                     document.getElementById('asubtna').style.fontWeight = 'bold';
                     document.getElementById('asubtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    asubtna_d();
                 } else if (asulsa == "asucd") {
                     document.getElementById('asubtna').style.color = '#00B666';
                     document.getElementById('asubtna').style.backgroundColor = '#FFFFFF';
@@ -2310,7 +2263,6 @@
                     document.getElementById('asubtna').style.borderColor = '#00B666';
                     document.getElementById('asubtna').style.fontWeight = 'bold';
                     document.getElementById('asubtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    asubtna_d();
                 } else {
                     localStorage.setItem("asuvara", "asunl");
                     asu_var_initiation();
@@ -2325,13 +2277,10 @@
                 document.getElementById('asubtna_a').style.borderColor = '#FFCC66';
                 if (asulsa == "asunl") {
                     document.getElementById('asubtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    asubtna_a_h();
                 } else if (asulsa == "asulg") {
                     document.getElementById('asubtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    asubtna_a_h();
                 } else if (asulsa == "asucd") {
                     document.getElementById('asubtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    asubtna_a_h();
                 } else {
                     localStorage.setItem("asuvara", "asunl");
                     asu_var_initiation();
@@ -2345,13 +2294,10 @@
                 document.getElementById('asubtna_a').style.border = 'none';
                 if (asulsa == "asunl") {
                     document.getElementById('asubtna_a').innerHTML = 'Learning';
-                    asubtna_a_d();
                 } else if (asulsa == "asulg") {
                     document.getElementById('asubtna_a').innerHTML = 'Not Learned';
-                    asubtna_a_d();
                 } else if (asulsa == "asucd") {
                     document.getElementById('asubtna_a').innerHTML = 'Not Learned';
-                    asubtna_a_d();
                 } else {
                     localStorage.setItem("asuvara", "asunl");
                     asu_var_initiation();
@@ -2366,13 +2312,10 @@
                 document.getElementById('asubtna_b').style.borderColor = '#FFCC66';
                 if (asulsa == "asunl") {
                     document.getElementById('asubtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    asubtna_b_h();
                 } else if (asulsa == "asulg") {
                     document.getElementById('asubtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    asubtna_b_h();
                 } else if (asulsa == "asucd") {
                     document.getElementById('asubtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    asubtna_b_h();
                 } else {
                     localStorage.setItem("asuvara", "asunl");
                     asu_var_initiation();
@@ -2386,13 +2329,10 @@
                 document.getElementById('asubtna_b').style.border = 'none';
                 if (asulsa == "asunl") {
                     document.getElementById('asubtna_b').innerHTML = 'Completed';
-                    asubtna_b_d();
                 } else if (asulsa == "asulg") {
                     document.getElementById('asubtna_b').innerHTML = 'Completed';
-                    asubtna_b_d();
                 } else if (asulsa == "asucd") {
                     document.getElementById('asubtna_b').innerHTML = 'Learning';
-                    asubtna_b_d();
                 } else {
                     localStorage.setItem("asuvara", "asunl");
                     asu_var_initiation();
@@ -2441,6 +2381,7 @@
                     asu_var_initiation();
                     asubtna_a_cl();
                 }
+                asubtna_a_h();
             }
 
             function asubtna_b_cl() {
@@ -2482,6 +2423,7 @@
                     asu_var_initiation();
                     asubtna_b_cl();
                 }
+                asubtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -2657,13 +2599,10 @@
                 document.getElementById('hhhbtna').style.fontWeight = 'bold';
                 if (hhhlsa == "hhhnl") {
                     document.getElementById('hhhbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    hhhbtna_h();
                 } else if (hhhlsa == "hhhlg") {
                     document.getElementById('hhhbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    hhhbtna_h();
                 } else if (hhhlsa == "hhhcd") {
                     document.getElementById('hhhbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    hhhbtna_h();
                 } else {
                     localStorage.setItem("hhhvara", "hhhnl");
                     hhh_var_initiation();
@@ -2679,7 +2618,6 @@
                     document.getElementById('hhhbtna').style.borderColor = '#660033';
                     document.getElementById('hhhbtna').style.fontWeight = 'bold';
                     document.getElementById('hhhbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    hhhbtna_d();
                 } else if (hhhlsa == "hhhlg") {
                     document.getElementById('hhhbtna').style.color = '#CCCC00';
                     document.getElementById('hhhbtna').style.backgroundColor = '#FFFFFF';
@@ -2687,7 +2625,6 @@
                     document.getElementById('hhhbtna').style.borderColor = '#CCCC00';
                     document.getElementById('hhhbtna').style.fontWeight = 'bold';
                     document.getElementById('hhhbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    hhhbtna_d();
                 } else if (hhhlsa == "hhhcd") {
                     document.getElementById('hhhbtna').style.color = '#00B666';
                     document.getElementById('hhhbtna').style.backgroundColor = '#FFFFFF';
@@ -2695,7 +2632,6 @@
                     document.getElementById('hhhbtna').style.borderColor = '#00B666';
                     document.getElementById('hhhbtna').style.fontWeight = 'bold';
                     document.getElementById('hhhbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    hhhbtna_d();
                 } else {
                     localStorage.setItem("hhhvara", "hhhnl");
                     hhh_var_initiation();
@@ -2710,13 +2646,10 @@
                 document.getElementById('hhhbtna_a').style.borderColor = '#FFCC66';
                 if (hhhlsa == "hhhnl") {
                     document.getElementById('hhhbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    hhhbtna_a_h();
                 } else if (hhhlsa == "hhhlg") {
                     document.getElementById('hhhbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    hhhbtna_a_h();
                 } else if (hhhlsa == "hhhcd") {
                     document.getElementById('hhhbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    hhhbtna_a_h();
                 } else {
                     localStorage.setItem("hhhvara", "hhhnl");
                     hhh_var_initiation();
@@ -2730,13 +2663,10 @@
                 document.getElementById('hhhbtna_a').style.border = 'none';
                 if (hhhlsa == "hhhnl") {
                     document.getElementById('hhhbtna_a').innerHTML = 'Learning';
-                    hhhbtna_a_d();
                 } else if (hhhlsa == "hhhlg") {
                     document.getElementById('hhhbtna_a').innerHTML = 'Not Learned';
-                    hhhbtna_a_d();
                 } else if (hhhlsa == "hhhcd") {
                     document.getElementById('hhhbtna_a').innerHTML = 'Not Learned';
-                    hhhbtna_a_d();
                 } else {
                     localStorage.setItem("hhhvara", "hhhnl");
                     hhh_var_initiation();
@@ -2751,13 +2681,10 @@
                 document.getElementById('hhhbtna_b').style.borderColor = '#FFCC66';
                 if (hhhlsa == "hhhnl") {
                     document.getElementById('hhhbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    hhhbtna_b_h();
                 } else if (hhhlsa == "hhhlg") {
                     document.getElementById('hhhbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    hhhbtna_b_h();
                 } else if (hhhlsa == "hhhcd") {
                     document.getElementById('hhhbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    hhhbtna_b_h();
                 } else {
                     localStorage.setItem("hhhvara", "hhhnl");
                     hhh_var_initiation();
@@ -2771,13 +2698,10 @@
                 document.getElementById('hhhbtna_b').style.border = 'none';
                 if (hhhlsa == "hhhnl") {
                     document.getElementById('hhhbtna_b').innerHTML = 'Completed';
-                    hhhbtna_b_d();
                 } else if (hhhlsa == "hhhlg") {
                     document.getElementById('hhhbtna_b').innerHTML = 'Completed';
-                    hhhbtna_b_d();
                 } else if (hhhlsa == "hhhcd") {
                     document.getElementById('hhhbtna_b').innerHTML = 'Learning';
-                    hhhbtna_b_d();
                 } else {
                     localStorage.setItem("hhhvara", "hhhnl");
                     hhh_var_initiation();
@@ -2826,6 +2750,7 @@
                     hhh_var_initiation();
                     hhhbtna_a_cl();
                 }
+                hhhbtna_a_h();
             }
 
             function hhhbtna_b_cl() {
@@ -2867,6 +2792,7 @@
                     hhh_var_initiation();
                     hhhbtna_b_cl();
                 }
+                hhhbtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -3042,13 +2968,10 @@
                 document.getElementById('ppibtna').style.fontWeight = 'bold';
                 if (ppilsa == "ppinl") {
                     document.getElementById('ppibtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    ppibtna_h();
                 } else if (ppilsa == "ppilg") {
                     document.getElementById('ppibtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    ppibtna_h();
                 } else if (ppilsa == "ppicd") {
                     document.getElementById('ppibtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    ppibtna_h();
                 } else {
                     localStorage.setItem("ppivara", "ppinl");
                     ppi_var_initiation();
@@ -3064,7 +2987,6 @@
                     document.getElementById('ppibtna').style.borderColor = '#660033';
                     document.getElementById('ppibtna').style.fontWeight = 'bold';
                     document.getElementById('ppibtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    ppibtna_d();
                 } else if (ppilsa == "ppilg") {
                     document.getElementById('ppibtna').style.color = '#CCCC00';
                     document.getElementById('ppibtna').style.backgroundColor = '#FFFFFF';
@@ -3072,7 +2994,6 @@
                     document.getElementById('ppibtna').style.borderColor = '#CCCC00';
                     document.getElementById('ppibtna').style.fontWeight = 'bold';
                     document.getElementById('ppibtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    ppibtna_d();
                 } else if (ppilsa == "ppicd") {
                     document.getElementById('ppibtna').style.color = '#00B666';
                     document.getElementById('ppibtna').style.backgroundColor = '#FFFFFF';
@@ -3080,7 +3001,6 @@
                     document.getElementById('ppibtna').style.borderColor = '#00B666';
                     document.getElementById('ppibtna').style.fontWeight = 'bold';
                     document.getElementById('ppibtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    ppibtna_d();
                 } else {
                     localStorage.setItem("ppivara", "ppinl");
                     ppi_var_initiation();
@@ -3095,13 +3015,10 @@
                 document.getElementById('ppibtna_a').style.borderColor = '#FFCC66';
                 if (ppilsa == "ppinl") {
                     document.getElementById('ppibtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    ppibtna_a_h();
                 } else if (ppilsa == "ppilg") {
                     document.getElementById('ppibtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    ppibtna_a_h();
                 } else if (ppilsa == "ppicd") {
                     document.getElementById('ppibtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    ppibtna_a_h();
                 } else {
                     localStorage.setItem("ppivara", "ppinl");
                     ppi_var_initiation();
@@ -3115,13 +3032,10 @@
                 document.getElementById('ppibtna_a').style.border = 'none';
                 if (ppilsa == "ppinl") {
                     document.getElementById('ppibtna_a').innerHTML = 'Learning';
-                    ppibtna_a_d();
                 } else if (ppilsa == "ppilg") {
                     document.getElementById('ppibtna_a').innerHTML = 'Not Learned';
-                    ppibtna_a_d();
                 } else if (ppilsa == "ppicd") {
                     document.getElementById('ppibtna_a').innerHTML = 'Not Learned';
-                    ppibtna_a_d();
                 } else {
                     localStorage.setItem("ppivara", "ppinl");
                     ppi_var_initiation();
@@ -3136,13 +3050,10 @@
                 document.getElementById('ppibtna_b').style.borderColor = '#FFCC66';
                 if (ppilsa == "ppinl") {
                     document.getElementById('ppibtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    ppibtna_b_h();
                 } else if (ppilsa == "ppilg") {
                     document.getElementById('ppibtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    ppibtna_b_h();
                 } else if (ppilsa == "ppicd") {
                     document.getElementById('ppibtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    ppibtna_b_h();
                 } else {
                     localStorage.setItem("ppivara", "ppinl");
                     ppi_var_initiation();
@@ -3156,13 +3067,10 @@
                 document.getElementById('ppibtna_b').style.border = 'none';
                 if (ppilsa == "ppinl") {
                     document.getElementById('ppibtna_b').innerHTML = 'Completed';
-                    ppibtna_b_d();
                 } else if (ppilsa == "ppilg") {
                     document.getElementById('ppibtna_b').innerHTML = 'Completed';
-                    ppibtna_b_d();
                 } else if (ppilsa == "ppicd") {
                     document.getElementById('ppibtna_b').innerHTML = 'Learning';
-                    ppibtna_b_d();
                 } else {
                     localStorage.setItem("ppivara", "ppinl");
                     ppi_var_initiation();
@@ -3211,6 +3119,7 @@
                     ppi_var_initiation();
                     ppibtna_a_cl();
                 }
+                ppibtna_a_h();
             }
 
             function ppibtna_b_cl() {
@@ -3252,6 +3161,7 @@
                     ppi_var_initiation();
                     ppibtna_b_cl();
                 }
+                ppibtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -3326,7 +3236,7 @@
             function triggeryes_ppi_() {
                 document.getElementById('ppibtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                 document.getElementById('ppibtnb_a').innerHTML = 'Hide Triggers';
-                document.getElementById('ppit').innerHTML = "F (R U R' U') (R U R' U') F'";
+                document.getElementById('ppit').innerHTML = "F (R U R' U') (R U R' U') (R U R' U') F'";
                 document.getElementById('ppibtnb').style.color = '#FF0080';
                 document.getElementById('ppibtnb').style.backgroundColor = '#FFFFFF';
                 document.getElementById('ppibtnb').style.border = '2px solid';
@@ -3335,6 +3245,7 @@
                 localStorage.setItem("ppivarb", "ppist");
                 ppilsb = localStorage.getItem("ppivarb");
             }
+
             // lll - Script
             
             // On Load
@@ -3426,13 +3337,10 @@
                 document.getElementById('lllbtna').style.fontWeight = 'bold';
                 if (llllsa == "lllnl") {
                     document.getElementById('lllbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    lllbtna_h();
                 } else if (llllsa == "llllg") {
                     document.getElementById('lllbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    lllbtna_h();
                 } else if (llllsa == "lllcd") {
                     document.getElementById('lllbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    lllbtna_h();
                 } else {
                     localStorage.setItem("lllvara", "lllnl");
                     lll_var_initiation();
@@ -3448,7 +3356,6 @@
                     document.getElementById('lllbtna').style.borderColor = '#660033';
                     document.getElementById('lllbtna').style.fontWeight = 'bold';
                     document.getElementById('lllbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    lllbtna_d();
                 } else if (llllsa == "llllg") {
                     document.getElementById('lllbtna').style.color = '#CCCC00';
                     document.getElementById('lllbtna').style.backgroundColor = '#FFFFFF';
@@ -3456,7 +3363,6 @@
                     document.getElementById('lllbtna').style.borderColor = '#CCCC00';
                     document.getElementById('lllbtna').style.fontWeight = 'bold';
                     document.getElementById('lllbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    lllbtna_d();
                 } else if (llllsa == "lllcd") {
                     document.getElementById('lllbtna').style.color = '#00B666';
                     document.getElementById('lllbtna').style.backgroundColor = '#FFFFFF';
@@ -3464,7 +3370,6 @@
                     document.getElementById('lllbtna').style.borderColor = '#00B666';
                     document.getElementById('lllbtna').style.fontWeight = 'bold';
                     document.getElementById('lllbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    lllbtna_d();
                 } else {
                     localStorage.setItem("lllvara", "lllnl");
                     lll_var_initiation();
@@ -3479,13 +3384,10 @@
                 document.getElementById('lllbtna_a').style.borderColor = '#FFCC66';
                 if (llllsa == "lllnl") {
                     document.getElementById('lllbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    lllbtna_a_h();
                 } else if (llllsa == "llllg") {
                     document.getElementById('lllbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    lllbtna_a_h();
                 } else if (llllsa == "lllcd") {
                     document.getElementById('lllbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    lllbtna_a_h();
                 } else {
                     localStorage.setItem("lllvara", "lllnl");
                     lll_var_initiation();
@@ -3499,13 +3401,10 @@
                 document.getElementById('lllbtna_a').style.border = 'none';
                 if (llllsa == "lllnl") {
                     document.getElementById('lllbtna_a').innerHTML = 'Learning';
-                    lllbtna_a_d();
                 } else if (llllsa == "llllg") {
                     document.getElementById('lllbtna_a').innerHTML = 'Not Learned';
-                    lllbtna_a_d();
                 } else if (llllsa == "lllcd") {
                     document.getElementById('lllbtna_a').innerHTML = 'Not Learned';
-                    lllbtna_a_d();
                 } else {
                     localStorage.setItem("lllvara", "lllnl");
                     lll_var_initiation();
@@ -3520,13 +3419,10 @@
                 document.getElementById('lllbtna_b').style.borderColor = '#FFCC66';
                 if (llllsa == "lllnl") {
                     document.getElementById('lllbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    lllbtna_b_h();
                 } else if (llllsa == "llllg") {
                     document.getElementById('lllbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    lllbtna_b_h();
                 } else if (llllsa == "lllcd") {
                     document.getElementById('lllbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    lllbtna_b_h();
                 } else {
                     localStorage.setItem("lllvara", "lllnl");
                     lll_var_initiation();
@@ -3540,13 +3436,10 @@
                 document.getElementById('lllbtna_b').style.border = 'none';
                 if (llllsa == "lllnl") {
                     document.getElementById('lllbtna_b').innerHTML = 'Completed';
-                    lllbtna_b_d();
                 } else if (llllsa == "llllg") {
                     document.getElementById('lllbtna_b').innerHTML = 'Completed';
-                    lllbtna_b_d();
                 } else if (llllsa == "lllcd") {
                     document.getElementById('lllbtna_b').innerHTML = 'Learning';
-                    lllbtna_b_d();
                 } else {
                     localStorage.setItem("lllvara", "lllnl");
                     lll_var_initiation();
@@ -3595,6 +3488,7 @@
                     lll_var_initiation();
                     lllbtna_a_cl();
                 }
+                lllbtna_a_h();
             }
 
             function lllbtna_b_cl() {
@@ -3636,6 +3530,7 @@
                     lll_var_initiation();
                     lllbtna_b_cl();
                 }
+                lllbtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -3811,13 +3706,10 @@
                 document.getElementById('tttbtna').style.fontWeight = 'bold';
                 if (tttlsa == "tttnl") {
                     document.getElementById('tttbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    tttbtna_h();
                 } else if (tttlsa == "tttlg") {
                     document.getElementById('tttbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    tttbtna_h();
                 } else if (tttlsa == "tttcd") {
                     document.getElementById('tttbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    tttbtna_h();
                 } else {
                     localStorage.setItem("tttvara", "tttnl");
                     ttt_var_initiation();
@@ -3833,7 +3725,6 @@
                     document.getElementById('tttbtna').style.borderColor = '#660033';
                     document.getElementById('tttbtna').style.fontWeight = 'bold';
                     document.getElementById('tttbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    tttbtna_d();
                 } else if (tttlsa == "tttlg") {
                     document.getElementById('tttbtna').style.color = '#CCCC00';
                     document.getElementById('tttbtna').style.backgroundColor = '#FFFFFF';
@@ -3841,7 +3732,6 @@
                     document.getElementById('tttbtna').style.borderColor = '#CCCC00';
                     document.getElementById('tttbtna').style.fontWeight = 'bold';
                     document.getElementById('tttbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    tttbtna_d();
                 } else if (tttlsa == "tttcd") {
                     document.getElementById('tttbtna').style.color = '#00B666';
                     document.getElementById('tttbtna').style.backgroundColor = '#FFFFFF';
@@ -3849,7 +3739,6 @@
                     document.getElementById('tttbtna').style.borderColor = '#00B666';
                     document.getElementById('tttbtna').style.fontWeight = 'bold';
                     document.getElementById('tttbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    tttbtna_d();
                 } else {
                     localStorage.setItem("tttvara", "tttnl");
                     ttt_var_initiation();
@@ -3864,13 +3753,10 @@
                 document.getElementById('tttbtna_a').style.borderColor = '#FFCC66';
                 if (tttlsa == "tttnl") {
                     document.getElementById('tttbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    tttbtna_a_h();
                 } else if (tttlsa == "tttlg") {
                     document.getElementById('tttbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    tttbtna_a_h();
                 } else if (tttlsa == "tttcd") {
                     document.getElementById('tttbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    tttbtna_a_h();
                 } else {
                     localStorage.setItem("tttvara", "tttnl");
                     ttt_var_initiation();
@@ -3884,13 +3770,10 @@
                 document.getElementById('tttbtna_a').style.border = 'none';
                 if (tttlsa == "tttnl") {
                     document.getElementById('tttbtna_a').innerHTML = 'Learning';
-                    tttbtna_a_d();
                 } else if (tttlsa == "tttlg") {
                     document.getElementById('tttbtna_a').innerHTML = 'Not Learned';
-                    tttbtna_a_d();
                 } else if (tttlsa == "tttcd") {
                     document.getElementById('tttbtna_a').innerHTML = 'Not Learned';
-                    tttbtna_a_d();
                 } else {
                     localStorage.setItem("tttvara", "tttnl");
                     ttt_var_initiation();
@@ -3905,13 +3788,10 @@
                 document.getElementById('tttbtna_b').style.borderColor = '#FFCC66';
                 if (tttlsa == "tttnl") {
                     document.getElementById('tttbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    tttbtna_b_h();
                 } else if (tttlsa == "tttlg") {
                     document.getElementById('tttbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    tttbtna_b_h();
                 } else if (tttlsa == "tttcd") {
                     document.getElementById('tttbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    tttbtna_b_h();
                 } else {
                     localStorage.setItem("tttvara", "tttnl");
                     ttt_var_initiation();
@@ -3925,13 +3805,10 @@
                 document.getElementById('tttbtna_b').style.border = 'none';
                 if (tttlsa == "tttnl") {
                     document.getElementById('tttbtna_b').innerHTML = 'Completed';
-                    tttbtna_b_d();
                 } else if (tttlsa == "tttlg") {
                     document.getElementById('tttbtna_b').innerHTML = 'Completed';
-                    tttbtna_b_d();
                 } else if (tttlsa == "tttcd") {
                     document.getElementById('tttbtna_b').innerHTML = 'Learning';
-                    tttbtna_b_d();
                 } else {
                     localStorage.setItem("tttvara", "tttnl");
                     ttt_var_initiation();
@@ -3980,6 +3857,7 @@
                     ttt_var_initiation();
                     tttbtna_a_cl();
                 }
+                tttbtna_a_h();
             }
 
             function tttbtna_b_cl() {
@@ -4021,6 +3899,7 @@
                     ttt_var_initiation();
                     tttbtna_b_cl();
                 }
+                tttbtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -4196,13 +4075,10 @@
                 document.getElementById('uuubtna').style.fontWeight = 'bold';
                 if (uuulsa == "uuunl") {
                     document.getElementById('uuubtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    uuubtna_h();
                 } else if (uuulsa == "uuulg") {
                     document.getElementById('uuubtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    uuubtna_h();
                 } else if (uuulsa == "uuucd") {
                     document.getElementById('uuubtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    uuubtna_h();
                 } else {
                     localStorage.setItem("uuuvara", "uuunl");
                     uuu_var_initiation();
@@ -4218,7 +4094,6 @@
                     document.getElementById('uuubtna').style.borderColor = '#660033';
                     document.getElementById('uuubtna').style.fontWeight = 'bold';
                     document.getElementById('uuubtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    uuubtna_d();
                 } else if (uuulsa == "uuulg") {
                     document.getElementById('uuubtna').style.color = '#CCCC00';
                     document.getElementById('uuubtna').style.backgroundColor = '#FFFFFF';
@@ -4226,7 +4101,6 @@
                     document.getElementById('uuubtna').style.borderColor = '#CCCC00';
                     document.getElementById('uuubtna').style.fontWeight = 'bold';
                     document.getElementById('uuubtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    uuubtna_d();
                 } else if (uuulsa == "uuucd") {
                     document.getElementById('uuubtna').style.color = '#00B666';
                     document.getElementById('uuubtna').style.backgroundColor = '#FFFFFF';
@@ -4234,7 +4108,6 @@
                     document.getElementById('uuubtna').style.borderColor = '#00B666';
                     document.getElementById('uuubtna').style.fontWeight = 'bold';
                     document.getElementById('uuubtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
-                    uuubtna_d();
                 } else {
                     localStorage.setItem("uuuvara", "uuunl");
                     uuu_var_initiation();
@@ -4249,13 +4122,10 @@
                 document.getElementById('uuubtna_a').style.borderColor = '#FFCC66';
                 if (uuulsa == "uuunl") {
                     document.getElementById('uuubtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    uuubtna_a_h();
                 } else if (uuulsa == "uuulg") {
                     document.getElementById('uuubtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    uuubtna_a_h();
                 } else if (uuulsa == "uuucd") {
                     document.getElementById('uuubtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
-                    uuubtna_a_h();
                 } else {
                     localStorage.setItem("uuuvara", "uuunl");
                     uuu_var_initiation();
@@ -4269,13 +4139,10 @@
                 document.getElementById('uuubtna_a').style.border = 'none';
                 if (uuulsa == "uuunl") {
                     document.getElementById('uuubtna_a').innerHTML = 'Learning';
-                    uuubtna_a_d();
                 } else if (uuulsa == "uuulg") {
                     document.getElementById('uuubtna_a').innerHTML = 'Not Learned';
-                    uuubtna_a_d();
                 } else if (uuulsa == "uuucd") {
                     document.getElementById('uuubtna_a').innerHTML = 'Not Learned';
-                    uuubtna_a_d();
                 } else {
                     localStorage.setItem("uuuvara", "uuunl");
                     uuu_var_initiation();
@@ -4290,13 +4157,10 @@
                 document.getElementById('uuubtna_b').style.borderColor = '#FFCC66';
                 if (uuulsa == "uuunl") {
                     document.getElementById('uuubtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    uuubtna_b_h();
                 } else if (uuulsa == "uuulg") {
                     document.getElementById('uuubtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
-                    uuubtna_b_h();
                 } else if (uuulsa == "uuucd") {
                     document.getElementById('uuubtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
-                    uuubtna_b_h();
                 } else {
                     localStorage.setItem("uuuvara", "uuunl");
                     uuu_var_initiation();
@@ -4310,13 +4174,10 @@
                 document.getElementById('uuubtna_b').style.border = 'none';
                 if (uuulsa == "uuunl") {
                     document.getElementById('uuubtna_b').innerHTML = 'Completed';
-                    uuubtna_b_d();
                 } else if (uuulsa == "uuulg") {
                     document.getElementById('uuubtna_b').innerHTML = 'Completed';
-                    uuubtna_b_d();
                 } else if (uuulsa == "uuucd") {
                     document.getElementById('uuubtna_b').innerHTML = 'Learning';
-                    uuubtna_b_d();
                 } else {
                     localStorage.setItem("uuuvara", "uuunl");
                     uuu_var_initiation();
@@ -4365,6 +4226,7 @@
                     uuu_var_initiation();
                     uuubtna_a_cl();
                 }
+                uuubtna_a_h();
             }
 
             function uuubtna_b_cl() {
@@ -4406,6 +4268,7 @@
                     uuu_var_initiation();
                     uuubtna_b_cl();
                 }
+                uuubtna_b_h();
             }
             
             // Triggers - On Hover 
@@ -4615,13 +4478,13 @@
             
         <br><br>
             
-        <div id='sun' class='two_beginner_oll_algs'>
+        <div id='sun' class='begoll_2_css'>
             
             <h3 class='algname22'>Sune</h3>
             
-            <img src='22_beg_oll_sune.png' class='221limgs' alt='Sune' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_oll_sune.png' class='two1limgs' alt='Sune' style='height: 125px; width: 125px;'> </img>
             <br><br>
-            <h3 id='sunt'> <b class='two_beginner_oll_algs'> R U R' U R U2 R' </b> </h3>
+            <h3 id='sunt'> <b class='begoll_2_css'> R U R' U R U2 R' </b> </h3>
                 
             <div class="sundiva" id="sundiva">
 
@@ -4652,13 +4515,13 @@
             
         <br><br><br>
 
-        <div id='asu' class='two_beginner_oll_algs'>
+        <div id='asu' class='begoll_2_css'>
             
             <h3 class='algname22'>Antisune</h3>
         
-            <img src='22_beg_oll_antisune.png' class='221limgs' alt='Antisune' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_oll_antisune.png' class='two1limgs' alt='Antisune' style='height: 125px; width: 125px;'> </img>
             <br><br>
-            <h3 id='asut'> <b class='two_beginner_oll_algs'> L' U' L U' L' U2 L </b> </h3>
+            <h3 id='asut'> <b class='begoll_2_css'> L' U' L U' L' U2 L </b> </h3>
                 
             <div class="asudiva" id="asudiva">
 
@@ -4689,13 +4552,13 @@
         
         <br><br><br>
         
-        <div id='hhh' class='two_beginner_oll_algs'>
+        <div id='hhh' class='begoll_2_css'>
         
             <h3 class='algname22'>H-shaped</h3>
         
-            <img src='22_beg_oll_h-shaped.png' class='221limgs' alt='H-shaped' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_oll_h-shaped.png' class='two1limgs' alt='H-shaped' style='height: 125px; width: 125px;'> </img>
             <br><br>
-            <h3 id='hhht'> <b class='two_beginner_oll_algs'> F (R U R' U')3 F' </b> </h3>
+            <h3 id='hhht'> <b class='begoll_2_css'> F (R U R' U')3 F' </b> </h3>
                 
             <div class="hhhdiva" id="hhhdiva">
 
@@ -4726,13 +4589,13 @@
         
         <br><br><br>
         
-        <div id='ppi' class='two_beginner_oll_algs'>
+        <div id='ppi' class='begoll_2_css'>
         
             <h3 class='algname22'>Pi</h3>
         
-            <img src='22_beg_oll_pi.png' class='221limgs' alt='Pi' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_oll_pi.png' class='two1limgs' alt='Pi' style='height: 125px; width: 125px;'> </img>
             <br><br>
-            <h3 id='ppit'> <b class='two_beginner_oll_algs'> F (R U R' U')2 F' </b> </h3>
+            <h3 id='ppit'> <b class='begoll_2_css'> F (R U R' U')2 F' </b> </h3>
                 
             <div class="ppidiva" id="ppidiva">
 
@@ -4763,13 +4626,13 @@
         
         <br><br><br>
         
-        <div id='lll' class='two_beginner_oll_algs'>
+        <div id='lll' class='begoll_2_css'>
         
             <h3 class='algname22'>8-shaped</h3>
             
-            <img src='22_beg_oll_8-shaped.png' class='221limgs' alt='8-shaped' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_oll_8-shaped.png' class='two1limgs' alt='8-shaped' style='height: 125px; width: 125px;'> </img>
             <br><br>
-            <h3 id='lllt'> <b class='two_beginner_oll_algs'> F R' F' R U R U' R' </b> </h3>
+            <h3 id='lllt'> <b class='begoll_2_css'> F R' F' R U R U' R' </b> </h3>
                 
             <div class="llldiva" id="llldiva">
 
@@ -4800,13 +4663,13 @@
         
         <br><br><br>
         
-        <div id='ttt' class='two_beginner_oll_algs'>
+        <div id='ttt' class='begoll_2_css'>
         
             <h3 class='algname22'>T-shaped</h3>
             
-            <img src='22_beg_oll_t-shaped.png' class='221limgs' alt='T-shaped' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_oll_t-shaped.png' class='two1limgs' alt='T-shaped' style='height: 125px; width: 125px;'> </img>
             <br><br>
-            <h3 id='tttt'> <b class='two_beginner_oll_algs'> R U R' U' R' F R F' </b> </h3>
+            <h3 id='tttt'> <b class='begoll_2_css'> R U R' U' R' F R F' </b> </h3>
                 
             <div class="tttdiva" id="tttdiva">
 
@@ -4837,13 +4700,13 @@
         
         <br><br><br>
         
-        <div id='uuu' class='two_beginner_oll_algs'>
+        <div id='uuu' class='begoll_2_css'>
         
             <h3 class='algname22'>U-shaped</h3>
             
-            <img src='22_beg_oll_u-shaped.png' class='221limgs' alt='U-shaped' style='height: 125px; width: 125px;'> </img>
+            <img src='22_beg_oll_u-shaped.png' class='two1limgs' alt='U-shaped' style='height: 125px; width: 125px;'> </img>
             <br><br>
-            <h3 id='uuut'> <b class='two_beginner_oll_algs'> F R U R' U' F' </b> </h3>
+            <h3 id='uuut'> <b class='begoll_2_css'> F R U R' U' F' </b> </h3>
                 
             <div class="uuudiva" id="uuudiva">
 
