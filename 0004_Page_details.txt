@@ -17,12 +17,12 @@ ______
 001636 - 2x2 Beg PLL
 004766 - 2x2 Beg OLL 
 008165 - 2x2 Int Ortega
-001344 - 2x2 Adv CLL
+001980 - 2x2 Adv CLL
 000627 - 2x2 Mas EG-1 \\*
 000627 - 2x2 Mas EG-2 \\*
 000000 - 2x2 Mas Full EG \\*
 ______
-015911 - 2x2 Total
+016547 - 2x2 Total
 ______
 
 ----------
@@ -48,8 +48,8 @@ ______
 000900 - Others Total
 ______
 
-152612 - Algorithms Total
-153512 - Grand Total
+153248 - Algorithms Total
+154148 - Grand Total
 
 -----------------------
 
@@ -100,7 +100,7 @@ ___
 
 -----------------------
 
-Avg line for each alg = 484.48
+Avg line for each alg = 486.50
 
 \\ - Not Counted
 * - Not Started
