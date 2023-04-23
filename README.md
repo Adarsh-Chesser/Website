@@ -7,7 +7,7 @@ This project has been done by me for myself. It is related about cubing and I wi
 
 This contains 200+ cubing algs and top cubes of the time(will be updated soon).
 
-Following links have been completed and opened for viewing
+Following links have been opened for viewing
 
 * 3x3 Advanced OLL 
 * 2x2 Beginner PLL
