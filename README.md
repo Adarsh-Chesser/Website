@@ -20,4 +20,4 @@ Following links have been opened for viewing
 * 3x3 Beginner OLL
 
 
-Website was Launched at https://adarshcrazycubing.github.io/Website/ on 9/3/23
+Website is changed to https://adarsh-chesser.github.io/Website/ on 21st April 2023 which is applicable from 27th April 2023
