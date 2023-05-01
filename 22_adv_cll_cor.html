@@ -23352,6 +23352,2220 @@
                 agblsb = localStorage.getItem("agbvarb");
             }
 
+            // agc - Script
+            
+            // On Load
+            
+            function agc_all() {
+                document.getElementById('agc').style.padding = '5px';
+                document.getElementById('agc').style.border = '2px solid';
+                document.getElementById('agc').style.borderColor = '#000066';
+                document.getElementById('agc').style.backgroundColor = '#806666';
+                document.getElementById('agc').style.color = '#FFCC66';
+                document.getElementById('agct').style.color = '#000066';
+                document.getElementById('agcdiva').style.marginRight = 'auto';
+                document.getElementById('agcdivb').style.marginRight = 'auto';
+                document.getElementById('agcdiva').style.marginLeft = '0px';
+                document.getElementById('agcdivb').style.marginLeft = '0px';
+                agca_var_initiation();
+                agcb_var_initiation();
+            }
+
+            var agclsa = localStorage.getItem("agcvara");
+            var agclsb = localStorage.getItem("agcvarb");
+
+            function agca_var_initiation() {
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agcbtna').style.color = '#660033';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#660033';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agcbtna').style.color = '#CCCC00';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agcbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agcbtna').style.color = '#00B666';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#00B666';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agclsa = localStorage.getItem("agcvara");
+                    agca_var_initiation();
+                }
+            }
+
+            function agcb_var_initiation() {
+                if (agclsb == "agcst") {
+                    document.getElementById('agcbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('agcbtnb').style.color = '#FF0080';
+                    document.getElementById('agcbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtnb').style.border = '2px solid';
+                    document.getElementById('agcbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                } else if (agclsb == "agcht") {
+                    document.getElementById('agcbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('agcbtnb').style.color = '#BF00FF';
+                    document.getElementById('agcbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtnb').style.border = '2px solid';
+                    document.getElementById('agcbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agcvarb", "agcst");
+                    agclsb = localStorage.getItem("agcvarb");
+                    agcb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function agcbtna_h() {
+                document.getElementById('agcbtna').style.color = '#000066';
+                document.getElementById('agcbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agcbtna').style.border = 'double';
+                document.getElementById('agcbtna').style.borderColor = '#FFCC66';
+                document.getElementById('agcbtna').style.fontWeight = 'bold';
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_h();
+                }
+            }
+
+            function agcbtna_d() {
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna').style.color = '#660033';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#660033';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    document.getElementById('agcbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna').style.color = '#CCCC00';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    document.getElementById('agcbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna').style.color = '#00B666';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#00B666';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    document.getElementById('agcbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_d();
+                }
+            }
+
+            function agcbtna_a_h() {
+                document.getElementById('agcbtna_a').style.color = '#000066';
+                document.getElementById('agcbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agcbtna_a').style.border = 'double';
+                document.getElementById('agcbtna_a').style.borderColor = '#FFCC66';
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_a_h();
+                }
+            }
+
+            function agcbtna_a_d() {
+                document.getElementById('agcbtna_a').style.color = '#000000';
+                document.getElementById('agcbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agcbtna_a').style.border = 'none';
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna_a').innerHTML = 'Learning';
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_a_d();
+                }
+            }
+            
+            function agcbtna_b_h() {
+                document.getElementById('agcbtna_b').style.color = '#000066';
+                document.getElementById('agcbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agcbtna_b').style.border = 'double';
+                document.getElementById('agcbtna_b').style.borderColor = '#FFCC66';
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_b_h();
+                }
+            }
+
+            function agcbtna_b_d() {
+                document.getElementById('agcbtna_b').style.color = '#000000';
+                document.getElementById('agcbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agcbtna_b').style.border = 'none';
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function agcbtna_a_cl() {
+                if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agcbtna').style.color = '#CCCC00';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agcvara", "agclg");
+                    agclsa = localStorage.getItem("agcvara");
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agcbtna').style.color = '#660033';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#660033';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agcvara", "agcnl");
+                    agclsa = localStorage.getItem("agcvara");
+                } else if (agclsa == "agccd") {
+                    document.getElementById('agcbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agcbtna').style.color = '#660033';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#660033';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agcvara", "agcnl");
+                    agclsa = localStorage.getItem("agcvara");
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_a_cl();
+                }
+                agcbtna_a_h();
+            }
+
+            function agcbtna_b_cl() {
+                if (agclsa == "agccd") {
+                    document.getElementById('agcbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agcbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agcbtna').style.color = '#CCCC00';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agcvara", "agclg");
+                    agclsa = localStorage.getItem("agcvara");
+                } else if (agclsa == "agclg") {
+                    document.getElementById('agcbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agcbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agcbtna').style.color = '#00B666';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#00B666';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agcvara", "agccd");
+                    agclsa = localStorage.getItem("agcvara");
+                } else if (agclsa == "agcnl") {
+                    document.getElementById('agcbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agcbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agcbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agcbtna').style.color = '#00B666';
+                    document.getElementById('agcbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtna').style.border = '2px solid';
+                    document.getElementById('agcbtna').style.borderColor = '#00B666';
+                    document.getElementById('agcbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agcvara", "agccd");
+                    agclsa = localStorage.getItem("agcvara");
+                } else {
+                    localStorage.setItem("agcvara", "agcnl");
+                    agc_var_initiation();
+                    agcbtna_b_cl();
+                }
+                agcbtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function agcbtnb_h() {
+                document.getElementById('agcbtnb').style.color = '#000066';
+                document.getElementById('agcbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agcbtnb').style.border = 'double';
+                document.getElementById('agcbtnb').style.borderColor = '#FFCC66';
+                document.getElementById('agcbtnb').style.fontWeight = 'bold';
+            }
+
+            function agcbtnb_d() {
+                if (agclsb == "agcst") {
+                    document.getElementById('agcbtnb').style.color = '#FF0080';
+                    document.getElementById('agcbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtnb').style.border = '2px solid';
+                    document.getElementById('agcbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                } else if (agclsb == "agcht") {
+                    document.getElementById('agcbtnb').style.color = '#BF00FF';
+                    document.getElementById('agcbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agcbtnb').style.border = '2px solid';
+                    document.getElementById('agcbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agcvarb", "agcht");
+                    agc_var_initiation();
+                }
+            }
+            
+            function agcbtnb_a_h() {
+                document.getElementById('agcbtnb_a').style.color = '#000066';
+                document.getElementById('agcbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agcbtnb_a').style.border = 'double';
+                document.getElementById('agcbtnb_a').style.borderColor = '#FFCC66';
+            }
+
+            function agcbtnb_a_d() {
+                document.getElementById('agcbtnb_a').style.color = '#000000';
+                document.getElementById('agcbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agcbtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function agcbtnb_a_cl() {
+                if (agclsb == "agcst") {
+                    triggerno_agc_();
+                } else if (agclsb == "agcht") {
+                    triggeryes_agc_();
+                } else {
+                    localStorage.setItem("agcvarb", "agcst");
+                    agc_var_initiation();
+                    agcbtnb_a_cl();
+                }
+            }
+
+            function triggerno_agc_() {
+                document.getElementById('agcbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agcbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('agct').innerHTML = "F R2 U' R2 U R2 U R2 F'";
+                document.getElementById('agcbtnb').style.color = '#BF00FF';
+                document.getElementById('agcbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agcbtnb').style.border = '2px solid';
+                document.getElementById('agcbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agcvarb", "agcht");
+                agclsb = localStorage.getItem("agcvarb");
+            }
+
+            function triggeryes_agc_() {
+                document.getElementById('agcbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agcbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('agct').innerHTML = "F (R2 U') (R2 U) (R2 U) R2 F'";
+                document.getElementById('agcbtnb').style.color = '#FF0080';
+                document.getElementById('agcbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agcbtnb').style.border = '2px solid';
+                document.getElementById('agcbtnb').style.borderColor = '#FF0080';
+                document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agcvarb", "agcst");
+                agclsb = localStorage.getItem("agcvarb");
+            }
+
+            // agd - Script
+            
+            // On Load
+            
+            function agd_all() {
+                document.getElementById('agd').style.padding = '5px';
+                document.getElementById('agd').style.border = '2px solid';
+                document.getElementById('agd').style.borderColor = '#000066';
+                document.getElementById('agd').style.backgroundColor = '#806666';
+                document.getElementById('agd').style.color = '#FFCC66';
+                document.getElementById('agdt').style.color = '#000066';
+                document.getElementById('agddiva').style.marginRight = 'auto';
+                document.getElementById('agddivb').style.marginRight = 'auto';
+                document.getElementById('agddiva').style.marginLeft = '0px';
+                document.getElementById('agddivb').style.marginLeft = '0px';
+                agda_var_initiation();
+                agdb_var_initiation();
+            }
+
+            var agdlsa = localStorage.getItem("agdvara");
+            var agdlsb = localStorage.getItem("agdvarb");
+
+            function agda_var_initiation() {
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agdbtna').style.color = '#660033';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#660033';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agdbtna').style.color = '#CCCC00';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agdbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agdbtna').style.color = '#00B666';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#00B666';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agdlsa = localStorage.getItem("agdvara");
+                    agda_var_initiation();
+                }
+            }
+
+            function agdb_var_initiation() {
+                if (agdlsb == "agdst") {
+                    document.getElementById('agdbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('agdbtnb').style.color = '#FF0080';
+                    document.getElementById('agdbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtnb').style.border = '2px solid';
+                    document.getElementById('agdbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                } else if (agdlsb == "agdht") {
+                    document.getElementById('agdbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('agdbtnb').style.color = '#BF00FF';
+                    document.getElementById('agdbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtnb').style.border = '2px solid';
+                    document.getElementById('agdbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agdvarb", "agdst");
+                    agdlsb = localStorage.getItem("agdvarb");
+                    agdb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function agdbtna_h() {
+                document.getElementById('agdbtna').style.color = '#000066';
+                document.getElementById('agdbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agdbtna').style.border = 'double';
+                document.getElementById('agdbtna').style.borderColor = '#FFCC66';
+                document.getElementById('agdbtna').style.fontWeight = 'bold';
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_h();
+                }
+            }
+
+            function agdbtna_d() {
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna').style.color = '#660033';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#660033';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    document.getElementById('agdbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna').style.color = '#CCCC00';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    document.getElementById('agdbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna').style.color = '#00B666';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#00B666';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    document.getElementById('agdbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_d();
+                }
+            }
+
+            function agdbtna_a_h() {
+                document.getElementById('agdbtna_a').style.color = '#000066';
+                document.getElementById('agdbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agdbtna_a').style.border = 'double';
+                document.getElementById('agdbtna_a').style.borderColor = '#FFCC66';
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_a_h();
+                }
+            }
+
+            function agdbtna_a_d() {
+                document.getElementById('agdbtna_a').style.color = '#000000';
+                document.getElementById('agdbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agdbtna_a').style.border = 'none';
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna_a').innerHTML = 'Learning';
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_a_d();
+                }
+            }
+            
+            function agdbtna_b_h() {
+                document.getElementById('agdbtna_b').style.color = '#000066';
+                document.getElementById('agdbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agdbtna_b').style.border = 'double';
+                document.getElementById('agdbtna_b').style.borderColor = '#FFCC66';
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_b_h();
+                }
+            }
+
+            function agdbtna_b_d() {
+                document.getElementById('agdbtna_b').style.color = '#000000';
+                document.getElementById('agdbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agdbtna_b').style.border = 'none';
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function agdbtna_a_cl() {
+                if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agdbtna').style.color = '#CCCC00';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agdvara", "agdlg");
+                    agdlsa = localStorage.getItem("agdvara");
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agdbtna').style.color = '#660033';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#660033';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agdvara", "agdnl");
+                    agdlsa = localStorage.getItem("agdvara");
+                } else if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agdbtna').style.color = '#660033';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#660033';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agdvara", "agdnl");
+                    agdlsa = localStorage.getItem("agdvara");
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_a_cl();
+                }
+                agdbtna_a_h();
+            }
+
+            function agdbtna_b_cl() {
+                if (agdlsa == "agdcd") {
+                    document.getElementById('agdbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agdbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agdbtna').style.color = '#CCCC00';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agdvara", "agdlg");
+                    agdlsa = localStorage.getItem("agdvara");
+                } else if (agdlsa == "agdlg") {
+                    document.getElementById('agdbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agdbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agdbtna').style.color = '#00B666';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#00B666';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agdvara", "agdcd");
+                    agdlsa = localStorage.getItem("agdvara");
+                } else if (agdlsa == "agdnl") {
+                    document.getElementById('agdbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agdbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agdbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agdbtna').style.color = '#00B666';
+                    document.getElementById('agdbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtna').style.border = '2px solid';
+                    document.getElementById('agdbtna').style.borderColor = '#00B666';
+                    document.getElementById('agdbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agdvara", "agdcd");
+                    agdlsa = localStorage.getItem("agdvara");
+                } else {
+                    localStorage.setItem("agdvara", "agdnl");
+                    agd_var_initiation();
+                    agdbtna_b_cl();
+                }
+                agdbtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function agdbtnb_h() {
+                document.getElementById('agdbtnb').style.color = '#000066';
+                document.getElementById('agdbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agdbtnb').style.border = 'double';
+                document.getElementById('agdbtnb').style.borderColor = '#FFCC66';
+                document.getElementById('agdbtnb').style.fontWeight = 'bold';
+            }
+
+            function agdbtnb_d() {
+                if (agdlsb == "agdst") {
+                    document.getElementById('agdbtnb').style.color = '#FF0080';
+                    document.getElementById('agdbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtnb').style.border = '2px solid';
+                    document.getElementById('agdbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                } else if (agdlsb == "agdht") {
+                    document.getElementById('agdbtnb').style.color = '#BF00FF';
+                    document.getElementById('agdbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agdbtnb').style.border = '2px solid';
+                    document.getElementById('agdbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agdvarb", "agdht");
+                    agd_var_initiation();
+                }
+            }
+            
+            function agdbtnb_a_h() {
+                document.getElementById('agdbtnb_a').style.color = '#000066';
+                document.getElementById('agdbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agdbtnb_a').style.border = 'double';
+                document.getElementById('agdbtnb_a').style.borderColor = '#FFCC66';
+            }
+
+            function agdbtnb_a_d() {
+                document.getElementById('agdbtnb_a').style.color = '#000000';
+                document.getElementById('agdbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agdbtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function agdbtnb_a_cl() {
+                if (agdlsb == "agdst") {
+                    triggerno_agd_();
+                } else if (agdlsb == "agdht") {
+                    triggeryes_agd_();
+                } else {
+                    localStorage.setItem("agdvarb", "agdst");
+                    agd_var_initiation();
+                    agdbtnb_a_cl();
+                }
+            }
+
+            function triggerno_agd_() {
+                document.getElementById('agdbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agdbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('agdt').innerHTML = "R U2 R' U' R U R' U2 R' F R F'";
+                document.getElementById('agdbtnb').style.color = '#BF00FF';
+                document.getElementById('agdbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agdbtnb').style.border = '2px solid';
+                document.getElementById('agdbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agdvarb", "agdht");
+                agdlsb = localStorage.getItem("agdvarb");
+            }
+
+            function triggeryes_agd_() {
+                document.getElementById('agdbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agdbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('agdt').innerHTML = "(R U2 R' U') (R U R' U2) (R' F R F')";
+                document.getElementById('agdbtnb').style.color = '#FF0080';
+                document.getElementById('agdbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agdbtnb').style.border = '2px solid';
+                document.getElementById('agdbtnb').style.borderColor = '#FF0080';
+                document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agdvarb", "agdst");
+                agdlsb = localStorage.getItem("agdvarb");
+            }
+
+            // age - Script
+            
+            // On Load
+            
+            function age_all() {
+                document.getElementById('age').style.padding = '5px';
+                document.getElementById('age').style.border = '2px solid';
+                document.getElementById('age').style.borderColor = '#000066';
+                document.getElementById('age').style.backgroundColor = '#806666';
+                document.getElementById('age').style.color = '#FFCC66';
+                document.getElementById('aget').style.color = '#000066';
+                document.getElementById('agediva').style.marginRight = 'auto';
+                document.getElementById('agedivb').style.marginRight = 'auto';
+                document.getElementById('agediva').style.marginLeft = '0px';
+                document.getElementById('agedivb').style.marginLeft = '0px';
+                agea_var_initiation();
+                ageb_var_initiation();
+            }
+
+            var agelsa = localStorage.getItem("agevara");
+            var agelsb = localStorage.getItem("agevarb");
+
+            function agea_var_initiation() {
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Learning';
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                    document.getElementById('agebtna').style.color = '#660033';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#660033';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                    document.getElementById('agebtna').style.color = '#CCCC00';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agebtna_b').innerHTML = 'Learning';
+                    document.getElementById('agebtna').style.color = '#00B666';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#00B666';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    agelsa = localStorage.getItem("agevara");
+                    agea_var_initiation();
+                }
+            }
+
+            function ageb_var_initiation() {
+                if (agelsb == "agest") {
+                    document.getElementById('agebtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('agebtnb').style.color = '#FF0080';
+                    document.getElementById('agebtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtnb').style.border = '2px solid';
+                    document.getElementById('agebtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agebtnb').style.fontWeight = 'bold';
+                } else if (agelsb == "ageht") {
+                    document.getElementById('agebtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('agebtnb').style.color = '#BF00FF';
+                    document.getElementById('agebtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtnb').style.border = '2px solid';
+                    document.getElementById('agebtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agebtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agevarb", "agest");
+                    agelsb = localStorage.getItem("agevarb");
+                    ageb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function agebtna_h() {
+                document.getElementById('agebtna').style.color = '#000066';
+                document.getElementById('agebtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agebtna').style.border = 'double';
+                document.getElementById('agebtna').style.borderColor = '#FFCC66';
+                document.getElementById('agebtna').style.fontWeight = 'bold';
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_h();
+                }
+            }
+
+            function agebtna_d() {
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna').style.color = '#660033';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#660033';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    document.getElementById('agebtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna').style.color = '#CCCC00';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    document.getElementById('agebtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna').style.color = '#00B666';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#00B666';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    document.getElementById('agebtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_d();
+                }
+            }
+
+            function agebtna_a_h() {
+                document.getElementById('agebtna_a').style.color = '#000066';
+                document.getElementById('agebtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agebtna_a').style.border = 'double';
+                document.getElementById('agebtna_a').style.borderColor = '#FFCC66';
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_a_h();
+                }
+            }
+
+            function agebtna_a_d() {
+                document.getElementById('agebtna_a').style.color = '#000000';
+                document.getElementById('agebtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agebtna_a').style.border = 'none';
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna_a').innerHTML = 'Learning';
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_a_d();
+                }
+            }
+            
+            function agebtna_b_h() {
+                document.getElementById('agebtna_b').style.color = '#000066';
+                document.getElementById('agebtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agebtna_b').style.border = 'double';
+                document.getElementById('agebtna_b').style.borderColor = '#FFCC66';
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_b_h();
+                }
+            }
+
+            function agebtna_b_d() {
+                document.getElementById('agebtna_b').style.color = '#000000';
+                document.getElementById('agebtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agebtna_b').style.border = 'none';
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function agebtna_a_cl() {
+                if (agelsa == "agenl") {
+                    document.getElementById('agebtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                    document.getElementById('agebtna').style.color = '#CCCC00';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agevara", "agelg");
+                    agelsa = localStorage.getItem("agevara");
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Learning';
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                    document.getElementById('agebtna').style.color = '#660033';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#660033';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agevara", "agenl");
+                    agelsa = localStorage.getItem("agevara");
+                } else if (agelsa == "agecd") {
+                    document.getElementById('agebtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Learning';
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                    document.getElementById('agebtna').style.color = '#660033';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#660033';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agevara", "agenl");
+                    agelsa = localStorage.getItem("agevara");
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_a_cl();
+                }
+                agebtna_a_h();
+            }
+
+            function agebtna_b_cl() {
+                if (agelsa == "agecd") {
+                    document.getElementById('agebtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agebtna_b').innerHTML = 'Completed';
+                    document.getElementById('agebtna').style.color = '#CCCC00';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agevara", "agelg");
+                    agelsa = localStorage.getItem("agevara");
+                } else if (agelsa == "agelg") {
+                    document.getElementById('agebtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agebtna_b').innerHTML = 'Learning';
+                    document.getElementById('agebtna').style.color = '#00B666';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#00B666';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agevara", "agecd");
+                    agelsa = localStorage.getItem("agevara");
+                } else if (agelsa == "agenl") {
+                    document.getElementById('agebtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agebtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agebtna_b').innerHTML = 'Learning';
+                    document.getElementById('agebtna').style.color = '#00B666';
+                    document.getElementById('agebtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtna').style.border = '2px solid';
+                    document.getElementById('agebtna').style.borderColor = '#00B666';
+                    document.getElementById('agebtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agevara", "agecd");
+                    agelsa = localStorage.getItem("agevara");
+                } else {
+                    localStorage.setItem("agevara", "agenl");
+                    age_var_initiation();
+                    agebtna_b_cl();
+                }
+                agebtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function agebtnb_h() {
+                document.getElementById('agebtnb').style.color = '#000066';
+                document.getElementById('agebtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agebtnb').style.border = 'double';
+                document.getElementById('agebtnb').style.borderColor = '#FFCC66';
+                document.getElementById('agebtnb').style.fontWeight = 'bold';
+            }
+
+            function agebtnb_d() {
+                if (agelsb == "agest") {
+                    document.getElementById('agebtnb').style.color = '#FF0080';
+                    document.getElementById('agebtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtnb').style.border = '2px solid';
+                    document.getElementById('agebtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agebtnb').style.fontWeight = 'bold';
+                } else if (agelsb == "ageht") {
+                    document.getElementById('agebtnb').style.color = '#BF00FF';
+                    document.getElementById('agebtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agebtnb').style.border = '2px solid';
+                    document.getElementById('agebtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agebtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agevarb", "ageht");
+                    age_var_initiation();
+                }
+            }
+            
+            function agebtnb_a_h() {
+                document.getElementById('agebtnb_a').style.color = '#000066';
+                document.getElementById('agebtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agebtnb_a').style.border = 'double';
+                document.getElementById('agebtnb_a').style.borderColor = '#FFCC66';
+            }
+
+            function agebtnb_a_d() {
+                document.getElementById('agebtnb_a').style.color = '#000000';
+                document.getElementById('agebtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agebtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function agebtnb_a_cl() {
+                if (agelsb == "agest") {
+                    triggerno_age_();
+                } else if (agelsb == "ageht") {
+                    triggeryes_age_();
+                } else {
+                    localStorage.setItem("agevarb", "agest");
+                    age_var_initiation();
+                    agebtnb_a_cl();
+                }
+            }
+
+            function triggerno_age_() {
+                document.getElementById('agebtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agebtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('aget').innerHTML = "R U' R' F R' F R U R' F R";
+                document.getElementById('agebtnb').style.color = '#BF00FF';
+                document.getElementById('agebtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agebtnb').style.border = '2px solid';
+                document.getElementById('agebtnb').style.borderColor = '#BF00FF';
+                document.getElementById('agebtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agevarb", "ageht");
+                agelsb = localStorage.getItem("agevarb");
+            }
+
+            function triggeryes_age_() {
+                document.getElementById('agebtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agebtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('aget').innerHTML = "(R U' R') (F R' F) (R U R') F R";
+                document.getElementById('agebtnb').style.color = '#FF0080';
+                document.getElementById('agebtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agebtnb').style.border = '2px solid';
+                document.getElementById('agebtnb').style.borderColor = '#FF0080';
+                document.getElementById('agebtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agevarb", "agest");
+                agelsb = localStorage.getItem("agevarb");
+            }
+
+            // agf - Script
+            
+            // On Load
+            
+            function agf_all() {
+                document.getElementById('agf').style.padding = '5px';
+                document.getElementById('agf').style.border = '2px solid';
+                document.getElementById('agf').style.borderColor = '#000066';
+                document.getElementById('agf').style.backgroundColor = '#806666';
+                document.getElementById('agf').style.color = '#FFCC66';
+                document.getElementById('agft').style.color = '#000066';
+                document.getElementById('agfdiva').style.marginRight = 'auto';
+                document.getElementById('agfdivb').style.marginRight = 'auto';
+                document.getElementById('agfdiva').style.marginLeft = '0px';
+                document.getElementById('agfdivb').style.marginLeft = '0px';
+                agfa_var_initiation();
+                agfb_var_initiation();
+            }
+
+            var agflsa = localStorage.getItem("agfvara");
+            var agflsb = localStorage.getItem("agfvarb");
+
+            function agfa_var_initiation() {
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agfbtna').style.color = '#660033';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#660033';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agfbtna').style.color = '#CCCC00';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agfbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agfbtna').style.color = '#00B666';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#00B666';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agflsa = localStorage.getItem("agfvara");
+                    agfa_var_initiation();
+                }
+            }
+
+            function agfb_var_initiation() {
+                if (agflsb == "agfst") {
+                    document.getElementById('agfbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('agfbtnb').style.color = '#FF0080';
+                    document.getElementById('agfbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtnb').style.border = '2px solid';
+                    document.getElementById('agfbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                } else if (agflsb == "agfht") {
+                    document.getElementById('agfbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('agfbtnb').style.color = '#BF00FF';
+                    document.getElementById('agfbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtnb').style.border = '2px solid';
+                    document.getElementById('agfbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agfvarb", "agfst");
+                    agflsb = localStorage.getItem("agfvarb");
+                    agfb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function agfbtna_h() {
+                document.getElementById('agfbtna').style.color = '#000066';
+                document.getElementById('agfbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agfbtna').style.border = 'double';
+                document.getElementById('agfbtna').style.borderColor = '#FFCC66';
+                document.getElementById('agfbtna').style.fontWeight = 'bold';
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_h();
+                }
+            }
+
+            function agfbtna_d() {
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna').style.color = '#660033';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#660033';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    document.getElementById('agfbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna').style.color = '#CCCC00';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    document.getElementById('agfbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna').style.color = '#00B666';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#00B666';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    document.getElementById('agfbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_d();
+                }
+            }
+
+            function agfbtna_a_h() {
+                document.getElementById('agfbtna_a').style.color = '#000066';
+                document.getElementById('agfbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agfbtna_a').style.border = 'double';
+                document.getElementById('agfbtna_a').style.borderColor = '#FFCC66';
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_a_h();
+                }
+            }
+
+            function agfbtna_a_d() {
+                document.getElementById('agfbtna_a').style.color = '#000000';
+                document.getElementById('agfbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agfbtna_a').style.border = 'none';
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna_a').innerHTML = 'Learning';
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_a_d();
+                }
+            }
+            
+            function agfbtna_b_h() {
+                document.getElementById('agfbtna_b').style.color = '#000066';
+                document.getElementById('agfbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agfbtna_b').style.border = 'double';
+                document.getElementById('agfbtna_b').style.borderColor = '#FFCC66';
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_b_h();
+                }
+            }
+
+            function agfbtna_b_d() {
+                document.getElementById('agfbtna_b').style.color = '#000000';
+                document.getElementById('agfbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agfbtna_b').style.border = 'none';
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function agfbtna_a_cl() {
+                if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agfbtna').style.color = '#CCCC00';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agfvara", "agflg");
+                    agflsa = localStorage.getItem("agfvara");
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agfbtna').style.color = '#660033';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#660033';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agfvara", "agfnl");
+                    agflsa = localStorage.getItem("agfvara");
+                } else if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Learning';
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agfbtna').style.color = '#660033';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#660033';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agfvara", "agfnl");
+                    agflsa = localStorage.getItem("agfvara");
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_a_cl();
+                }
+                agfbtna_a_h();
+            }
+
+            function agfbtna_b_cl() {
+                if (agflsa == "agfcd") {
+                    document.getElementById('agfbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agfbtna_b').innerHTML = 'Completed';
+                    document.getElementById('agfbtna').style.color = '#CCCC00';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agfvara", "agflg");
+                    agflsa = localStorage.getItem("agfvara");
+                } else if (agflsa == "agflg") {
+                    document.getElementById('agfbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agfbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agfbtna').style.color = '#00B666';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#00B666';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agfvara", "agfcd");
+                    agflsa = localStorage.getItem("agfvara");
+                } else if (agflsa == "agfnl") {
+                    document.getElementById('agfbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('agfbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('agfbtna_b').innerHTML = 'Learning';
+                    document.getElementById('agfbtna').style.color = '#00B666';
+                    document.getElementById('agfbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtna').style.border = '2px solid';
+                    document.getElementById('agfbtna').style.borderColor = '#00B666';
+                    document.getElementById('agfbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("agfvara", "agfcd");
+                    agflsa = localStorage.getItem("agfvara");
+                } else {
+                    localStorage.setItem("agfvara", "agfnl");
+                    agf_var_initiation();
+                    agfbtna_b_cl();
+                }
+                agfbtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function agfbtnb_h() {
+                document.getElementById('agfbtnb').style.color = '#000066';
+                document.getElementById('agfbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agfbtnb').style.border = 'double';
+                document.getElementById('agfbtnb').style.borderColor = '#FFCC66';
+                document.getElementById('agfbtnb').style.fontWeight = 'bold';
+            }
+
+            function agfbtnb_d() {
+                if (agflsb == "agfst") {
+                    document.getElementById('agfbtnb').style.color = '#FF0080';
+                    document.getElementById('agfbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtnb').style.border = '2px solid';
+                    document.getElementById('agfbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                } else if (agflsb == "agfht") {
+                    document.getElementById('agfbtnb').style.color = '#BF00FF';
+                    document.getElementById('agfbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('agfbtnb').style.border = '2px solid';
+                    document.getElementById('agfbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("agfvarb", "agfht");
+                    agf_var_initiation();
+                }
+            }
+            
+            function agfbtnb_a_h() {
+                document.getElementById('agfbtnb_a').style.color = '#000066';
+                document.getElementById('agfbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('agfbtnb_a').style.border = 'double';
+                document.getElementById('agfbtnb_a').style.borderColor = '#FFCC66';
+            }
+
+            function agfbtnb_a_d() {
+                document.getElementById('agfbtnb_a').style.color = '#000000';
+                document.getElementById('agfbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agfbtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function agfbtnb_a_cl() {
+                if (agflsb == "agfst") {
+                    triggerno_agf_();
+                } else if (agflsb == "agfht") {
+                    triggeryes_agf_();
+                } else {
+                    localStorage.setItem("agfvarb", "agfst");
+                    agf_var_initiation();
+                    agfbtnb_a_cl();
+                }
+            }
+
+            function triggerno_agf_() {
+                document.getElementById('agfbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agfbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('agft').innerHTML = "R' U' R' F R F' R U' R' U2 R";
+                document.getElementById('agfbtnb').style.color = '#BF00FF';
+                document.getElementById('agfbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agfbtnb').style.border = '2px solid';
+                document.getElementById('agfbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agfvarb", "agfht");
+                agflsb = localStorage.getItem("agfvarb");
+            }
+
+            function triggeryes_agf_() {
+                document.getElementById('agfbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('agfbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('agft').innerHTML = "R' U' (R' F R F') (R U' R') U2 R";
+                document.getElementById('agfbtnb').style.color = '#FF0080';
+                document.getElementById('agfbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('agfbtnb').style.border = '2px solid';
+                document.getElementById('agfbtnb').style.borderColor = '#FF0080';
+                document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("agfvarb", "agfst");
+                agflsb = localStorage.getItem("agfvarb");
+            }
+
+            // aha - Script
+            
+            // On Load
+            
+            function aha_all() {
+                document.getElementById('aha').style.padding = '5px';
+                document.getElementById('aha').style.border = '2px solid';
+                document.getElementById('aha').style.borderColor = '#000066';
+                document.getElementById('aha').style.backgroundColor = '#806666';
+                document.getElementById('aha').style.color = '#FFCC66';
+                document.getElementById('ahat').style.color = '#000066';
+                document.getElementById('ahadiva').style.marginRight = 'auto';
+                document.getElementById('ahadivb').style.marginRight = 'auto';
+                document.getElementById('ahadiva').style.marginLeft = '0px';
+                document.getElementById('ahadivb').style.marginLeft = '0px';
+                ahaa_var_initiation();
+                ahab_var_initiation();
+            }
+
+            var ahalsa = localStorage.getItem("ahavara");
+            var ahalsb = localStorage.getItem("ahavarb");
+
+            function ahaa_var_initiation() {
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Learning';
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahabtna').style.color = '#660033';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#660033';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahabtna').style.color = '#CCCC00';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahabtna_b').innerHTML = 'Learning';
+                    document.getElementById('ahabtna').style.color = '#00B666';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#00B666';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    ahalsa = localStorage.getItem("ahavara");
+                    ahaa_var_initiation();
+                }
+            }
+
+            function ahab_var_initiation() {
+                if (ahalsb == "ahast") {
+                    document.getElementById('ahabtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('ahabtnb').style.color = '#FF0080';
+                    document.getElementById('ahabtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtnb').style.border = '2px solid';
+                    document.getElementById('ahabtnb').style.borderColor = '#FF0080';
+                    document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                } else if (ahalsb == "ahaht") {
+                    document.getElementById('ahabtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('ahabtnb').style.color = '#BF00FF';
+                    document.getElementById('ahabtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtnb').style.border = '2px solid';
+                    document.getElementById('ahabtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("ahavarb", "ahast");
+                    ahalsb = localStorage.getItem("ahavarb");
+                    ahab_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function ahabtna_h() {
+                document.getElementById('ahabtna').style.color = '#000066';
+                document.getElementById('ahabtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahabtna').style.border = 'double';
+                document.getElementById('ahabtna').style.borderColor = '#FFCC66';
+                document.getElementById('ahabtna').style.fontWeight = 'bold';
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_h();
+                }
+            }
+
+            function ahabtna_d() {
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna').style.color = '#660033';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#660033';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    document.getElementById('ahabtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna').style.color = '#CCCC00';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    document.getElementById('ahabtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna').style.color = '#00B666';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#00B666';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    document.getElementById('ahabtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_d();
+                }
+            }
+
+            function ahabtna_a_h() {
+                document.getElementById('ahabtna_a').style.color = '#000066';
+                document.getElementById('ahabtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahabtna_a').style.border = 'double';
+                document.getElementById('ahabtna_a').style.borderColor = '#FFCC66';
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_a_h();
+                }
+            }
+
+            function ahabtna_a_d() {
+                document.getElementById('ahabtna_a').style.color = '#000000';
+                document.getElementById('ahabtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahabtna_a').style.border = 'none';
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna_a').innerHTML = 'Learning';
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_a_d();
+                }
+            }
+            
+            function ahabtna_b_h() {
+                document.getElementById('ahabtna_b').style.color = '#000066';
+                document.getElementById('ahabtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahabtna_b').style.border = 'double';
+                document.getElementById('ahabtna_b').style.borderColor = '#FFCC66';
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_b_h();
+                }
+            }
+
+            function ahabtna_b_d() {
+                document.getElementById('ahabtna_b').style.color = '#000000';
+                document.getElementById('ahabtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahabtna_b').style.border = 'none';
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function ahabtna_a_cl() {
+                if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahabtna').style.color = '#CCCC00';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahavara", "ahalg");
+                    ahalsa = localStorage.getItem("ahavara");
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Learning';
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahabtna').style.color = '#660033';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#660033';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahavara", "ahanl");
+                    ahalsa = localStorage.getItem("ahavara");
+                } else if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Learning';
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahabtna').style.color = '#660033';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#660033';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahavara", "ahanl");
+                    ahalsa = localStorage.getItem("ahavara");
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_a_cl();
+                }
+                ahabtna_a_h();
+            }
+
+            function ahabtna_b_cl() {
+                if (ahalsa == "ahacd") {
+                    document.getElementById('ahabtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahabtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahabtna').style.color = '#CCCC00';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahavara", "ahalg");
+                    ahalsa = localStorage.getItem("ahavara");
+                } else if (ahalsa == "ahalg") {
+                    document.getElementById('ahabtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahabtna_b').innerHTML = 'Learning';
+                    document.getElementById('ahabtna').style.color = '#00B666';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#00B666';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahavara", "ahacd");
+                    ahalsa = localStorage.getItem("ahavara");
+                } else if (ahalsa == "ahanl") {
+                    document.getElementById('ahabtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahabtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahabtna_b').innerHTML = 'Learning';
+                    document.getElementById('ahabtna').style.color = '#00B666';
+                    document.getElementById('ahabtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtna').style.border = '2px solid';
+                    document.getElementById('ahabtna').style.borderColor = '#00B666';
+                    document.getElementById('ahabtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahavara", "ahacd");
+                    ahalsa = localStorage.getItem("ahavara");
+                } else {
+                    localStorage.setItem("ahavara", "ahanl");
+                    aha_var_initiation();
+                    ahabtna_b_cl();
+                }
+                ahabtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function ahabtnb_h() {
+                document.getElementById('ahabtnb').style.color = '#000066';
+                document.getElementById('ahabtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahabtnb').style.border = 'double';
+                document.getElementById('ahabtnb').style.borderColor = '#FFCC66';
+                document.getElementById('ahabtnb').style.fontWeight = 'bold';
+            }
+
+            function ahabtnb_d() {
+                if (ahalsb == "ahast") {
+                    document.getElementById('ahabtnb').style.color = '#FF0080';
+                    document.getElementById('ahabtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtnb').style.border = '2px solid';
+                    document.getElementById('ahabtnb').style.borderColor = '#FF0080';
+                    document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                } else if (ahalsb == "ahaht") {
+                    document.getElementById('ahabtnb').style.color = '#BF00FF';
+                    document.getElementById('ahabtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahabtnb').style.border = '2px solid';
+                    document.getElementById('ahabtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("ahavarb", "ahaht");
+                    aha_var_initiation();
+                }
+            }
+            
+            function ahabtnb_a_h() {
+                document.getElementById('ahabtnb_a').style.color = '#000066';
+                document.getElementById('ahabtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahabtnb_a').style.border = 'double';
+                document.getElementById('ahabtnb_a').style.borderColor = '#FFCC66';
+            }
+
+            function ahabtnb_a_d() {
+                document.getElementById('ahabtnb_a').style.color = '#000000';
+                document.getElementById('ahabtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahabtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function ahabtnb_a_cl() {
+                if (ahalsb == "ahast") {
+                    triggerno_aha_();
+                } else if (ahalsb == "ahaht") {
+                    triggeryes_aha_();
+                } else {
+                    localStorage.setItem("ahavarb", "ahast");
+                    aha_var_initiation();
+                    ahabtnb_a_cl();
+                }
+            }
+
+            function triggerno_aha_() {
+                document.getElementById('ahabtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('ahabtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('ahat').innerHTML = "R U R' U' R' F R2 U' R' U' R U R' F'";
+                document.getElementById('ahabtnb').style.color = '#BF00FF';
+                document.getElementById('ahabtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahabtnb').style.border = '2px solid';
+                document.getElementById('ahabtnb').style.borderColor = '#BF00FF';
+                document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                localStorage.setItem("ahavarb", "ahaht");
+                ahalsb = localStorage.getItem("ahavarb");
+            }
+
+            function triggeryes_aha_() {
+                document.getElementById('ahabtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('ahabtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('ahat').innerHTML = "(R U R' U') R' F (R2 U' R' U') (R U R') F'";
+                document.getElementById('ahabtnb').style.color = '#FF0080';
+                document.getElementById('ahabtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahabtnb').style.border = '2px solid';
+                document.getElementById('ahabtnb').style.borderColor = '#FF0080';
+                document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                localStorage.setItem("ahavarb", "ahast");
+                ahalsb = localStorage.getItem("ahavarb");
+            }
+
+            // ahb - Script
+            
+            // On Load
+            
+            function ahb_all() {
+                document.getElementById('ahb').style.padding = '5px';
+                document.getElementById('ahb').style.border = '2px solid';
+                document.getElementById('ahb').style.borderColor = '#000066';
+                document.getElementById('ahb').style.backgroundColor = '#806666';
+                document.getElementById('ahb').style.color = '#FFCC66';
+                document.getElementById('ahbt').style.color = '#000066';
+                document.getElementById('ahbdiva').style.marginRight = 'auto';
+                document.getElementById('ahbdivb').style.marginRight = 'auto';
+                document.getElementById('ahbdiva').style.marginLeft = '0px';
+                document.getElementById('ahbdivb').style.marginLeft = '0px';
+                ahba_var_initiation();
+                ahbb_var_initiation();
+            }
+
+            var ahblsa = localStorage.getItem("ahbvara");
+            var ahblsb = localStorage.getItem("ahbvarb");
+
+            function ahba_var_initiation() {
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Learning';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahbbtna').style.color = '#660033';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#660033';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahbbtna').style.color = '#CCCC00';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Learning';
+                    document.getElementById('ahbbtna').style.color = '#00B666';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#00B666';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahblsa = localStorage.getItem("ahbvara");
+                    ahba_var_initiation();
+                }
+            }
+
+            function ahbb_var_initiation() {
+                if (ahblsb == "ahbst") {
+                    document.getElementById('ahbbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('ahbbtnb').style.color = '#FF0080';
+                    document.getElementById('ahbbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtnb').style.border = '2px solid';
+                    document.getElementById('ahbbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                } else if (ahblsb == "ahbht") {
+                    document.getElementById('ahbbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('ahbbtnb').style.color = '#BF00FF';
+                    document.getElementById('ahbbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtnb').style.border = '2px solid';
+                    document.getElementById('ahbbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("ahbvarb", "ahbst");
+                    ahblsb = localStorage.getItem("ahbvarb");
+                    ahbb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function ahbbtna_h() {
+                document.getElementById('ahbbtna').style.color = '#000066';
+                document.getElementById('ahbbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahbbtna').style.border = 'double';
+                document.getElementById('ahbbtna').style.borderColor = '#FFCC66';
+                document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_h();
+                }
+            }
+
+            function ahbbtna_d() {
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna').style.color = '#660033';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#660033';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    document.getElementById('ahbbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna').style.color = '#CCCC00';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    document.getElementById('ahbbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna').style.color = '#00B666';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#00B666';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    document.getElementById('ahbbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_d();
+                }
+            }
+
+            function ahbbtna_a_h() {
+                document.getElementById('ahbbtna_a').style.color = '#000066';
+                document.getElementById('ahbbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahbbtna_a').style.border = 'double';
+                document.getElementById('ahbbtna_a').style.borderColor = '#FFCC66';
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_a_h();
+                }
+            }
+
+            function ahbbtna_a_d() {
+                document.getElementById('ahbbtna_a').style.color = '#000000';
+                document.getElementById('ahbbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahbbtna_a').style.border = 'none';
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna_a').innerHTML = 'Learning';
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_a_d();
+                }
+            }
+            
+            function ahbbtna_b_h() {
+                document.getElementById('ahbbtna_b').style.color = '#000066';
+                document.getElementById('ahbbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahbbtna_b').style.border = 'double';
+                document.getElementById('ahbbtna_b').style.borderColor = '#FFCC66';
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_b_h();
+                }
+            }
+
+            function ahbbtna_b_d() {
+                document.getElementById('ahbbtna_b').style.color = '#000000';
+                document.getElementById('ahbbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahbbtna_b').style.border = 'none';
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function ahbbtna_a_cl() {
+                if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahbbtna').style.color = '#CCCC00';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahbvara", "ahblg");
+                    ahblsa = localStorage.getItem("ahbvara");
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Learning';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahbbtna').style.color = '#660033';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#660033';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahblsa = localStorage.getItem("ahbvara");
+                } else if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Learning';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahbbtna').style.color = '#660033';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#660033';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahblsa = localStorage.getItem("ahbvara");
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_a_cl();
+                }
+                ahbbtna_a_h();
+            }
+
+            function ahbbtna_b_cl() {
+                if (ahblsa == "ahbcd") {
+                    document.getElementById('ahbbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Completed';
+                    document.getElementById('ahbbtna').style.color = '#CCCC00';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahbvara", "ahblg");
+                    ahblsa = localStorage.getItem("ahbvara");
+                } else if (ahblsa == "ahblg") {
+                    document.getElementById('ahbbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Learning';
+                    document.getElementById('ahbbtna').style.color = '#00B666';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#00B666';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahbvara", "ahbcd");
+                    ahblsa = localStorage.getItem("ahbvara");
+                } else if (ahblsa == "ahbnl") {
+                    document.getElementById('ahbbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('ahbbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('ahbbtna_b').innerHTML = 'Learning';
+                    document.getElementById('ahbbtna').style.color = '#00B666';
+                    document.getElementById('ahbbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtna').style.border = '2px solid';
+                    document.getElementById('ahbbtna').style.borderColor = '#00B666';
+                    document.getElementById('ahbbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("ahbvara", "ahbcd");
+                    ahblsa = localStorage.getItem("ahbvara");
+                } else {
+                    localStorage.setItem("ahbvara", "ahbnl");
+                    ahb_var_initiation();
+                    ahbbtna_b_cl();
+                }
+                ahbbtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function ahbbtnb_h() {
+                document.getElementById('ahbbtnb').style.color = '#000066';
+                document.getElementById('ahbbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahbbtnb').style.border = 'double';
+                document.getElementById('ahbbtnb').style.borderColor = '#FFCC66';
+                document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+            }
+
+            function ahbbtnb_d() {
+                if (ahblsb == "ahbst") {
+                    document.getElementById('ahbbtnb').style.color = '#FF0080';
+                    document.getElementById('ahbbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtnb').style.border = '2px solid';
+                    document.getElementById('ahbbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                } else if (ahblsb == "ahbht") {
+                    document.getElementById('ahbbtnb').style.color = '#BF00FF';
+                    document.getElementById('ahbbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('ahbbtnb').style.border = '2px solid';
+                    document.getElementById('ahbbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("ahbvarb", "ahbht");
+                    ahb_var_initiation();
+                }
+            }
+            
+            function ahbbtnb_a_h() {
+                document.getElementById('ahbbtnb_a').style.color = '#000066';
+                document.getElementById('ahbbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('ahbbtnb_a').style.border = 'double';
+                document.getElementById('ahbbtnb_a').style.borderColor = '#FFCC66';
+            }
+
+            function ahbbtnb_a_d() {
+                document.getElementById('ahbbtnb_a').style.color = '#000000';
+                document.getElementById('ahbbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahbbtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function ahbbtnb_a_cl() {
+                if (ahblsb == "ahbst") {
+                    triggerno_ahb_();
+                } else if (ahblsb == "ahbht") {
+                    triggeryes_ahb_();
+                } else {
+                    localStorage.setItem("ahbvarb", "ahbst");
+                    ahb_var_initiation();
+                    ahbbtnb_a_cl();
+                }
+            }
+
+            function triggerno_ahb_() {
+                document.getElementById('ahbbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('ahbbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('ahbt').innerHTML = "F R U' R' U' R U R' F' R U R' U' R' F R F'";
+                document.getElementById('ahbbtnb').style.color = '#BF00FF';
+                document.getElementById('ahbbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahbbtnb').style.border = '2px solid';
+                document.getElementById('ahbbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("ahbvarb", "ahbht");
+                ahblsb = localStorage.getItem("ahbvarb");
+            }
+
+            function triggeryes_ahb_() {
+                document.getElementById('ahbbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('ahbbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('ahbt').innerHTML = "F (R U' R' U') (R U R' F') (R U R' U') (R' F R F')";
+                document.getElementById('ahbbtnb').style.color = '#FF0080';
+                document.getElementById('ahbbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('ahbbtnb').style.border = '2px solid';
+                document.getElementById('ahbbtnb').style.borderColor = '#FF0080';
+                document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("ahbvarb", "ahbst");
+                ahblsb = localStorage.getItem("ahbvarb");
+            }
+
             // Triggers
 
             function showtrigger_22advcll() {
