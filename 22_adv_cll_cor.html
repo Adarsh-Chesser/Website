@@ -9409,7 +9409,6 @@
             adab_var_initiation();
             adbb_var_initiation();
             adcb_var_initiation();
-            trigger_onload_a();
             }
 
             function trigger_onload_b() {
@@ -9434,7 +9433,6 @@
             agfb_var_initiation();
             ahab_var_initiation();
             ahbb_var_initiation();
-            trigger_onload_b();
             }
             
             function crf_part_a() {
@@ -16864,6 +16862,7 @@
                     document.getElementById('adabtnb').style.border = '2px solid';
                     document.getElementById('adabtnb').style.borderColor = '#FF0080';
                     document.getElementById('adabtnb').style.fontWeight = 'bold';
+                    triggeryes_ada_();
                 } else if (adalsb == "adaht") {
                     document.getElementById('adabtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('adabtnb_a').innerHTML = 'Show Triggers';
@@ -16872,6 +16871,7 @@
                     document.getElementById('adabtnb').style.border = '2px solid';
                     document.getElementById('adabtnb').style.borderColor = '#BF00FF';
                     document.getElementById('adabtnb').style.fontWeight = 'bold';
+                    triggerno_ada_();
                 } else {
                     localStorage.setItem("adavarb", "adast");
                     adalsb = localStorage.getItem("adavarb");
@@ -17233,6 +17233,7 @@
                     document.getElementById('adbbtnb').style.border = '2px solid';
                     document.getElementById('adbbtnb').style.borderColor = '#FF0080';
                     document.getElementById('adbbtnb').style.fontWeight = 'bold';
+                    triggeryes_adb_();
                 } else if (adblsb == "adbht") {
                     document.getElementById('adbbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('adbbtnb_a').innerHTML = 'Show Triggers';
@@ -17241,6 +17242,7 @@
                     document.getElementById('adbbtnb').style.border = '2px solid';
                     document.getElementById('adbbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('adbbtnb').style.fontWeight = 'bold';
+                    triggerno_adb_();
                 } else {
                     localStorage.setItem("adbvarb", "adbst");
                     adblsb = localStorage.getItem("adbvarb");
@@ -17602,6 +17604,7 @@
                     document.getElementById('adcbtnb').style.border = '2px solid';
                     document.getElementById('adcbtnb').style.borderColor = '#FF0080';
                     document.getElementById('adcbtnb').style.fontWeight = 'bold';
+                    triggeryes_adc_();
                 } else if (adclsb == "adcht") {
                     document.getElementById('adcbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('adcbtnb_a').innerHTML = 'Show Triggers';
@@ -17610,6 +17613,7 @@
                     document.getElementById('adcbtnb').style.border = '2px solid';
                     document.getElementById('adcbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('adcbtnb').style.fontWeight = 'bold';
+                    triggerno_adc_();
                 } else {
                     localStorage.setItem("adcvarb", "adcst");
                     adclsb = localStorage.getItem("adcvarb");
@@ -17971,6 +17975,7 @@
                     document.getElementById('addbtnb').style.border = '2px solid';
                     document.getElementById('addbtnb').style.borderColor = '#FF0080';
                     document.getElementById('addbtnb').style.fontWeight = 'bold';
+                    triggeryes_add_();
                 } else if (addlsb == "addht") {
                     document.getElementById('addbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('addbtnb_a').innerHTML = 'Show Triggers';
@@ -17979,6 +17984,7 @@
                     document.getElementById('addbtnb').style.border = '2px solid';
                     document.getElementById('addbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('addbtnb').style.fontWeight = 'bold';
+                    triggerno_add_();
                 } else {
                     localStorage.setItem("addvarb", "addst");
                     addlsb = localStorage.getItem("addvarb");
@@ -18340,6 +18346,7 @@
                     document.getElementById('aeabtnb').style.border = '2px solid';
                     document.getElementById('aeabtnb').style.borderColor = '#FF0080';
                     document.getElementById('aeabtnb').style.fontWeight = 'bold';
+                    triggeryes_aea_();
                 } else if (aealsb == "aeaht") {
                     document.getElementById('aeabtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('aeabtnb_a').innerHTML = 'Show Triggers';
@@ -18348,6 +18355,7 @@
                     document.getElementById('aeabtnb').style.border = '2px solid';
                     document.getElementById('aeabtnb').style.borderColor = '#BF00FF';
                     document.getElementById('aeabtnb').style.fontWeight = 'bold';
+                    triggerno_aea_();
                 } else {
                     localStorage.setItem("aeavarb", "aeast");
                     aealsb = localStorage.getItem("aeavarb");
@@ -18709,6 +18717,7 @@
                     document.getElementById('aebbtnb').style.border = '2px solid';
                     document.getElementById('aebbtnb').style.borderColor = '#FF0080';
                     document.getElementById('aebbtnb').style.fontWeight = 'bold';
+                    triggeryes_aeb_();
                 } else if (aeblsb == "aebht") {
                     document.getElementById('aebbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('aebbtnb_a').innerHTML = 'Show Triggers';
@@ -18717,6 +18726,7 @@
                     document.getElementById('aebbtnb').style.border = '2px solid';
                     document.getElementById('aebbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('aebbtnb').style.fontWeight = 'bold';
+                    triggerno_aeb_();
                 } else {
                     localStorage.setItem("aebvarb", "aebst");
                     aeblsb = localStorage.getItem("aebvarb");
@@ -19078,6 +19088,7 @@
                     document.getElementById('aecbtnb').style.border = '2px solid';
                     document.getElementById('aecbtnb').style.borderColor = '#FF0080';
                     document.getElementById('aecbtnb').style.fontWeight = 'bold';
+                    triggeryes_aec_();
                 } else if (aeclsb == "aecht") {
                     document.getElementById('aecbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('aecbtnb_a').innerHTML = 'Show Triggers';
@@ -19086,6 +19097,7 @@
                     document.getElementById('aecbtnb').style.border = '2px solid';
                     document.getElementById('aecbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('aecbtnb').style.fontWeight = 'bold';
+                    triggerno_aec_();
                 } else {
                     localStorage.setItem("aecvarb", "aecst");
                     aeclsb = localStorage.getItem("aecvarb");
@@ -19447,6 +19459,7 @@
                     document.getElementById('aedbtnb').style.border = '2px solid';
                     document.getElementById('aedbtnb').style.borderColor = '#FF0080';
                     document.getElementById('aedbtnb').style.fontWeight = 'bold';
+                    triggeryes_aed_();
                 } else if (aedlsb == "aedht") {
                     document.getElementById('aedbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('aedbtnb_a').innerHTML = 'Show Triggers';
@@ -19455,6 +19468,7 @@
                     document.getElementById('aedbtnb').style.border = '2px solid';
                     document.getElementById('aedbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('aedbtnb').style.fontWeight = 'bold';
+                    triggerno_aed_();
                 } else {
                     localStorage.setItem("aedvarb", "aedst");
                     aedlsb = localStorage.getItem("aedvarb");
@@ -19816,6 +19830,7 @@
                     document.getElementById('aeebtnb').style.border = '2px solid';
                     document.getElementById('aeebtnb').style.borderColor = '#FF0080';
                     document.getElementById('aeebtnb').style.fontWeight = 'bold';
+                    triggeryes_aee_();
                 } else if (aeelsb == "aeeht") {
                     document.getElementById('aeebtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('aeebtnb_a').innerHTML = 'Show Triggers';
@@ -19824,6 +19839,7 @@
                     document.getElementById('aeebtnb').style.border = '2px solid';
                     document.getElementById('aeebtnb').style.borderColor = '#BF00FF';
                     document.getElementById('aeebtnb').style.fontWeight = 'bold';
+                    triggerno_aee_();
                 } else {
                     localStorage.setItem("aeevarb", "aeest");
                     aeelsb = localStorage.getItem("aeevarb");
@@ -20185,6 +20201,7 @@
                     document.getElementById('aefbtnb').style.border = '2px solid';
                     document.getElementById('aefbtnb').style.borderColor = '#FF0080';
                     document.getElementById('aefbtnb').style.fontWeight = 'bold';
+                    triggeryes_aef_();
                 } else if (aeflsb == "aefht") {
                     document.getElementById('aefbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('aefbtnb_a').innerHTML = 'Show Triggers';
@@ -20193,6 +20210,7 @@
                     document.getElementById('aefbtnb').style.border = '2px solid';
                     document.getElementById('aefbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('aefbtnb').style.fontWeight = 'bold';
+                    triggerno_aef_();
                 } else {
                     localStorage.setItem("aefvarb", "aefst");
                     aeflsb = localStorage.getItem("aefvarb");
@@ -20554,6 +20572,7 @@
                     document.getElementById('afabtnb').style.border = '2px solid';
                     document.getElementById('afabtnb').style.borderColor = '#FF0080';
                     document.getElementById('afabtnb').style.fontWeight = 'bold';
+                    triggeryes_afa_();
                 } else if (afalsb == "afaht") {
                     document.getElementById('afabtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('afabtnb_a').innerHTML = 'Show Triggers';
@@ -20562,6 +20581,7 @@
                     document.getElementById('afabtnb').style.border = '2px solid';
                     document.getElementById('afabtnb').style.borderColor = '#BF00FF';
                     document.getElementById('afabtnb').style.fontWeight = 'bold';
+                    triggerno_afa_();
                 } else {
                     localStorage.setItem("afavarb", "afast");
                     afalsb = localStorage.getItem("afavarb");
@@ -20923,6 +20943,7 @@
                     document.getElementById('afbbtnb').style.border = '2px solid';
                     document.getElementById('afbbtnb').style.borderColor = '#FF0080';
                     document.getElementById('afbbtnb').style.fontWeight = 'bold';
+                    triggeryes_afb_();
                 } else if (afblsb == "afbht") {
                     document.getElementById('afbbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('afbbtnb_a').innerHTML = 'Show Triggers';
@@ -20931,6 +20952,7 @@
                     document.getElementById('afbbtnb').style.border = '2px solid';
                     document.getElementById('afbbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('afbbtnb').style.fontWeight = 'bold';
+                    triggerno_afb_();
                 } else {
                     localStorage.setItem("afbvarb", "afbst");
                     afblsb = localStorage.getItem("afbvarb");
@@ -21292,6 +21314,7 @@
                     document.getElementById('afcbtnb').style.border = '2px solid';
                     document.getElementById('afcbtnb').style.borderColor = '#FF0080';
                     document.getElementById('afcbtnb').style.fontWeight = 'bold';
+                    triggeryes_afc_();
                 } else if (afclsb == "afcht") {
                     document.getElementById('afcbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('afcbtnb_a').innerHTML = 'Show Triggers';
@@ -21300,6 +21323,7 @@
                     document.getElementById('afcbtnb').style.border = '2px solid';
                     document.getElementById('afcbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('afcbtnb').style.fontWeight = 'bold';
+                    triggerno_afc_();
                 } else {
                     localStorage.setItem("afcvarb", "afcst");
                     afclsb = localStorage.getItem("afcvarb");
@@ -21661,6 +21685,7 @@
                     document.getElementById('afdbtnb').style.border = '2px solid';
                     document.getElementById('afdbtnb').style.borderColor = '#FF0080';
                     document.getElementById('afdbtnb').style.fontWeight = 'bold';
+                    triggeryes_afd_();
                 } else if (afdlsb == "afdht") {
                     document.getElementById('afdbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('afdbtnb_a').innerHTML = 'Show Triggers';
@@ -21669,6 +21694,7 @@
                     document.getElementById('afdbtnb').style.border = '2px solid';
                     document.getElementById('afdbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('afdbtnb').style.fontWeight = 'bold';
+                    triggerno_afd_();
                 } else {
                     localStorage.setItem("afdvarb", "afdst");
                     afdlsb = localStorage.getItem("afdvarb");
@@ -22030,6 +22056,7 @@
                     document.getElementById('afebtnb').style.border = '2px solid';
                     document.getElementById('afebtnb').style.borderColor = '#FF0080';
                     document.getElementById('afebtnb').style.fontWeight = 'bold';
+                    triggeryes_afe_();
                 } else if (afelsb == "afeht") {
                     document.getElementById('afebtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('afebtnb_a').innerHTML = 'Show Triggers';
@@ -22038,6 +22065,7 @@
                     document.getElementById('afebtnb').style.border = '2px solid';
                     document.getElementById('afebtnb').style.borderColor = '#BF00FF';
                     document.getElementById('afebtnb').style.fontWeight = 'bold';
+                    triggerno_afe_();
                 } else {
                     localStorage.setItem("afevarb", "afest");
                     afelsb = localStorage.getItem("afevarb");
@@ -22399,6 +22427,7 @@
                     document.getElementById('affbtnb').style.border = '2px solid';
                     document.getElementById('affbtnb').style.borderColor = '#FF0080';
                     document.getElementById('affbtnb').style.fontWeight = 'bold';
+                    triggeryes_aff_();
                 } else if (afflsb == "affht") {
                     document.getElementById('affbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('affbtnb_a').innerHTML = 'Show Triggers';
@@ -22407,6 +22436,7 @@
                     document.getElementById('affbtnb').style.border = '2px solid';
                     document.getElementById('affbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('affbtnb').style.fontWeight = 'bold';
+                    triggerno_aff_();
                 } else {
                     localStorage.setItem("affvarb", "affst");
                     afflsb = localStorage.getItem("affvarb");
@@ -22768,6 +22798,7 @@
                     document.getElementById('agabtnb').style.border = '2px solid';
                     document.getElementById('agabtnb').style.borderColor = '#FF0080';
                     document.getElementById('agabtnb').style.fontWeight = 'bold';
+                    triggeryes_aga_();
                 } else if (agalsb == "agaht") {
                     document.getElementById('agabtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('agabtnb_a').innerHTML = 'Show Triggers';
@@ -22776,6 +22807,7 @@
                     document.getElementById('agabtnb').style.border = '2px solid';
                     document.getElementById('agabtnb').style.borderColor = '#BF00FF';
                     document.getElementById('agabtnb').style.fontWeight = 'bold';
+                    triggerno_aga_();
                 } else {
                     localStorage.setItem("agavarb", "agast");
                     agalsb = localStorage.getItem("agavarb");
@@ -23137,6 +23169,7 @@
                     document.getElementById('agbbtnb').style.border = '2px solid';
                     document.getElementById('agbbtnb').style.borderColor = '#FF0080';
                     document.getElementById('agbbtnb').style.fontWeight = 'bold';
+                    triggeryes_agb_();
                 } else if (agblsb == "agbht") {
                     document.getElementById('agbbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('agbbtnb_a').innerHTML = 'Show Triggers';
@@ -23145,6 +23178,7 @@
                     document.getElementById('agbbtnb').style.border = '2px solid';
                     document.getElementById('agbbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('agbbtnb').style.fontWeight = 'bold';
+                    triggerno_agb_();
                 } else {
                     localStorage.setItem("agbvarb", "agbst");
                     agblsb = localStorage.getItem("agbvarb");
@@ -23506,6 +23540,7 @@
                     document.getElementById('agcbtnb').style.border = '2px solid';
                     document.getElementById('agcbtnb').style.borderColor = '#FF0080';
                     document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                    triggeryes_agc_();
                 } else if (agclsb == "agcht") {
                     document.getElementById('agcbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('agcbtnb_a').innerHTML = 'Show Triggers';
@@ -23514,6 +23549,7 @@
                     document.getElementById('agcbtnb').style.border = '2px solid';
                     document.getElementById('agcbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('agcbtnb').style.fontWeight = 'bold';
+                    triggerno_agc_();
                 } else {
                     localStorage.setItem("agcvarb", "agcst");
                     agclsb = localStorage.getItem("agcvarb");
@@ -23875,6 +23911,7 @@
                     document.getElementById('agdbtnb').style.border = '2px solid';
                     document.getElementById('agdbtnb').style.borderColor = '#FF0080';
                     document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                    triggeryes_agd_();
                 } else if (agdlsb == "agdht") {
                     document.getElementById('agdbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('agdbtnb_a').innerHTML = 'Show Triggers';
@@ -23883,6 +23920,7 @@
                     document.getElementById('agdbtnb').style.border = '2px solid';
                     document.getElementById('agdbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('agdbtnb').style.fontWeight = 'bold';
+                    triggerno_agd_();
                 } else {
                     localStorage.setItem("agdvarb", "agdst");
                     agdlsb = localStorage.getItem("agdvarb");
@@ -24244,6 +24282,7 @@
                     document.getElementById('agebtnb').style.border = '2px solid';
                     document.getElementById('agebtnb').style.borderColor = '#FF0080';
                     document.getElementById('agebtnb').style.fontWeight = 'bold';
+                    triggeryes_age_();
                 } else if (agelsb == "ageht") {
                     document.getElementById('agebtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('agebtnb_a').innerHTML = 'Show Triggers';
@@ -24252,6 +24291,7 @@
                     document.getElementById('agebtnb').style.border = '2px solid';
                     document.getElementById('agebtnb').style.borderColor = '#BF00FF';
                     document.getElementById('agebtnb').style.fontWeight = 'bold';
+                    triggerno_age_();
                 } else {
                     localStorage.setItem("agevarb", "agest");
                     agelsb = localStorage.getItem("agevarb");
@@ -24613,6 +24653,7 @@
                     document.getElementById('agfbtnb').style.border = '2px solid';
                     document.getElementById('agfbtnb').style.borderColor = '#FF0080';
                     document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                    triggeryes_agf_();
                 } else if (agflsb == "agfht") {
                     document.getElementById('agfbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('agfbtnb_a').innerHTML = 'Show Triggers';
@@ -24621,6 +24662,7 @@
                     document.getElementById('agfbtnb').style.border = '2px solid';
                     document.getElementById('agfbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('agfbtnb').style.fontWeight = 'bold';
+                    triggerno_agf_();
                 } else {
                     localStorage.setItem("agfvarb", "agfst");
                     agflsb = localStorage.getItem("agfvarb");
@@ -24982,6 +25024,7 @@
                     document.getElementById('ahabtnb').style.border = '2px solid';
                     document.getElementById('ahabtnb').style.borderColor = '#FF0080';
                     document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                    triggeryes_aha_();
                 } else if (ahalsb == "ahaht") {
                     document.getElementById('ahabtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('ahabtnb_a').innerHTML = 'Show Triggers';
@@ -24990,6 +25033,7 @@
                     document.getElementById('ahabtnb').style.border = '2px solid';
                     document.getElementById('ahabtnb').style.borderColor = '#BF00FF';
                     document.getElementById('ahabtnb').style.fontWeight = 'bold';
+                    triggerno_aha_();
                 } else {
                     localStorage.setItem("ahavarb", "ahast");
                     ahalsb = localStorage.getItem("ahavarb");
@@ -25351,6 +25395,7 @@
                     document.getElementById('ahbbtnb').style.border = '2px solid';
                     document.getElementById('ahbbtnb').style.borderColor = '#FF0080';
                     document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                    triggeryes_ahb_();
                 } else if (ahblsb == "ahbht") {
                     document.getElementById('ahbbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('ahbbtnb_a').innerHTML = 'Show Triggers';
@@ -25359,6 +25404,7 @@
                     document.getElementById('ahbbtnb').style.border = '2px solid';
                     document.getElementById('ahbbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('ahbbtnb').style.fontWeight = 'bold';
+                    triggerno_ahb_();
                 } else {
                     localStorage.setItem("ahbvarb", "ahbst");
                     ahblsb = localStorage.getItem("ahbvarb");
@@ -27165,76 +27211,226 @@
 
         </div>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aea' class='advcll_2_css'>
+        
+            <h3 class='algname22'>T1</h3>
+            
+            <img src='22_adv_cll_T1.png' class='two1limgs' alt='T1' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='aeat'> <b class='advcll_2_css'> R' U R U2 R2 F' R U' R' F2 R2 </b> </h3>
+            
+            <div class="aeadiva" id="aeadiva">
 
-        <h3 class='algname22'>T1</h3>
+                <div class="aeadropa" id="aeadiva">
+                    <button class="aeabtna" id="aeabtna" onmouseover="aeabtna_h()" onmouseout="aeabtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aeadropa-content">
+                        <a id="aeabtna_a" onclick="aeabtna_a_cl()" onmouseover="aeabtna_a_h()" onmouseout="aeabtna_a_d()">Learning</a>
+                        <a id="aeabtna_b" onclick="aeabtna_b_cl()" onmouseover="aeabtna_b_h()" onmouseout="aeabtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_T1.png' class='two1limgs' alt='T1' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R' U R U2 R2 F' R U' R' F2 R2 </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="aeadivb" id="aeadivb">
+
+                <div class="aeadropb" id="aeadivb">
+                    <button class="aeabtnb" id="aeabtnb" onmouseover="aeabtnb_h()" onmouseout="aeabtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aeadropb-content">
+                        <a id="aeabtnb_a" onclick="aeabtnb_a_cl()" onmouseover="aeabtnb_a_h()" onmouseout="aeabtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aeb' class='advcll_2_css'>
+        
+            <h3 class='algname22'>T2</h3>
+            
+            <img src='22_adv_cll_T2.png' class='two1limgs' alt='T2' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='aebt'> <b class='advcll_2_css'> R' U R U2 R2 F R F' R </b> </h3>
+            
+            <div class="aebdiva" id="aebdiva">
 
-        <h3 class='algname22'>T2</h3>
+                <div class="aebdropa" id="aebdiva">
+                    <button class="aebbtna" id="aebbtna" onmouseover="aebbtna_h()" onmouseout="aebbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aebdropa-content">
+                        <a id="aebbtna_a" onclick="aebbtna_a_cl()" onmouseover="aebbtna_a_h()" onmouseout="aebbtna_a_d()">Learning</a>
+                        <a id="aebbtna_b" onclick="aebbtna_b_cl()" onmouseover="aebbtna_b_h()" onmouseout="aebbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_T2.png' class='two1limgs' alt='T2' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R' U R U2 R2 F R F' R </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="aebdivb" id="aebdivb">
+
+                <div class="aebdropb" id="aebdivb">
+                    <button class="aebbtnb" id="aebbtnb" onmouseover="aebbtnb_h()" onmouseout="aebbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aebdropb-content">
+                        <a id="aebbtnb_a" onclick="aebbtnb_a_cl()" onmouseover="aebbtnb_a_h()" onmouseout="aebbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aec' class='advcll_2_css'>
+        
+            <h3 class='algname22'>T3</h3>
+            
+            <img src='22_adv_cll_T3.png' class='two1limgs' alt='T3' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='aect'> <b class='advcll_2_css'> L' U' L U L F' L' F </b> </h3>
+            
+            <div class="aecdiva" id="aecdiva">
 
-        <h3 class='algname22'>T3</h3>
+                <div class="aecdropa" id="aecdiva">
+                    <button class="aecbtna" id="aecbtna" onmouseover="aecbtna_h()" onmouseout="aecbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aecdropa-content">
+                        <a id="aecbtna_a" onclick="aecbtna_a_cl()" onmouseover="aecbtna_a_h()" onmouseout="aecbtna_a_d()">Learning</a>
+                        <a id="aecbtna_b" onclick="aecbtna_b_cl()" onmouseover="aecbtna_b_h()" onmouseout="aecbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_T3.png' class='two1limgs' alt='T3' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> L' U' L U L F' L' F </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="aecdivb" id="aecdivb">
+
+                <div class="aecdropb" id="aecdivb">
+                    <button class="aecbtnb" id="aecbtnb" onmouseover="aecbtnb_h()" onmouseout="aecbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aecdropb-content">
+                        <a id="aecbtnb_a" onclick="aecbtnb_a_cl()" onmouseover="aecbtnb_a_h()" onmouseout="aecbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aed' class='advcll_2_css'>
+        
+            <h3 class='algname22'>T4</h3>
+            
+            <img src='22_adv_cll_T4.png' class='two1limgs' alt='T4' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='aedt'> <b class='advcll_2_css'> F R U R' U' R U' R' U' R U R' F' </b> </h3>
+            
+            <div class="aeddiva" id="aeddiva">
 
-        <h3 class='algname22'>T4</h3>
+                <div class="aeddropa" id="aeddiva">
+                    <button class="aedbtna" id="aedbtna" onmouseover="aedbtna_h()" onmouseout="aedbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aeddropa-content">
+                        <a id="aedbtna_a" onclick="aedbtna_a_cl()" onmouseover="aedbtna_a_h()" onmouseout="aedbtna_a_d()">Learning</a>
+                        <a id="aedbtna_b" onclick="aedbtna_b_cl()" onmouseover="aedbtna_b_h()" onmouseout="aedbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_T4.png' class='two1limgs' alt='T4' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> F R U R' U' R U' R' U' R U R' F' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="aeddivb" id="aeddivb">
+
+                <div class="aeddropb" id="aeddivb">
+                    <button class="aedbtnb" id="aedbtnb" onmouseover="aedbtnb_h()" onmouseout="aedbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aeddropb-content">
+                        <a id="aedbtnb_a" onclick="aedbtnb_a_cl()" onmouseover="aedbtnb_a_h()" onmouseout="aedbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aee' class='advcll_2_css'>
+        
+            <h3 class='algname22'>T5</h3>
+            
+            <img src='22_adv_cll_T5.png' class='two1limgs' alt='T5' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='aeet'> <b class='advcll_2_css'> R U R' U' R' F R F' </b> </h3>
+            
+            <div class="aeediva" id="aeediva">
 
-        <h3 class='algname22'>T5</h3>
+                <div class="aeedropa" id="aeediva">
+                    <button class="aeebtna" id="aeebtna" onmouseover="aeebtna_h()" onmouseout="aeebtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aeedropa-content">
+                        <a id="aeebtna_a" onclick="aeebtna_a_cl()" onmouseover="aeebtna_a_h()" onmouseout="aeebtna_a_d()">Learning</a>
+                        <a id="aeebtna_b" onclick="aeebtna_b_cl()" onmouseover="aeebtna_b_h()" onmouseout="aeebtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_T5.png' class='two1limgs' alt='T5' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R U R' U' R' F R F' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="aeedivb" id="aeedivb">
+
+                <div class="aeedropb" id="aeedivb">
+                    <button class="aeebtnb" id="aeebtnb" onmouseover="aeebtnb_h()" onmouseout="aeebtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aeedropb-content">
+                        <a id="aeebtnb_a" onclick="aeebtnb_a_cl()" onmouseover="aeebtnb_a_h()" onmouseout="aeebtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aef' class='advcll_2_css'>
+        
+            <h3 class='algname22'>T6</h3>
+            
+            <img src='22_adv_cll_T6.png' class='two1limgs' alt='T6' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='aeft'> <b class='advcll_2_css'> F U' R U2 R' U' F2 R U R' </b> </h3>
+            
+            <div class="aefdiva" id="aefdiva">
 
-        <h3 class='algname22'>T6</h3>
+                <div class="aefdropa" id="aefdiva">
+                    <button class="aefbtna" id="aefbtna" onmouseover="aefbtna_h()" onmouseout="aefbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aefdropa-content">
+                        <a id="aefbtna_a" onclick="aefbtna_a_cl()" onmouseover="aefbtna_a_h()" onmouseout="aefbtna_a_d()">Learning</a>
+                        <a id="aefbtna_b" onclick="aefbtna_b_cl()" onmouseover="aefbtna_b_h()" onmouseout="aefbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_T6.png' class='two1limgs' alt='T6' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> F U' R U2 R' U' F2 R U R' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="aefdivb" id="aefdivb">
+
+                <div class="aefdropb" id="aefdivb">
+                    <button class="aefbtnb" id="aefbtnb" onmouseover="aefbtnb_h()" onmouseout="aefbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="aefdropb-content">
+                        <a id="aefbtnb_a" onclick="aefbtnb_a_cl()" onmouseover="aefbtnb_a_h()" onmouseout="aefbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
         <b><a class='atop' href="#top" id='atop_xxe' onmouseover='atop_xxe_h()' onmouseout='atop_xxe_d()'>Back To Top</a></b>
@@ -27256,76 +27452,226 @@
 
         </div>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='afa' class='advcll_2_css'>
+        
+            <h3 class='algname22'>U1</h3>
+            
+            <img src='22_adv_cll_U1.png' class='two1limgs' alt='U1' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='afat'> <b class='advcll_2_css'> R2 F2 R U R' F R2 U2 R' U' R </b> </h3>
+            
+            <div class="afadiva" id="afadiva">
 
-        <h3 class='algname22'>U1</h3>
+                <div class="afadropa" id="afadiva">
+                    <button class="afabtna" id="afabtna" onmouseover="afabtna_h()" onmouseout="afabtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afadropa-content">
+                        <a id="afabtna_a" onclick="afabtna_a_cl()" onmouseover="afabtna_a_h()" onmouseout="afabtna_a_d()">Learning</a>
+                        <a id="afabtna_b" onclick="afabtna_b_cl()" onmouseover="afabtna_b_h()" onmouseout="afabtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_U1.png' class='two1limgs' alt='U1' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R2 F2 R U R' F R2 U2 R' U' R </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="afadivb" id="afadivb">
+
+                <div class="afadropb" id="afadivb">
+                    <button class="afabtnb" id="afabtnb" onmouseover="afabtnb_h()" onmouseout="afabtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afadropb-content">
+                        <a id="afabtnb_a" onclick="afabtnb_a_cl()" onmouseover="afabtnb_a_h()" onmouseout="afabtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='afb' class='advcll_2_css'>
+        
+            <h3 class='algname22'>U2</h3>
+            
+            <img src='22_adv_cll_U2.png' class='two1limgs' alt='U2' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='afbt'> <b class='advcll_2_css'> R U2 R U' R' F R' F2 U' F </b> </h3>
+            
+            <div class="afbdiva" id="afbdiva">
 
-        <h3 class='algname22'>U2</h3>
+                <div class="afbdropa" id="afbdiva">
+                    <button class="afbbtna" id="afbbtna" onmouseover="afbbtna_h()" onmouseout="afbbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afbdropa-content">
+                        <a id="afbbtna_a" onclick="afbbtna_a_cl()" onmouseover="afbbtna_a_h()" onmouseout="afbbtna_a_d()">Learning</a>
+                        <a id="afbbtna_b" onclick="afbbtna_b_cl()" onmouseover="afbbtna_b_h()" onmouseout="afbbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_U2.png' class='two1limgs' alt='U2' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R U2 R U' R' F R' F2 U' F </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="afbdivb" id="afbdivb">
+
+                <div class="afbdropb" id="afbdivb">
+                    <button class="afbbtnb" id="afbbtnb" onmouseover="afbbtnb_h()" onmouseout="afbbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afbdropb-content">
+                        <a id="afbbtnb_a" onclick="afbbtnb_a_cl()" onmouseover="afbbtnb_a_h()" onmouseout="afbbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='afc' class='advcll_2_css'>
+        
+            <h3 class='algname22'>U3</h3>
+            
+            <img src='22_adv_cll_U3.png' class='two1limgs' alt='U3' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='afct'> <b class='advcll_2_css'> R' U R' F R F' R U2 R' U R </b> </h3>
+            
+            <div class="afcdiva" id="afcdiva">
 
-        <h3 class='algname22'>U3</h3>
+                <div class="afcdropa" id="afcdiva">
+                    <button class="afcbtna" id="afcbtna" onmouseover="afcbtna_h()" onmouseout="afcbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afcdropa-content">
+                        <a id="afcbtna_a" onclick="afcbtna_a_cl()" onmouseover="afcbtna_a_h()" onmouseout="afcbtna_a_d()">Learning</a>
+                        <a id="afcbtna_b" onclick="afcbtna_b_cl()" onmouseover="afcbtna_b_h()" onmouseout="afcbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_U3.png' class='two1limgs' alt='U3' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R' U R' F R F' R U2 R' U R </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="afcdivb" id="afcdivb">
+
+                <div class="afcdropb" id="afcdivb">
+                    <button class="afcbtnb" id="afcbtnb" onmouseover="afcbtnb_h()" onmouseout="afcbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afcdropb-content">
+                        <a id="afcbtnb_a" onclick="afcbtnb_a_cl()" onmouseover="afcbtnb_a_h()" onmouseout="afcbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='afd' class='advcll_2_css'>
+        
+            <h3 class='algname22'>U4</h3>
+            
+            <img src='22_adv_cll_U4.png' class='two1limgs' alt='U4' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='afdt'> <b class='advcll_2_css'> F R' F' R U' R U' R' U2 R U' R' </b> </h3>
+            
+            <div class="afddiva" id="afddiva">
 
-        <h3 class='algname22'>U4</h3>
+                <div class="afddropa" id="afddiva">
+                    <button class="afdbtna" id="afdbtna" onmouseover="afdbtna_h()" onmouseout="afdbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afddropa-content">
+                        <a id="afdbtna_a" onclick="afdbtna_a_cl()" onmouseover="afdbtna_a_h()" onmouseout="afdbtna_a_d()">Learning</a>
+                        <a id="afdbtna_b" onclick="afdbtna_b_cl()" onmouseover="afdbtna_b_h()" onmouseout="afdbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_U4.png' class='two1limgs' alt='U4' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> F R' F' R U' R U' R' U2 R U' R' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="afddivb" id="afddivb">
+
+                <div class="afddropb" id="afddivb">
+                    <button class="afdbtnb" id="afdbtnb" onmouseover="afdbtnb_h()" onmouseout="afdbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afddropb-content">
+                        <a id="afdbtnb_a" onclick="afdbtnb_a_cl()" onmouseover="afdbtnb_a_h()" onmouseout="afdbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='afe' class='advcll_2_css'>
+        
+            <h3 class='algname22'>U5</h3>
+            
+            <img src='22_adv_cll_U5.png' class='two1limgs' alt='U5' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='afet'> <b class='advcll_2_css'> R U' R2 F R F' R U R' U' R U R' </b> </h3>
+            
+            <div class="afediva" id="afediva">
 
-        <h3 class='algname22'>U5</h3>
+                <div class="afedropa" id="afediva">
+                    <button class="afebtna" id="afebtna" onmouseover="afebtna_h()" onmouseout="afebtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afedropa-content">
+                        <a id="afebtna_a" onclick="afebtna_a_cl()" onmouseover="afebtna_a_h()" onmouseout="afebtna_a_d()">Learning</a>
+                        <a id="afebtna_b" onclick="afebtna_b_cl()" onmouseover="afebtna_b_h()" onmouseout="afebtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_U5.png' class='two1limgs' alt='U5' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R U' R2 F R F' R U R' U' R U R' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="afedivb" id="afedivb">
+
+                <div class="afedropb" id="afedivb">
+                    <button class="afebtnb" id="afebtnb" onmouseover="afebtnb_h()" onmouseout="afebtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="afedropb-content">
+                        <a id="afebtnb_a" onclick="afebtnb_a_cl()" onmouseover="afebtnb_a_h()" onmouseout="afebtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aff' class='advcll_2_css'>
+        
+            <h3 class='algname22'>U6</h3>
+            
+            <img src='22_adv_cll_U6.png' class='two1limgs' alt='U6' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='afft'> <b class='advcll_2_css'> F R U R' U' F' </b> </h3>
+            
+            <div class="affdiva" id="affdiva">
 
-        <h3 class='algname22'>U6</h3>
+                <div class="affdropa" id="affdiva">
+                    <button class="affbtna" id="affbtna" onmouseover="affbtna_h()" onmouseout="affbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="affdropa-content">
+                        <a id="affbtna_a" onclick="affbtna_a_cl()" onmouseover="affbtna_a_h()" onmouseout="affbtna_a_d()">Learning</a>
+                        <a id="affbtna_b" onclick="affbtna_b_cl()" onmouseover="affbtna_b_h()" onmouseout="affbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_U6.png' class='two1limgs' alt='U6' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> F R U R' U' F' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="affdivb" id="affdivb">
+
+                <div class="affdropb" id="affdivb">
+                    <button class="affbtnb" id="affbtnb" onmouseover="affbtnb_h()" onmouseout="affbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="affdropb-content">
+                        <a id="affbtnb_a" onclick="affbtnb_a_cl()" onmouseover="affbtnb_a_h()" onmouseout="affbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
         <b><a class='atop' href="#top" id='atop_xxf' onmouseover='atop_xxf_h()' onmouseout='atop_xxf_d()'>Back To Top</a></b>
@@ -27347,76 +27693,226 @@
 
         </div>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aga' class='advcll_2_css'>
+        
+            <h3 class='algname22'>P1</h3>
+            
+            <img src='22_adv_cll_P1.png' class='two1limgs' alt='P1' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='agat'> <b class='advcll_2_css'> R U' R2 U R2 U R2 U' R </b> </h3>
+            
+            <div class="agadiva" id="agadiva">
 
-        <h3 class='algname22'>P1</h3>
+                <div class="agadropa" id="agadiva">
+                    <button class="agabtna" id="agabtna" onmouseover="agabtna_h()" onmouseout="agabtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agadropa-content">
+                        <a id="agabtna_a" onclick="agabtna_a_cl()" onmouseover="agabtna_a_h()" onmouseout="agabtna_a_d()">Learning</a>
+                        <a id="agabtna_b" onclick="agabtna_b_cl()" onmouseover="agabtna_b_h()" onmouseout="agabtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_P1.png' class='two1limgs' alt='P1' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R U' R2 U R2 U R2 U' R </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="agadivb" id="agadivb">
+
+                <div class="agadropb" id="agadivb">
+                    <button class="agabtnb" id="agabtnb" onmouseover="agabtnb_h()" onmouseout="agabtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agadropb-content">
+                        <a id="agabtnb_a" onclick="agabtnb_a_cl()" onmouseover="agabtnb_a_h()" onmouseout="agabtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='agb' class='advcll_2_css'>
+        
+            <h3 class='algname22'>P2</h3>
+            
+            <img src='22_adv_cll_P2.png' class='two1limgs' alt='P2' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='agbt'> <b class='advcll_2_css'> R' F2 R F' U2 R U' R' U' F </b> </h3>
+            
+            <div class="agbdiva" id="agbdiva">
 
-        <h3 class='algname22'>P2</h3>
+                <div class="agbdropa" id="agbdiva">
+                    <button class="agbbtna" id="agbbtna" onmouseover="agbbtna_h()" onmouseout="agbbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agbdropa-content">
+                        <a id="agbbtna_a" onclick="agbbtna_a_cl()" onmouseover="agbbtna_a_h()" onmouseout="agbbtna_a_d()">Learning</a>
+                        <a id="agbbtna_b" onclick="agbbtna_b_cl()" onmouseover="agbbtna_b_h()" onmouseout="agbbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_P2.png' class='two1limgs' alt='P2' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R' F2 R F' U2 R U' R' U' F </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="agbdivb" id="agbdivb">
+
+                <div class="agbdropb" id="agbdivb">
+                    <button class="agbbtnb" id="agbbtnb" onmouseover="agbbtnb_h()" onmouseout="agbbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agbdropb-content">
+                        <a id="agbbtnb_a" onclick="agbbtnb_a_cl()" onmouseover="agbbtnb_a_h()" onmouseout="agbbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='agc' class='advcll_2_css'>
+        
+            <h3 class='algname22'>P3</h3>
+            
+            <img src='22_adv_cll_P3.png' class='two1limgs' alt='P3' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='agct'> <b class='advcll_2_css'> F R2 U' R2 U R2 U R2 F' </b> </h3>
+            
+            <div class="agcdiva" id="agcdiva">
 
-        <h3 class='algname22'>P3</h3>
+                <div class="agcdropa" id="agcdiva">
+                    <button class="agcbtna" id="agcbtna" onmouseover="agcbtna_h()" onmouseout="agcbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agcdropa-content">
+                        <a id="agcbtna_a" onclick="agcbtna_a_cl()" onmouseover="agcbtna_a_h()" onmouseout="agcbtna_a_d()">Learning</a>
+                        <a id="agcbtna_b" onclick="agcbtna_b_cl()" onmouseover="agcbtna_b_h()" onmouseout="agcbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_P3.png' class='two1limgs' alt='P3' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> F R2 U' R2 U R2 U R2 F' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="agcdivb" id="agcdivb">
+
+                <div class="agcdropb" id="agcdivb">
+                    <button class="agcbtnb" id="agcbtnb" onmouseover="agcbtnb_h()" onmouseout="agcbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agcdropb-content">
+                        <a id="agcbtnb_a" onclick="agcbtnb_a_cl()" onmouseover="agcbtnb_a_h()" onmouseout="agcbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='agd' class='advcll_2_css'>
+        
+            <h3 class='algname22'>P4</h3>
+            
+            <img src='22_adv_cll_P4.png' class='two1limgs' alt='P4' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='agdt'> <b class='advcll_2_css'> R U2 R' U' R U R' U2 R' F R F' </b> </h3>
+            
+            <div class="agddiva" id="agddiva">
 
-        <h3 class='algname22'>P4</h3>
+                <div class="agddropa" id="agddiva">
+                    <button class="agdbtna" id="agdbtna" onmouseover="agdbtna_h()" onmouseout="agdbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agddropa-content">
+                        <a id="agdbtna_a" onclick="agdbtna_a_cl()" onmouseover="agdbtna_a_h()" onmouseout="agdbtna_a_d()">Learning</a>
+                        <a id="agdbtna_b" onclick="agdbtna_b_cl()" onmouseover="agdbtna_b_h()" onmouseout="agdbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_P4.png' class='two1limgs' alt='P4' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R U2 R' U' R U R' U2 R' F R F' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="agddivb" id="agddivb">
+
+                <div class="agddropb" id="agddivb">
+                    <button class="agdbtnb" id="agdbtnb" onmouseover="agdbtnb_h()" onmouseout="agdbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agddropb-content">
+                        <a id="agdbtnb_a" onclick="agdbtnb_a_cl()" onmouseover="agdbtnb_a_h()" onmouseout="agdbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='age' class='advcll_2_css'>
+        
+            <h3 class='algname22'>P5</h3>
+            
+            <img src='22_adv_cll_P5.png' class='two1limgs' alt='P5' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='aget'> <b class='advcll_2_css'> R U' R' F R' F R U R' F R </b> </h3>
+            
+            <div class="agediva" id="agediva">
 
-        <h3 class='algname22'>P5</h3>
+                <div class="agedropa" id="agediva">
+                    <button class="agebtna" id="agebtna" onmouseover="agebtna_h()" onmouseout="agebtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agedropa-content">
+                        <a id="agebtna_a" onclick="agebtna_a_cl()" onmouseover="agebtna_a_h()" onmouseout="agebtna_a_d()">Learning</a>
+                        <a id="agebtna_b" onclick="agebtna_b_cl()" onmouseover="agebtna_b_h()" onmouseout="agebtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_P5.png' class='two1limgs' alt='P5' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R U' R' F R' F R U R' F R </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="agedivb" id="agedivb">
+
+                <div class="agedropb" id="agedivb">
+                    <button class="agebtnb" id="agebtnb" onmouseover="agebtnb_h()" onmouseout="agebtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agedropb-content">
+                        <a id="agebtnb_a" onclick="agebtnb_a_cl()" onmouseover="agebtnb_a_h()" onmouseout="agebtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='agf' class='advcll_2_css'>
+        
+            <h3 class='algname22'>P6</h3>
+            
+            <img src='22_adv_cll_P6.png' class='two1limgs' alt='P6' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='agft'> <b class='advcll_2_css'> R' U' R' F R F' R U' R' U2 R </b> </h3>
+            
+            <div class="agfdiva" id="agfdiva">
 
-        <h3 class='algname22'>P6</h3>
+                <div class="agfdropa" id="agfdiva">
+                    <button class="agfbtna" id="agfbtna" onmouseover="agfbtna_h()" onmouseout="agfbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agfdropa-content">
+                        <a id="agfbtna_a" onclick="agfbtna_a_cl()" onmouseover="agfbtna_a_h()" onmouseout="agfbtna_a_d()">Learning</a>
+                        <a id="agfbtna_b" onclick="agfbtna_b_cl()" onmouseover="agfbtna_b_h()" onmouseout="agfbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_P6.png' class='two1limgs' alt='P6' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R' U' R' F R F' R U' R' U2 R </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="agfdivb" id="agfdivb">
+
+                <div class="agfdropb" id="agfdivb">
+                    <button class="agfbtnb" id="agfbtnb" onmouseover="agfbtnb_h()" onmouseout="agfbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="agfdropb-content">
+                        <a id="agfbtnb_a" onclick="agfbtnb_a_cl()" onmouseover="agfbtnb_a_h()" onmouseout="agfbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
         <b><a class='atop' href="#top" id='atop_xxg' onmouseover='atop_xxg_h()' onmouseout='atop_xxg_d()'>Back To Top</a></b>
@@ -27438,28 +27934,78 @@
 
         </div>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='aha' class='advcll_2_css'>
+        
+            <h3 class='algname22'>Adjacent</h3>
+            
+            <img src='22_adv_cll_Adjacent.png' class='two1limgs' alt='Adjacent' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='ahat'> <b class='advcll_2_css'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
+            
+            <div class="ahadiva" id="ahadiva">
 
-        <h3 class='algname22'>Adjacent</h3>
+                <div class="ahadropa" id="ahadiva">
+                    <button class="ahabtna" id="ahabtna" onmouseover="ahabtna_h()" onmouseout="ahabtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ahadropa-content">
+                        <a id="ahabtna_a" onclick="ahabtna_a_cl()" onmouseover="ahabtna_a_h()" onmouseout="ahabtna_a_d()">Learning</a>
+                        <a id="ahabtna_b" onclick="ahabtna_b_cl()" onmouseover="ahabtna_b_h()" onmouseout="ahabtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_Adjacent.png' class='two1limgs' alt='Adjacent' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="ahadivb" id="ahadivb">
+
+                <div class="ahadropb" id="ahadivb">
+                    <button class="ahabtnb" id="ahabtnb" onmouseover="ahabtnb_h()" onmouseout="ahabtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ahadropb-content">
+                        <a id="ahabtnb_a" onclick="ahabtnb_a_cl()" onmouseover="ahabtnb_a_h()" onmouseout="ahabtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
-        <div class='two_advanced_cll_algs'>
+        <div id='ahb' class='advcll_2_css'>
+        
+            <h3 class='algname22'>Diagonal</h3>
+            
+            <img src='22_adv_cll_Diagonal.png' class='two1limgs' alt='Diagonal' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='ahbt'> <b class='advcll_2_css'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
+            
+            <div class="ahbdiva" id="ahbdiva">
 
-        <h3 class='algname22'>Diagonal</h3>
+                <div class="ahbdropa" id="ahbdiva">
+                    <button class="ahbbtna" id="ahbbtna" onmouseover="ahbbtna_h()" onmouseout="ahbbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ahbdropa-content">
+                        <a id="ahbbtna_a" onclick="ahbbtna_a_cl()" onmouseover="ahbbtna_a_h()" onmouseout="ahbbtna_a_d()">Learning</a>
+                        <a id="ahbbtna_b" onclick="ahbbtna_b_cl()" onmouseover="ahbbtna_b_h()" onmouseout="ahbbtna_b_d()">Completed</a>
+                    </div>
+                </div>
 
-        <img src='22_adv_cll_Diagonal.png' class='two1limgs' alt='Diagonal' style='height: 125px; width: 125px;'> </img>
-        <br><br>
-        <h3> <b class='two_advanced_cll_algs'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
+            </div>
+
+            <br>
+
+            <div class="ahbdivb" id="ahbdivb">
+
+                <div class="ahbdropb" id="ahbdivb">
+                    <button class="ahbbtnb" id="ahbbtnb" onmouseover="ahbbtnb_h()" onmouseout="ahbbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="ahbdropb-content">
+                        <a id="ahbbtnb_a" onclick="ahbbtnb_a_cl()" onmouseover="ahbbtnb_a_h()" onmouseout="ahbbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-
+        
         <br><br><br>
 
         <b><a class='atop' href="#top" id='atop_xxh' onmouseover='atop_xxh_h()' onmouseout='atop_xxh_d()'>Back To Top</a></b>
