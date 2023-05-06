@@ -4,8 +4,8 @@
 #003300
 
 #DDDDDD - GREY 22
-#FFCC66
-#806666
+#CCFF33
+#66804C
 #000066
 
 #DDDDDD - GREY 44, 46, 47
@@ -23,8 +23,8 @@ EF8E1F - Orange
 
 FFFFFF - White
 00B666 - Completed
-575757 - None
-FFCC00 - Learning
+9900CC - Not Learned
+CCCC00 - Learning
 FF0000 - Delete
 
 button.cubealgbutton22 {
@@ -58,3 +58,7 @@ g - 7;
 h - 8;
 i - 9;
 z - 0;
+
+NL - LG, CD;
+CD - NL, LG;
+LG - NL, CD
