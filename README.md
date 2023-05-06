@@ -3,9 +3,9 @@
 Hi everyone! Good Morning!
 This is Adarsh Crazy Cubing
 
-This project has been done by me for myself. It is related about cubing and I will soon update more information on this website.
+This project has been done by me for myself. It is related about cubing and I will soon update more information on this website^.
 
-This contains 200+ cubing algs and top cubes of the time(will be updated soon).
+This contains 300+ cubing algs and Top Cubes of the Time^^.
 
 Following links have been opened for viewing
 
@@ -20,4 +20,5 @@ Following links have been opened for viewing
 * 3x3 Beginner OLL
 
 
-Website is changed to https://adarsh-chesser.github.io/Website/ on 21st April 2023 which is applicable from 27th April 2023
+^Website is changed to https://adarsh-chesser.github.io/Website/ on 21st April 2023 which is applicable from 27th April 2023
+^^'Top Cubes of the Time' will be updated soon
