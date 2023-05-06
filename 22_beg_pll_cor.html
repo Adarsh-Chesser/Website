@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+
+<html id='top' lang="en" >
+
+    <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Algorithms</title>
+    <link rel="stylesheet" href="algpage.css">
+    
+    </head>
+
+    <body onload="begpll_2_wprld()" id='bodyb'>
+
+        <script src="https://kit.fontawesome.com/999759c2df.js" crossorigin="anonymous"></script>
+        
+        <style>
+
+            /* Document */
+
+            #bodyb {
+            font-family: Arial, Helvetica, sans-serif;
+            }
+
+            div.begpll_2_css {
+            border: 2px solid #66804C;
+            }
+
+            b.begpll_2_css {
+            padding-left: 5px;
+            color: #000066;
+            }
+
+            .algname22 {
+            color: #CCFF33;
+            }
+
+            .two1limgs {
+            height: 125px;
+            width: 125px;
+            padding-left: 5px;
+            }
+
+            /* Header */
+
+            .header_link {
+            overflow: hidden;
+            background-color: #333333;
+            }
+    
+            .header_link a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .x22pdrop, .x33pdrop, .x44pdrop {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .x22pdrop .x22pbtn, .x33pdrop .x33pbtn, .x44pdrop .x44pbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .header_link a:hover, .x22pdrop:hover .x22pbtn, .x33pdrop:hover .x33pbtn, .x44pdrop:hover .x44pbtn {
+            background-color: #FF0000;
+            }
+    
+            .x22pdrop-content, .x33pdrop-content, .x44pdrop-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .x22pdrop-content a, .x33pdrop-content a, .x44pdrop-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .x22pdrop-content a:hover, .x33pdrop-content a:hover, .x44pdrop-content a:hover {
+            background-color: #DDDDDD;
+            color: #FF0000;
+            font-weight: bold;
+            }
+    
+            .x22pdrop:hover .x22pdrop-content, .x33pdrop:hover .x33pdrop-content, .x44pdrop:hover .x44pdrop-content {
+            display: block;
+            }
+
+            /* acs - Style */
+
+            /* Status */
+    
+            .acsdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .acsdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .acsdropa {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .acsdropa .acsbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .acsdiva a:hover {
+            background-color: #CCFF33;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .acsdropa:hover .acsbtna {
+            color: #CCFF33;
+            border: 2px dotted #CCFF33;
+            background-color: #000066;
+            }
+    
+            .acsdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .acsdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .acsdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+    
+            .acsdropa:hover .acsdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .acsdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .acsdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .acsdropb {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .acsdropb .acsbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .acsdivb a:hover {
+            background-color: #CCFF33;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .acsdropb:hover .acsbtnb {
+            color: #CCFF33;
+            border: 2px dotted #CCFF33;
+            background-color: #000066;
+            }
+    
+            .acsdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .acsdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .acsdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+    
+            .acsdropb:hover .acsdropb-content {
+            display: block;
+            }
+
+            .acsdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        
+            .acsdropb {
+            float: left;
+            overflow: hidden;
+            }
+        
+            .acsdropb .acsbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+        
+            .acsdivb a:hover {
+            background-color: #CCFF33;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+    
+            .acsdropb:hover .acsbtnb {
+            color: #CCFF33;
+            border: 2px dotted #CCFF33;
+            background-color: #000066;
+            }
+        
+            .acsdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+        
+            .acsdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+        
+            .acsdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+    
+            .acsdropb:hover .acsdropb-content {
+            display: block;
+            }
+
+            /* dcs - Style */
+
+            /* Status */
+    
+            .dcsdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .dcsdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .dcsdropa {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .dcsdropa .dcsbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .dcsdiva a:hover {
+            background-color: #CCFF33;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .dcsdropa:hover .dcsbtna {
+            color: #CCFF33;
+            border: 2px dotted #CCFF33;
+            background-color: #000066;
+            }
+    
+            .dcsdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .dcsdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .dcsdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+    
+            .dcsdropa:hover .dcsdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .dcsdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .dcsdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .dcsdropb {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .dcsdropb .dcsbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .dcsdivb a:hover {
+            background-color: #CCFF33;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+
+            .dcsdropb:hover .dcsbtnb {
+            color: #CCFF33;
+            border: 2px dotted #CCFF33;
+            background-color: #000066;
+            }
+    
+            .dcsdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .dcsdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .dcsdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            }
+    
+            .dcsdropb:hover .dcsdropb-content {
+            display: block;
+            }
+
+            .dcsdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        
+            .dcsdropb {
+            float: left;
+            overflow: hidden;
+            }
+        
+            .dcsdropb .dcsbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+        
+            .dcsdivb a:hover {
+            background-color: #CCFF33;
+            color: #000066;
+            border: 2px solid #000066;
+            font-weight: bold;
+            }
+    
+            .dcsdropb:hover .dcsbtnb {
+            color: #CCFF33;
+            border: 2px dotted #CCFF33;
+            background-color: #000066;
+            }
+        
+            .dcsdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+        
+            .dcsdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+        
+            .dcsdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #000066;
+            font-weight: bold;
+            }
+    
+            .dcsdropb:hover .dcsdropb-content {
+            display: block;
+            }
+    
+        </style>
+            
+        <script>
+
+            // On Load
+    
+            function begpll_2_wprld() {
+            plf_part_a();
+            atop_style();
+            header_style();
+            footer_style();
+            title_colours();
+            introduction_style();
+            triggerbutton_colours();
+            }
+
+            // Header and Footer - Style
+    
+            function header_style() {
+            document.getElementById('headhone').style.color = '#FF0000';
+            }
+        
+            function footer_style() {
+            document.getElementById('footermain').style.backgroundColor = '#FAFAFA';
+            document.getElementById('footermain').style.border = '5px double #FF5050';
+            document.getElementById('footp_a').style.color = '#33CCCC';
+            document.getElementById('footp_b').style.color = '#33CCCC';
+            document.getElementById('footp_c').style.color = '#33CCCC';
+            }
+    
+            // On Load - Functions
+            
+            function plf_part_a() {
+            acs_all();
+            dcs_all();
+            }
+
+            function atop_style() {
+            document.getElementById('atop_xxa').style.color = '#4C4C4C';
+            document.getElementById('atop_xxa').style.textDecoration = 'none';
+            }
+            
+            function title_colours() {
+            document.getElementById('bodyhone').style.color = '#000066';
+            document.getElementById('bodyhtwo').style.color = '#66804C';
+            }
+            
+            function introduction_style() {
+            document.getElementById('introp22_a').style.color = '#000066';
+            document.getElementById('introp22_b').style.color = '#000066';
+            document.getElementById('introa22_a').style.color = '#CCFF33';
+            document.getElementById('introa22_b').style.color = '#CCFF33';
+            document.getElementById('introa22_c').style.color = '#CCFF33';
+            document.getElementById('introa22_d').style.color = '#CCFF33';
+            document.getElementById('introa22_e').style.color = '#CCFF33';
+            document.getElementById('introa22_a').style.textDecoration = 'none';
+            document.getElementById('introa22_b').style.textDecoration = 'none';
+            document.getElementById('introa22_c').style.textDecoration = 'none';
+            document.getElementById('introa22_d').style.textDecoration = 'none';
+            document.getElementById('introa22_e').style.textDecoration = 'none';
+            }
+
+            function triggerbutton_colours() {
+            document.getElementById('show_hide_ooa').style.color = '#000066';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#CCFF33';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #000066';
+            document.getElementById('show_hide_ooa').style.width = '250px';
+            document.getElementById('show_hide_oob').style.color = '#000066';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#CCFF33';
+            document.getElementById('show_hide_oob').style.border = '2px solid #000066';
+            document.getElementById('show_hide_oob').style.width = '250px';
+            }
+
+            // Other Documents Link - Hover
+
+            function introa22_a_h() {
+            document.getElementById('introa22_a').style.color = '#66804C';
+            document.getElementById('introa22_a').style.textDecoration = 'none';
+            }
+
+            function introa22_a_d() {
+            document.getElementById('introa22_a').style.color = '#CCFF33';
+            document.getElementById('introa22_a').style.textDecoration = 'none';
+            }
+
+            function introa22_b_h() {
+            document.getElementById('introa22_b').style.color = '#66804C';
+            document.getElementById('introa22_b').style.textDecoration = 'none';
+            }
+
+            function introa22_b_d() {
+            document.getElementById('introa22_b').style.color = '#CCFF33';
+            document.getElementById('introa22_b').style.textDecoration = 'none';
+            }
+
+            function introa22_c_h() {
+            document.getElementById('introa22_c').style.color = '#66804C';
+            document.getElementById('introa22_c').style.textDecoration = 'none';
+            }
+
+            function introa22_c_d() {
+            document.getElementById('introa22_c').style.color = '#CCFF33';
+            document.getElementById('introa22_c').style.textDecoration = 'none';
+            }
+
+            function introa22_d_h() {
+            document.getElementById('introa22_d').style.color = '#66804C';
+            document.getElementById('introa22_d').style.textDecoration = 'none';
+            }
+
+            function introa22_d_d() {
+            document.getElementById('introa22_d').style.color = '#CCFF33';
+            document.getElementById('introa22_d').style.textDecoration = 'none';
+            }
+
+            function introa22_e_h() {
+            document.getElementById('introa22_e').style.color = '#66804C';
+            document.getElementById('introa22_e').style.textDecoration = 'none';
+            }
+
+            function introa22_e_d() {
+            document.getElementById('introa22_e').style.color = '#CCFF33';
+            document.getElementById('introa22_e').style.textDecoration = 'none';
+            }
+
+            // Back to Top - Hover
+    
+            function atop_xxa_d() {
+            document.getElementById('atop_xxa').style.color = '#4C4C4C';
+            document.getElementById('atop_xxa').style.textDecoration = 'none';
+            }
+    
+            function atop_xxa_h() {
+            document.getElementById('atop_xxa').style.color = '#808080';
+            document.getElementById('atop_xxa').style.textDecoration = 'none';
+            }
+
+            // Trigger Button - Hover
+            
+            function show_hide_ooa_d() {
+            document.getElementById('show_hide_ooa').style.color = '#000066';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#CCFF33';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #000066';
+            document.getElementById('show_hide_ooa').style.width = '250px';
+            }
+
+            function show_hide_ooa_h() {
+            document.getElementById('show_hide_ooa').style.color = '#66804C';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#000066';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #66804C';
+            document.getElementById('show_hide_ooa').style.width = '250px';
+            }
+            
+            function show_hide_oob_d() {
+            document.getElementById('show_hide_oob').style.color = '#000066';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#CCFF33';
+            document.getElementById('show_hide_oob').style.border = '2px solid #000066';
+            document.getElementById('show_hide_oob').style.width = '250px';
+            }
+
+            function show_hide_oob_h() {
+            document.getElementById('show_hide_oob').style.color = '#66804C';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#000066';
+            document.getElementById('show_hide_oob').style.border = '2px solid #66804C';
+            document.getElementById('show_hide_oob').style.width = '250px';
+            }
+            
+            // acs - Script
+            
+            // On Load
+            
+            function acs_all() {
+                document.getElementById('acs').style.padding = '5px';
+                document.getElementById('acs').style.border = '2px solid';
+                document.getElementById('acs').style.borderColor = '#000066';
+                document.getElementById('acs').style.backgroundColor = '#66804C';
+                document.getElementById('acs').style.color = '#CCFF33';
+                document.getElementById('acst').style.color = '#000066';
+                document.getElementById('acsdiva').style.marginRight = 'auto';
+                document.getElementById('acsdivb').style.marginRight = 'auto';
+                document.getElementById('acsdiva').style.marginLeft = '0px';
+                document.getElementById('acsdivb').style.marginLeft = '0px';
+                acsa_var_initiation();
+                acsb_var_initiation();
+            }
+
+            var acslsa = localStorage.getItem("acsvara");
+            var acslsb = localStorage.getItem("acsvarb");
+
+            function acsa_var_initiation() {
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Learning';
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('acsbtna').style.color = '#660033';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#660033';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('acsbtna').style.color = '#CCCC00';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('acsbtna_b').innerHTML = 'Learning';
+                    document.getElementById('acsbtna').style.color = '#00B666';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#00B666';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acslsa = localStorage.getItem("acsvara");
+                    acsa_var_initiation();
+                }
+            }
+
+            function acsb_var_initiation() {
+                if (acslsb == "acsst") {
+                    document.getElementById('acsbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('acsbtnb').style.color = '#FF0080';
+                    document.getElementById('acsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtnb').style.border = '2px solid';
+                    document.getElementById('acsbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                } else if (acslsb == "acsht") {
+                    document.getElementById('acsbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('acsbtnb').style.color = '#BF00FF';
+                    document.getElementById('acsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtnb').style.border = '2px solid';
+                    document.getElementById('acsbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("acsvarb", "acsst");
+                    acslsb = localStorage.getItem("acsvarb");
+                    acsb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function acsbtna_h() {
+                document.getElementById('acsbtna').style.color = '#000066';
+                document.getElementById('acsbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('acsbtna').style.border = 'double';
+                document.getElementById('acsbtna').style.borderColor = '#CCFF33';
+                document.getElementById('acsbtna').style.fontWeight = 'bold';
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_h();
+                }
+            }
+
+            function acsbtna_d() {
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna').style.color = '#660033';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#660033';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    document.getElementById('acsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna').style.color = '#CCCC00';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    document.getElementById('acsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna').style.color = '#00B666';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#00B666';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    document.getElementById('acsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_d();
+                }
+            }
+
+            function acsbtna_a_h() {
+                document.getElementById('acsbtna_a').style.color = '#000066';
+                document.getElementById('acsbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('acsbtna_a').style.border = 'double';
+                document.getElementById('acsbtna_a').style.borderColor = '#CCFF33';
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_a_h();
+                }
+            }
+
+            function acsbtna_a_d() {
+                document.getElementById('acsbtna_a').style.color = '#000000';
+                document.getElementById('acsbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('acsbtna_a').style.border = 'none';
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna_a').innerHTML = 'Learning';
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_a_d();
+                }
+            }
+            
+            function acsbtna_b_h() {
+                document.getElementById('acsbtna_b').style.color = '#000066';
+                document.getElementById('acsbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('acsbtna_b').style.border = 'double';
+                document.getElementById('acsbtna_b').style.borderColor = '#CCFF33';
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_b_h();
+                }
+            }
+
+            function acsbtna_b_d() {
+                document.getElementById('acsbtna_b').style.color = '#000000';
+                document.getElementById('acsbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('acsbtna_b').style.border = 'none';
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function acsbtna_a_cl() {
+                if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('acsbtna').style.color = '#CCCC00';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("acsvara", "acslg");
+                    acslsa = localStorage.getItem("acsvara");
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Learning';
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('acsbtna').style.color = '#660033';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#660033';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("acsvara", "acsnl");
+                    acslsa = localStorage.getItem("acsvara");
+                } else if (acslsa == "acscd") {
+                    document.getElementById('acsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Learning';
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('acsbtna').style.color = '#660033';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#660033';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("acsvara", "acsnl");
+                    acslsa = localStorage.getItem("acsvara");
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_a_cl();
+                }
+                acsbtna_a_h();
+            }
+
+            function acsbtna_b_cl() {
+                if (acslsa == "acscd") {
+                    document.getElementById('acsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('acsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('acsbtna').style.color = '#CCCC00';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("acsvara", "acslg");
+                    acslsa = localStorage.getItem("acsvara");
+                } else if (acslsa == "acslg") {
+                    document.getElementById('acsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('acsbtna_b').innerHTML = 'Learning';
+                    document.getElementById('acsbtna').style.color = '#00B666';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#00B666';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("acsvara", "acscd");
+                    acslsa = localStorage.getItem("acsvara");
+                } else if (acslsa == "acsnl") {
+                    document.getElementById('acsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('acsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('acsbtna_b').innerHTML = 'Learning';
+                    document.getElementById('acsbtna').style.color = '#00B666';
+                    document.getElementById('acsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtna').style.border = '2px solid';
+                    document.getElementById('acsbtna').style.borderColor = '#00B666';
+                    document.getElementById('acsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("acsvara", "acscd");
+                    acslsa = localStorage.getItem("acsvara");
+                } else {
+                    localStorage.setItem("acsvara", "acsnl");
+                    acs_var_initiation();
+                    acsbtna_b_cl();
+                }
+                acsbtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function acsbtnb_h() {
+                document.getElementById('acsbtnb').style.color = '#000066';
+                document.getElementById('acsbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('acsbtnb').style.border = 'double';
+                document.getElementById('acsbtnb').style.borderColor = '#CCFF33';
+                document.getElementById('acsbtnb').style.fontWeight = 'bold';
+            }
+
+            function acsbtnb_d() {
+                if (acslsb == "acsst") {
+                    document.getElementById('acsbtnb').style.color = '#FF0080';
+                    document.getElementById('acsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtnb').style.border = '2px solid';
+                    document.getElementById('acsbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                } else if (acslsb == "acsht") {
+                    document.getElementById('acsbtnb').style.color = '#BF00FF';
+                    document.getElementById('acsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('acsbtnb').style.border = '2px solid';
+                    document.getElementById('acsbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("acsvarb", "acsht");
+                    acs_var_initiation();
+                }
+            }
+            
+            function acsbtnb_a_h() {
+                document.getElementById('acsbtnb_a').style.color = '#000066';
+                document.getElementById('acsbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('acsbtnb_a').style.border = 'double';
+                document.getElementById('acsbtnb_a').style.borderColor = '#CCFF33';
+            }
+
+            function acsbtnb_a_d() {
+                document.getElementById('acsbtnb_a').style.color = '#000000';
+                document.getElementById('acsbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('acsbtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function acsbtnb_a_cl() {
+                if (acslsb == "acsst") {
+                    triggerno_acs_();
+                } else if (acslsb == "acsht") {
+                    triggeryes_acs_();
+                } else {
+                    localStorage.setItem("acsvarb", "acsst");
+                    acs_var_initiation();
+                    acsbtnb_a_cl();
+                }
+            }
+
+            function triggerno_acs_() {
+                document.getElementById('acsbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('acsbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('acst').innerHTML = "R U R' U' R' F R2 U' R' U' R U R' F'";
+                document.getElementById('acsbtnb').style.color = '#BF00FF';
+                document.getElementById('acsbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('acsbtnb').style.border = '2px solid';
+                document.getElementById('acsbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("acsvarb", "acsht");
+                acslsb = localStorage.getItem("acsvarb");
+            }
+
+            function triggeryes_acs_() {
+                document.getElementById('acsbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('acsbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('acst').innerHTML = "(R U R' U') R' F (R2 U' R' U') (R U R') F'";
+                document.getElementById('acsbtnb').style.color = '#FF0080';
+                document.getElementById('acsbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('acsbtnb').style.border = '2px solid';
+                document.getElementById('acsbtnb').style.borderColor = '#FF0080';
+                document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("acsvarb", "acsst");
+                acslsb = localStorage.getItem("acsvarb");
+            }
+
+            // dcs - Script
+            
+            // On Load
+            
+            function dcs_all() {
+                document.getElementById('dcs').style.padding = '5px';
+                document.getElementById('dcs').style.border = '2px solid';
+                document.getElementById('dcs').style.borderColor = '#000066';
+                document.getElementById('dcs').style.backgroundColor = '#66804C';
+                document.getElementById('dcs').style.color = '#CCFF33';
+                document.getElementById('dcst').style.color = '#000066';
+                document.getElementById('dcsdiva').style.marginRight = 'auto';
+                document.getElementById('dcsdivb').style.marginRight = 'auto';
+                document.getElementById('dcsdiva').style.marginLeft = '0px';
+                document.getElementById('dcsdivb').style.marginLeft = '0px';
+                dcsa_var_initiation();
+                dcsb_var_initiation();
+            }
+
+            var dcslsa = localStorage.getItem("dcsvara");
+            var dcslsb = localStorage.getItem("dcsvarb");
+
+            function dcsa_var_initiation() {
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Learning';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('dcsbtna').style.color = '#660033';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#660033';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('dcsbtna').style.color = '#CCCC00';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Learning';
+                    document.getElementById('dcsbtna').style.color = '#00B666';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#00B666';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcslsa = localStorage.getItem("dcsvara");
+                    dcsa_var_initiation();
+                }
+            }
+
+            function dcsb_var_initiation() {
+                if (dcslsb == "dcsst") {
+                    document.getElementById('dcsbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('dcsbtnb').style.color = '#FF0080';
+                    document.getElementById('dcsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtnb').style.border = '2px solid';
+                    document.getElementById('dcsbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                } else if (dcslsb == "dcsht") {
+                    document.getElementById('dcsbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('dcsbtnb').style.color = '#BF00FF';
+                    document.getElementById('dcsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtnb').style.border = '2px solid';
+                    document.getElementById('dcsbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("dcsvarb", "dcsst");
+                    dcslsb = localStorage.getItem("dcsvarb");
+                    dcsb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function dcsbtna_h() {
+                document.getElementById('dcsbtna').style.color = '#000066';
+                document.getElementById('dcsbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('dcsbtna').style.border = 'double';
+                document.getElementById('dcsbtna').style.borderColor = '#CCFF33';
+                document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_h();
+                }
+            }
+
+            function dcsbtna_d() {
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna').style.color = '#660033';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#660033';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    document.getElementById('dcsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna').style.color = '#CCCC00';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    document.getElementById('dcsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna').style.color = '#00B666';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#00B666';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    document.getElementById('dcsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_d();
+                }
+            }
+
+            function dcsbtna_a_h() {
+                document.getElementById('dcsbtna_a').style.color = '#000066';
+                document.getElementById('dcsbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('dcsbtna_a').style.border = 'double';
+                document.getElementById('dcsbtna_a').style.borderColor = '#CCFF33';
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_a_h();
+                }
+            }
+
+            function dcsbtna_a_d() {
+                document.getElementById('dcsbtna_a').style.color = '#000000';
+                document.getElementById('dcsbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('dcsbtna_a').style.border = 'none';
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna_a').innerHTML = 'Learning';
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_a_d();
+                }
+            }
+            
+            function dcsbtna_b_h() {
+                document.getElementById('dcsbtna_b').style.color = '#000066';
+                document.getElementById('dcsbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('dcsbtna_b').style.border = 'double';
+                document.getElementById('dcsbtna_b').style.borderColor = '#CCFF33';
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_b_h();
+                }
+            }
+
+            function dcsbtna_b_d() {
+                document.getElementById('dcsbtna_b').style.color = '#000000';
+                document.getElementById('dcsbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('dcsbtna_b').style.border = 'none';
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function dcsbtna_a_cl() {
+                if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('dcsbtna').style.color = '#CCCC00';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("dcsvara", "dcslg");
+                    dcslsa = localStorage.getItem("dcsvara");
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Learning';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('dcsbtna').style.color = '#660033';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#660033';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcslsa = localStorage.getItem("dcsvara");
+                } else if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Learning';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('dcsbtna').style.color = '#660033';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#660033';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcslsa = localStorage.getItem("dcsvara");
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_a_cl();
+                }
+                dcsbtna_a_h();
+            }
+
+            function dcsbtna_b_cl() {
+                if (dcslsa == "dcscd") {
+                    document.getElementById('dcsbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Completed';
+                    document.getElementById('dcsbtna').style.color = '#CCCC00';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("dcsvara", "dcslg");
+                    dcslsa = localStorage.getItem("dcsvara");
+                } else if (dcslsa == "dcslg") {
+                    document.getElementById('dcsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Learning';
+                    document.getElementById('dcsbtna').style.color = '#00B666';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#00B666';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("dcsvara", "dcscd");
+                    dcslsa = localStorage.getItem("dcsvara");
+                } else if (dcslsa == "dcsnl") {
+                    document.getElementById('dcsbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('dcsbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('dcsbtna_b').innerHTML = 'Learning';
+                    document.getElementById('dcsbtna').style.color = '#00B666';
+                    document.getElementById('dcsbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtna').style.border = '2px solid';
+                    document.getElementById('dcsbtna').style.borderColor = '#00B666';
+                    document.getElementById('dcsbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("dcsvara", "dcscd");
+                    dcslsa = localStorage.getItem("dcsvara");
+                } else {
+                    localStorage.setItem("dcsvara", "dcsnl");
+                    dcs_var_initiation();
+                    dcsbtna_b_cl();
+                }
+                dcsbtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function dcsbtnb_h() {
+                document.getElementById('dcsbtnb').style.color = '#000066';
+                document.getElementById('dcsbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('dcsbtnb').style.border = 'double';
+                document.getElementById('dcsbtnb').style.borderColor = '#CCFF33';
+                document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+            }
+
+            function dcsbtnb_d() {
+                if (dcslsb == "dcsst") {
+                    document.getElementById('dcsbtnb').style.color = '#FF0080';
+                    document.getElementById('dcsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtnb').style.border = '2px solid';
+                    document.getElementById('dcsbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                } else if (dcslsb == "dcsht") {
+                    document.getElementById('dcsbtnb').style.color = '#BF00FF';
+                    document.getElementById('dcsbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('dcsbtnb').style.border = '2px solid';
+                    document.getElementById('dcsbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("dcsvarb", "dcsht");
+                    dcs_var_initiation();
+                }
+            }
+            
+            function dcsbtnb_a_h() {
+                document.getElementById('dcsbtnb_a').style.color = '#000066';
+                document.getElementById('dcsbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('dcsbtnb_a').style.border = 'double';
+                document.getElementById('dcsbtnb_a').style.borderColor = '#CCFF33';
+            }
+
+            function dcsbtnb_a_d() {
+                document.getElementById('dcsbtnb_a').style.color = '#000000';
+                document.getElementById('dcsbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('dcsbtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function dcsbtnb_a_cl() {
+                if (dcslsb == "dcsst") {
+                    triggerno_dcs_();
+                } else if (dcslsb == "dcsht") {
+                    triggeryes_dcs_();
+                } else {
+                    localStorage.setItem("dcsvarb", "dcsst");
+                    dcs_var_initiation();
+                    dcsbtnb_a_cl();
+                }
+            }
+
+            function triggerno_dcs_() {
+                document.getElementById('dcsbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('dcsbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('dcst').innerHTML = "F R U' R' U' R U R' F' R U R' U' R' F R F'";
+                document.getElementById('dcsbtnb').style.color = '#BF00FF';
+                document.getElementById('dcsbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('dcsbtnb').style.border = '2px solid';
+                document.getElementById('dcsbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("dcsvarb", "dcsht");
+                dcslsb = localStorage.getItem("dcsvarb");
+            }
+
+            function triggeryes_dcs_() {
+                document.getElementById('dcsbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('dcsbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('dcst').innerHTML = "F (R U' R' U') (R U R' F') (R U R' U') (R' F R F')";
+                document.getElementById('dcsbtnb').style.color = '#FF0080';
+                document.getElementById('dcsbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('dcsbtnb').style.border = '2px solid';
+                document.getElementById('dcsbtnb').style.borderColor = '#FF0080';
+                document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("dcsvarb", "dcsst");
+                dcslsb = localStorage.getItem("dcsvarb");
+            }
+            
+            //Triggers
+            
+            function showtrigger_22begpll() {
+            triggeryes_acs_();
+            triggeryes_dcs_();
+            changecolor_22begpll();
+            paddingalgs_22begpll();
+            }
+            
+            function hidetrigger_22begpll() {
+            triggerno_acs_();
+            triggerno_dcs_();
+            changecolor_22begpll();
+            paddingalgs_22begpll();
+            }
+            
+            function changecolor_22begpll() {
+            document.getElementById('acst').style.color = "#000066";
+            document.getElementById('dcst').style.color = "#000066";
+            }
+
+            function paddingalgs_22begpll() {
+            document.getElementById('acst').style.paddingLeft = "5px";
+            document.getElementById('dcst').style.paddingLeft = "5px";
+            }
+            
+        </script>
+            
+        <header id='headermain' style='text-align: center;'>
+
+        <h1 id='headhone'>Adarsh Crazy Cubing</h1>
+           
+        <div class="header_link">
+
+            <a href="index.html">Homepage</a>
+
+            <div class="x22pdrop">
+                <button class="x22pbtn">2x2 Algorithms</button>
+                <div class="x22pdrop-content">
+                    <a href="22_beg_oll_cor.html">Beginner OLL</a>
+                    <a href="22_beg_pll_cor.html">Beginner PLL</a>
+                    <a href="22_int_ort_cor.html">Ortega OLL & PBL</a>
+                    <a href="22_adv_cll_cor.html">CLL</a>
+                    <a href="22_mas_eg1_cor.html">EG-1</a>
+                    <a href="22_mas_eg2_cor.html">EG-2</a>
+                    <a href="22_mas_eg_cor.html">Full EG</a>
+                </div>
+            </div> 
+
+            <div class="x33pdrop">
+                <button class="x33pbtn">3x3 Algorithms</button>
+                <div class="x33pdrop-content">
+                    <a href="33_beg_oll_both.html">Beginner OLL</a>
+                    <a href="33_beg_pll_both.html">Beginner PLL</a>
+                    <a href="33_adv_oll_both.html">Advanced OLL</a>
+                    <a href="33_adv_pll_both.html">Advanced PLL</a>
+                    <a href="33_adv_oll_both.html">Full LL</a>
+                    <a href="33_mas_col_both.html">COLL</a>
+                </div>
+            </div> 
+
+            <div class="x44pdrop">
+                <button class="x44pbtn">4x4+ Algorithms</button>
+                <div class="x44pdrop-content">
+                    <a href="47_beg_both_parity.html">OLL & PLL Parity</a>
+                    <a href="46_mas_pll_parity.html">Parity + PLL</a>
+                </div>
+            </div> 
+
+        </div>
+            
+        </header>
+        
+        <br><br>
+        
+        <h1 style='text-align:center;' id='bodyhone'>2x2</h1>
+        
+        <h2 style='text-align:center;' id='bodyhtwo'><i>Beginner PLL</i> Algorithms </h2>
+
+        <br><br>
+        
+        <div id='intro_div'> <b>
+        
+        <p id='introp22_a'>This is the third and final step in beginner solving method. Before this step, do 
+        <a id='introa22_a' href='22_beg_oll_cor.html' alt='OLL' onmouseover='introa22_a_h()' onmouseout='introa22_a_d()'>Beginner OLL</a>.
+        </p>
+        
+        <p id='introp22_b'>Advanced Permutation/Full LL: 
+        <a id='introa22_b' href='22_int_ort_cor.html' alt='Ortega PBL' onmouseover='introa22_b_h()' onmouseout='introa22_b_d()'>Ortega PBL</a>, 
+        <a id='introa22_c' href='22_adv_cll_cor.html' alt='CLL' onmouseover='introa22_c_h()' onmouseout='introa22_c_d()'>CLL</a>, 
+        <a id='introa22_d' href='22_mas_eg1_cor.html' alt='EG-1' onmouseover='introa22_d_h()' onmouseout='introa22_d_d()'>EG-1</a>, 
+        <a id='introa22_e' href='22_mas_eg2_cor.html' alt='EG-2' onmouseover='introa22_e_h()' onmouseout='introa22_e_d()'>EG-2</a>.
+        </p>
+        
+        <button type="button" class='triggerornot22' onclick='showtrigger_22begpll()' id='show_hide_ooa'
+        onmouseover='show_hide_ooa_h()' onmouseout='show_hide_ooa_d()'> <h4> Show triggers(brackets) </h4> </button>
+        <br><br>
+        <button type="button" class='triggerornot22' onclick='hidetrigger_22begpll()' id='show_hide_oob'
+        onmouseover='show_hide_oob_h()' onmouseout='show_hide_oob_d()'> <h4> Hide triggers(no brackets) </h4> </button>
+        <br>
+        
+        </b> </div>
+        
+        <br><br>
+        
+        <div id='acs' class='begpll_2_css'>
+        
+            <h3 class='algname22'>Adjacent Corner Swap</h3>
+            
+            <img src='22_beg_pll_adjacent-swap.png' class='two1limgs' alt='Adjacent Corner Swap' style='height: 125px; width: 125px;'> </img>
+            <br>
+            <h3 id='acst'> <b class='begpll_2_css'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
+            
+            <div class="acsdiva" id="acsdiva">
+
+                <div class="acsdropa" id="acsdiva">
+                    <button class="acsbtna" id="acsbtna" onmouseover="acsbtna_h()" onmouseout="acsbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="acsdropa-content">
+                        <a id="acsbtna_a" onclick="acsbtna_a_cl()" onmouseover="acsbtna_a_h()" onmouseout="acsbtna_a_d()">Learning</a>
+                        <a id="acsbtna_b" onclick="acsbtna_b_cl()" onmouseover="acsbtna_b_h()" onmouseout="acsbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="acsdivb" id="acsdivb">
+
+                <div class="acsdropb" id="acsdivb">
+                    <button class="acsbtnb" id="acsbtnb" onmouseover="acsbtnb_h()" onmouseout="acsbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="acsdropb-content">
+                        <a id="acsbtnb_a" onclick="acsbtnb_a_cl()" onmouseover="acsbtnb_a_h()" onmouseout="acsbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <br><br><br>
+        
+        <div id='dcs' class='begpll_2_css'>
+        
+        <h3 class='algname22'>Diagonal Corner Swap</h3>
+        
+        <img src='22_beg_pll_diagonal-swap.png' class='two1limgs' alt='Diagonal Corner Swap' style='height: 125px; width: 125px;'> </img>
+        <br>
+        <h3 id='dcst'> <b class='begpll_2_css'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
+                
+            <div class="dcsdiva" id="dcsdiva">
+
+                <div class="dcsdropa" id="dcsdiva">
+                    <button class="dcsbtna" id="dcsbtna" onmouseover="dcsbtna_h()" onmouseout="dcsbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="dcsdropa-content">
+                        <a id="dcsbtna_a" onclick="dcsbtna_a_cl()" onmouseover="dcsbtna_a_h()" onmouseout="dcsbtna_a_d()">Learning</a>
+                        <a id="dcsbtna_b" onclick="dcsbtna_b_cl()" onmouseover="dcsbtna_b_h()" onmouseout="dcsbtna_b_d()">Completed</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="dcsdivb" id="dcsdivb">
+
+                <div class="dcsdropb" id="dcsdivb">
+                    <button class="dcsbtnb" id="dcsbtnb" onmouseover="dcsbtnb_h()" onmouseout="dcsbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                    <div class="dcsdropb-content">
+                        <a id="dcsbtnb_a" onclick="dcsbtnb_a_cl()" onmouseover="dcsbtnb_a_h()" onmouseout="dcsbtnb_a_d()">Hide Triggers</a>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+        
+        <br><br><br>
+        
+        <b><a class='atop' href="#top" id='atop_xxa' onmouseover='atop_xxa_h()' onmouseout='atop_xxa_d()'>Back To Top</a></b>
+
+        <br><br><br>
+        
+        <footer id='footermain' style='text-align: center;'>
+        
+            <p id='footp_a'>Thank you for viewing my page</p>
+            
+            <p id='footp_b'>Requesting you to visit our page again</p>
+            
+            <p id='footp_c'>Email at: <b>adarsh30k@gmail.com</b> </p>
+            
+        </footer>
+        
+    </body>
+        
+</html>
