@@ -1,40 +1,9 @@
 <style>
 
-/* Back to top, algpage button and Note */
-
-.buttonhp {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.buttonhp:hover {
-  background-color: #4C8080;
-  color: white;
-}
-
-.buttonap {
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.buttonap:hover {
-  background-color: darkgrey;
-  color: white;
-}
-
-.notediv {
-	border: 3px solid black;
-	background-color: darkslategrey;
-	color: white;
-	padding-left: 5px;
-}
-
-/* Algorithm page link and heading */
+/* Algorithm page */
 
 .algpageheading22 {
-	border: 3px solid #806666;
+	border: 3px solid #66804C;
 	padding-left: 5px;
 	background-color: #DDDDDD;
 }
@@ -43,13 +12,13 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-	background-color: #FFCC66;
+	background-color: #CCFF33;
 	color: #000066;
 	border: 2px solid #000066;
 }
 
 .button22alglink:hover {
-	background-color: #806666;
+	background-color: #66804C;
 	color: #000066;
 }
 
@@ -93,150 +62,68 @@
 	color: #800000;
 }
 
-/* Top note and triger */
-
-.introp22 {
-	color: #000066;
-}
-
-.introa22 {
-	color: #FFCC66;
-	text-decoration: none;
-}
-
-.introa22:hover {
-	color: #806666;
-	text-decoration: none;
-}
-
-.triggerornot22 {
-	width:250px;
-	border: 2px solid #000066;
-	color: #000066;
-	background-color: #FFCC66
-}
-
-.triggerornot22:hover {
-	width: 250px;
-	border: 2px solid #000066;
-	color: #806666;
-	background-color: #000066
-}
-
-/* Advance CLL / Master EG-1, EG-2 / Advance OLL, PLL / Beginner OLL, PLL heading link */
-
-a.adv_cllhea {
-    text-decoration: none;
-    cursor: pointer;
-	color: #806666;
-}
-
-a.adv_cllhea:hover {
-  color: #FFCC66;
-}
-
-a.adv_pllhea {
-    text-decoration: none;
-    cursor: pointer;
-	color: #4C8080;
-}
-
-a.adv_pllhea:hover {
-  color: #99CCFF;
-}
-
-a.adv_ollhea {
-    cursor: pointer;
-   text-decoration: none;
- 	color: #4C8080;
-}
-
-a.adv_ollhea:hover {
-  color: #99CCFF;
-}
-
-a.beg_pllhea {
-    text-decoration: none;
-    cursor: pointer;
-	color: #4C8080;
-}
-
-a.beg_pllhea:hover {
-  color: #99CCFF;
-}
-
-a.beg_ollhea {
-    text-decoration: none;
-    cursor: pointer;
-	color: #4C8080;
-}
-
-a.beg_ollhea:hover {
-  color: #99CCFF;
-}
-
 /* 2x2 Algorithm divs and algs */
 
 h3.algname22 {
-	color: #FFCC66;
+	color: #CCFF33;
 }
 
-div.two_beginner_oll_algs {
+div.begoll_2_css {
 	border: 2px solid black;
-	background-color: #806666;
+	background-color: #66804C;
 }
 
-b.two_beginner_oll_algs {
+b.begoll_2_css {
 	color:#000066;
 	padding-left: 5px;
 }
 
-div.two_beginner_pll_algs {
+div.begpll_2_css {
 	border: 2px solid black;
-	background-color: #806666;
+	background-color: #66804C;
 }
 
-b.two_beginner_pll_algs {
+b.begpll_2_css {
 	color:#000066;
 	padding-left: 5px;
 }
 
-div.two_intermediate_ortega_algs {
+div.intort_2_css {
 	border: 2px solid black;
-	background-color: #806666;
+	background-color: #66804C;
 }
 
-b.two_intermediate_ortega_algs {
+b.intort_2_css {
 	color:#000066;
 	padding-left: 5px;
 }
 
-div.two_advanced_cll_algs {
+div.advcll_2_css {
 	border: 2px solid black;
-	background-color: #806666;
+	background-color: #66804C;
 }
 
-b.two_advanced_cll_algs {
+b.advcll_2_css {
 	color:#000066;
 	padding-left: 5px;
 }
 
-div.two_master_eg1_algs {
+div.masego_2_css {
 	border: 2px solid black;
-	background-color: #806666;
+	background-color: #66804C;
 }
 
-b.two_master_eg1_algs {
+b.masego_2_css {
 	color:#000066;
 	padding-left: 5px;
 }
 
-div.two_master_eg2_algs {
+div.masegt_2_css {
 	border: 2px solid black;
-	background-color: #806666;
+	background-color: #66804C;
 }
 
-b.two_master_eg2_algs {
+b.masegt_2_css {
 	color:#000066;
 	padding-left: 5px;
 }
@@ -305,117 +192,22 @@ b.fourfivesixseven_beginner_parity_algs {
 
 /* images */
 
-.221limgs {
+.two1limgs {
 	height: 125px;
 	width: 125px;
 	padding-left: 5px;
 }
 
-.331limgs {
+.three1limgs {
 	height: 160px;
 	width: 160px;
 	padding-left: 5px;
 }
 
-.44fullimgs {
+.fourfullimgs {
 	height: 200px;
 	width: 200px;
 	padding-left: 5px;
-}
-
-/* Action Buttons */
-
-button.cubealgbutton22 {
-  padding: 12px 16px;
-  font-size: 16px;
-  background-color: #000066;
-  color: white;
-  border: 2px solid white;
-}
-
-button.cubealgbutton22:hover {
-  padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #000066;
-  color: #FFCC66;
-  border: 2px solid #FFCC66;
-}
-
-button.cubealgbutton22_none {
-  padding: 12px 16px;
-  font-size: 16px;
-  background-color: #575757;
-  color: white;
-  border: 2px solid white;
-}
-
-button.cubealgbutton22_none:hover {
-  padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  color: #FFCC66;
-  border: 2px solid #FFCC66;
-}
-
-img.but22 {
-	width: 15px;
-	height: 15px;
-}
-
-button.cubealgbutton33 {
-	padding: 12px 16px;
-	font-size: 16px;
-	background-color: #003300;
-	color: white;
-	border: 2px solid white;
-  }
-  
-  button.cubealgbutton33:hover {
-	padding: 12px 16px;
-	font-size: 16px;
-	cursor: pointer;
-	background-color: #003300;
-	color: #99CCFF;
-	border: 2px solid #99CCFF;
-  }
-  
-  button.cubealgbutton33_none {
-	padding: 12px 16px;
-	font-size: 16px;
-	background-color: #575757;
-	color: white;
-	border: 2px solid white;
-  }
-  
-  button.cubealgbutton33_none:hover {
-	padding: 12px 16px;
-	font-size: 16px;
-	cursor: pointer;
-	color: #99CCFF;
-	border: 2px solid #99CCFF;
-  }
-  
-  button.cubealgbutton33_trigno {
-	padding: 12px 16px;
-	font-size: 16px;
-	background-color: #FFFF00;
-	color: #33CCCC;
-	border: 2px solid #33CCCC;
-  }
-  
-  button.cubealgbutton33_trigno:hover {
-	padding: 12px 16px;
-	font-size: 16px;
-	cursor: pointer;
-	background-color: #003300;
-	color: #99CCFF;
-	border: 2px solid #99CCFF;
-  }
-
-img.but33 {
-	width: 15px;
-	height: 15px;
 }
 
 </style>
