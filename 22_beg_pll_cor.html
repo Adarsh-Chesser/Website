@@ -768,6 +768,7 @@
                     document.getElementById('acsbtnb').style.border = '2px solid';
                     document.getElementById('acsbtnb').style.borderColor = '#FF0080';
                     document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                    triggeryes_acs_();
                 } else if (acslsb == "acsht") {
                     document.getElementById('acsbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('acsbtnb_a').innerHTML = 'Show Triggers';
@@ -776,6 +777,7 @@
                     document.getElementById('acsbtnb').style.border = '2px solid';
                     document.getElementById('acsbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('acsbtnb').style.fontWeight = 'bold';
+                    triggerno_acs_();
                 } else {
                     localStorage.setItem("acsvarb", "acsst");
                     acslsb = localStorage.getItem("acsvarb");
@@ -1137,6 +1139,7 @@
                     document.getElementById('dcsbtnb').style.border = '2px solid';
                     document.getElementById('dcsbtnb').style.borderColor = '#FF0080';
                     document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                    triggeryes_dcs_();
                 } else if (dcslsb == "dcsht") {
                     document.getElementById('dcsbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
                     document.getElementById('dcsbtnb_a').innerHTML = 'Show Triggers';
@@ -1145,6 +1148,7 @@
                     document.getElementById('dcsbtnb').style.border = '2px solid';
                     document.getElementById('dcsbtnb').style.borderColor = '#BF00FF';
                     document.getElementById('dcsbtnb').style.fontWeight = 'bold';
+                    triggerno_dcs_();
                 } else {
                     localStorage.setItem("dcsvarb", "dcsst");
                     dcslsb = localStorage.getItem("dcsvarb");
