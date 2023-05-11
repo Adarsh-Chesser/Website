@@ -542,6 +542,7 @@
             // On Load
     
             function begpll_2_wprld() {
+            trigger_onload_a();
             plf_part_a();
             atop_style();
             header_style();
@@ -566,7 +567,12 @@
             }
     
             // On Load - Functions
-            
+              
+            function trigger_onload_a() {
+                acsb_var_initiation();
+                dcsb_var_initiation();
+                }
+    
             function plf_part_a() {
             acs_all();
             dcs_all();
