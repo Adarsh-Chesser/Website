@@ -1,213 +1,223 @@
 <style>
 
-/* Algorithm page */
+	/* Algorithm page */
 
-.algpageheading22 {
-	border: 3px solid #66804C;
-	padding-left: 5px;
-	background-color: #DDDDDD;
-}
+	.algpageheading22 {
+		border: 3px solid #66804C;
+		padding-left: 5px;
+		background-color: #DDDDDD;
+	}
 
-.button22alglink {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-	background-color: #CCFF33;
-	color: #000066;
-	border: 2px solid #000066;
-}
+	.button22alglink {
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		background-color: #CCFF33;
+		color: #000066;
+		border: 2px solid #000066;
+	}
 
-.button22alglink:hover {
-	background-color: #66804C;
-	color: #000066;
-}
+	.button22alglink:hover {
+		background-color: #66804C;
+		color: #000066;
+	}
 
-.algpageheading33 {
-	border: 3px solid #4C8080;
-	padding-left: 5px;
-	background-color: #DDDDDD;
-}
+	.algpageheading33 {
+		border: 3px solid #4C8080;
+		padding-left: 5px;
+		background-color: #DDDDDD;
+	}
 
-.button33alglink {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-	background-color: #99CCFF;
-	color: #003300;
-	border: 2px solid #003300;
-}
+	.button33alglink {
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		background-color: #99CCFF;
+		color: #003300;
+		border: 2px solid #003300;
+	}
 
-.button33alglink:hover {
-	background-color: #4C8080;
-	color: #003300;
-}
+	.button33alglink:hover {
+		background-color: #4C8080;
+		color: #003300;
+	}
 
-.algpageheading44 {
-	border: 3px solid #8C801A;
-	padding-left: 5px;
-	background-color: #DDDDDD;
-}
+	.algpageheading44 {
+		border: 3px solid #8C801A;
+		padding-left: 5px;
+		background-color: #DDDDDD;
+	}
 
-.button44alglink {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-	background-color: #99FF33;
-	color: #800000;
-	border: 2px solid #800000;
-}
+	.button44alglink {
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		background-color: #99FF33;
+		color: #800000;
+		border: 2px solid #800000;
+	}
 
-.button44alglink:hover {
-	background-color: #8C801A;
-	color: #800000;
-}
+	.button44alglink:hover {
+		background-color: #8C801A;
+		color: #800000;
+	}
 
-/* 2x2 Algorithm divs and algs */
+	/* 2x2 Algorithm divs and algs */
 
-h3.algname22 {
-	color: #CCFF33;
-}
+	h3.algname22 {
+		color: #CCFF33;
+	}
 
-div.begoll_2_css {
-	border: 2px solid black;
-	background-color: #66804C;
-}
+	div.begoll_2_css {
+		border: 2px solid black;
+		background-color: #66804C;
+	}
 
-b.begoll_2_css {
-	color:#000066;
-	padding-left: 5px;
-}
+	b.begoll_2_css {
+		color:#000066;
+		padding-left: 5px;
+	}
 
-div.begpll_2_css {
-	border: 2px solid black;
-	background-color: #66804C;
-}
+	div.begpll_2_css {
+		border: 2px solid black;
+		background-color: #66804C;
+	}
 
-b.begpll_2_css {
-	color:#000066;
-	padding-left: 5px;
-}
+	b.begpll_2_css {
+		color:#000066;
+		padding-left: 5px;
+	}
 
-div.intort_2_css {
-	border: 2px solid black;
-	background-color: #66804C;
-}
+	div.intort_2_css {
+		border: 2px solid black;
+		background-color: #66804C;
+	}
 
-b.intort_2_css {
-	color:#000066;
-	padding-left: 5px;
-}
+	b.intort_2_css {
+		color:#000066;
+		padding-left: 5px;
+	}
 
-div.advcll_2_css {
-	border: 2px solid black;
-	background-color: #66804C;
-}
+	div.advcll_2_css {
+		border: 2px solid black;
+		background-color: #66804C;
+	}
 
-b.advcll_2_css {
-	color:#000066;
-	padding-left: 5px;
-}
+	b.advcll_2_css {
+		color:#000066;
+		padding-left: 5px;
+	}
 
-div.masego_2_css {
-	border: 2px solid black;
-	background-color: #66804C;
-}
+	div.masego_2_css {
+		border: 2px solid black;
+		background-color: #66804C;
+	}
 
-b.masego_2_css {
-	color:#000066;
-	padding-left: 5px;
-}
+	b.masego_2_css {
+		color:#000066;
+		padding-left: 5px;
+	}
 
-div.masegt_2_css {
-	border: 2px solid black;
-	background-color: #66804C;
-}
+	div.masegt_2_css {
+		border: 2px solid black;
+		background-color: #66804C;
+	}
 
-b.masegt_2_css {
-	color:#000066;
-	padding-left: 5px;
-}
+	b.masegt_2_css {
+		color:#000066;
+		padding-left: 5px;
+	}
 
-/* 3x3 Algorithm divs and algs */
+	/* 3x3 Algorithm divs and algs */
 
-h3.algname33 {
-	color: #99CCFF;
-}
+	h3.algname33 {
+		color: #99CCFF;
+	}
 
-.hoverhthree33 {
-	color: #003300;
-}
+	.hoverhthree33 {
+		color: #003300;
+	}
 
-div.three_beginner_oll_algs {
-	border: 2px solid black;
-	background-color: #4C8080;
-}
+	div.begoll_3_css {
+		border: 2px solid black;
+		background-color: #4C8080;
+	}
 
-b.three_beginner_oll_algs {
-	color:#003300;
-	padding-left: 5px;
-}
+	b.begoll_3_css {
+		color:#003300;
+		padding-left: 5px;
+	}
 
-div.three_beginner_pll_algs {
-	border: 2px solid black;
-	background-color: #4C8080;
-}
+	div.begpll_3_css {
+		border: 2px solid black;
+		background-color: #4C8080;
+	}
 
-b.three_beginner_pll_algs {
-	color:#003300;
-	padding-left: 5px;
-}
+	b.begpll_3_css {
+		color:#003300;
+		padding-left: 5px;
+	}
 
-div.three_advanced_oll_algs {
-	border: 2px solid black;
-	background-color: #4C8080;
-}
+	div.advoll_3_css {
+		border: 2px solid black;
+		background-color: #4C8080;
+	}
 
-b.three_advanced_oll_algs {
-	color:#003300;
-	padding-left: 5px;
-}
+	b.advoll_3_css {
+		color:#003300;
+		padding-left: 5px;
+	}
 
-div.three_advanced_pll_algs {
-	border: 2px solid black;
-	background-color: #4C8080;
-}
+	div.advpll_3_css {
+		border: 2px solid black;
+		background-color: #4C8080;
+	}
 
-b.three_advanced_pll_algs {
-	color:#003300;
-	padding-left: 5px;
-}
+	b.advpll_3_css {
+		color:#003300;
+		padding-left: 5px;
+	}
 
-/* 4x4+ Algorithm divs and algs */
+	div.advltl_3_css {
+		border: 2px solid black;
+		background-color: #4C8080;
+	}
 
-div.fourfivesixseven_beginner_parity_algs {
-	background-color: #99FF33;
-	border: 2px solid black;
-}
+	b.advltl_3_css {
+		color:#003300;
+		padding-left: 5px;
+	}
 
-b.fourfivesixseven_beginner_parity_algs {
-	color: #800000;
-	padding-left: 5px;
-}
+	/* 4x4+ Algorithm divs and algs */
 
-/* images */
+	div.begpar_7_css {
+		background-color: #99FF33;
+		border: 2px solid black;
+	}
 
-.two1limgs {
-	height: 125px;
-	width: 125px;
-	padding-left: 5px;
-}
+	b.begpar_7_css {
+		color: #800000;
+		padding-left: 5px;
+	}
 
-.three1limgs {
-	height: 160px;
-	width: 160px;
-	padding-left: 5px;
-}
+	/* images */
 
-.fourfullimgs {
-	height: 200px;
-	width: 200px;
-	padding-left: 5px;
-}
+	.two1limgs {
+		height: 125px;
+		width: 125px;
+		padding-left: 5px;
+	}
+
+	.three1limgs {
+		height: 160px;
+		width: 160px;
+		padding-left: 5px;
+	}
+
+	.fourfullimgs {
+		height: 200px;
+		width: 200px;
+		padding-left: 5px;
+	}
 
 </style>
