@@ -30,8 +30,6 @@
             // Header and Footer - Style
     
             function header_style() {
-            document.getElementById('headermain').style.backgroundColor = '#FAFAFA';
-            document.getElementById('headermain').style.border = '5px double #FF9933';
             document.getElementById('headhone').style.color = '#33CC33';
             }
             
@@ -99,36 +97,6 @@
             document.getElementById('show_hide_oob').style.width = '250px';
             }
 
-            // Trigger Button - Hover
-            
-            function show_hide_ooa_d() {
-            document.getElementById('show_hide_ooa').style.color = '#800000';
-            document.getElementById('show_hide_ooa').style.backgroundColor = '#99FF33';
-            document.getElementById('show_hide_ooa').style.border = '2px solid #800000';
-            document.getElementById('show_hide_ooa').style.width = '250px';
-            }
-
-            function show_hide_ooa_h() {
-            document.getElementById('show_hide_ooa').style.color = '#8C801A';
-            document.getElementById('show_hide_ooa').style.backgroundColor = '#800000';
-            document.getElementById('show_hide_ooa').style.border = '2px solid #8C801A';
-            document.getElementById('show_hide_ooa').style.width = '250px';
-            }
-            
-            function show_hide_oob_d() {
-            document.getElementById('show_hide_oob').style.color = '#800000';
-            document.getElementById('show_hide_oob').style.backgroundColor = '#99FF33';
-            document.getElementById('show_hide_oob').style.border = '2px solid #800000';
-            document.getElementById('show_hide_oob').style.width = '250px';
-            }
-
-            function show_hide_oob_h() {
-            document.getElementById('show_hide_oob').style.color = '#8C801A';
-            document.getElementById('show_hide_oob').style.backgroundColor = '#800000';
-            document.getElementById('show_hide_oob').style.border = '2px solid #8C801A';
-            document.getElementById('show_hide_oob').style.width = '250px';
-            }
-            
             // Other Documents Link - Hover
     
             function introa47_a_h() {
@@ -193,43 +161,34 @@
             document.getElementById('atop_xxa').style.textDecoration = 'none';
             }
     
-            // Header Buttons - Hover
-    
-            function header_total_4_begpar() {
-            algp_down();
-            hmep_down();
+            // Trigger Button - Hover
+            
+            function show_hide_ooa_d() {
+            document.getElementById('show_hide_ooa').style.color = '#800000';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#99FF33';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #800000';
+            document.getElementById('show_hide_ooa').style.width = '250px';
+            }
+
+            function show_hide_ooa_h() {
+            document.getElementById('show_hide_ooa').style.color = '#8C801A';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#800000';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #8C801A';
+            document.getElementById('show_hide_ooa').style.width = '250px';
             }
             
-            function algp_hover() {
-            document.getElementById('hdbut_algp').style.color = '#FFFF00';
-            document.getElementById('hdbut_algp').style.border = '2px solid #FFFF00';
-            document.getElementById('hdbut_algp').style.backgroundColor = '#006600';
-            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
-            document.getElementById('hdbut_algp').style.paddingRight = '12px';
+            function show_hide_oob_d() {
+            document.getElementById('show_hide_oob').style.color = '#800000';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#99FF33';
+            document.getElementById('show_hide_oob').style.border = '2px solid #800000';
+            document.getElementById('show_hide_oob').style.width = '250px';
             }
-            
-            function algp_down() {
-            document.getElementById('hdbut_algp').style.color = '#006600';
-            document.getElementById('hdbut_algp').style.border = '2px solid #006600';
-            document.getElementById('hdbut_algp').style.backgroundColor = '#FFFF00';
-            document.getElementById('hdbut_algp').style.paddingLeft = '12px';
-            document.getElementById('hdbut_algp').style.paddingRight = '12px';
-            }
-            
-            function hmep_hover() {
-            document.getElementById('hdbut_hmep').style.color = '#FFFF00';
-            document.getElementById('hdbut_hmep').style.border = '2px solid #FFFF00';
-            document.getElementById('hdbut_hmep').style.backgroundColor = '#006600';
-            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
-            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
-            }
-            
-            function hmep_down() {
-            document.getElementById('hdbut_hmep').style.color = '#006600';
-            document.getElementById('hdbut_hmep').style.border = '2px solid #006600';
-            document.getElementById('hdbut_hmep').style.backgroundColor = '#FFFF00';
-            document.getElementById('hdbut_hmep').style.paddingLeft = '12px';
-            document.getElementById('hdbut_hmep').style.paddingRight = '12px';
+
+            function show_hide_oob_h() {
+            document.getElementById('show_hide_oob').style.color = '#8C801A';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#800000';
+            document.getElementById('show_hide_oob').style.border = '2px solid #8C801A';
+            document.getElementById('show_hide_oob').style.width = '250px';
             }
             
             // OLL Parity
@@ -1165,14 +1124,48 @@
         </script>
         
         <header id='headermain' style='text-align: center;'>
-        
+
             <h1 id='headhone'>Adarsh Crazy Cubing</h1>
-                   
-            <button class='hdbutint' id='hdbut_algp' onmouseover='algp_hover()' onmouseout='algp_down()' onclick="document.location='algpage.html'"> <h3> Algorithm Page </h3> </button>
-            <button class='hdbutint' id='hdbut_hmep' onmouseover='hmep_hover()' onmouseout='hmep_down()' onclick="document.location='index.html'"> <h3> Home Page </h3> </button>
-                    
-            <br><br>
-                    
+               
+            <div class="header_link">
+    
+                <a href="index.html">Homepage</a>
+    
+                <div class="x22pdrop">
+                    <button class="x22pbtn">2x2 Algorithms</button>
+                    <div class="x22pdrop-content">
+                        <a href="22_beg_oll_cor.html">Beginner OLL</a>
+                        <a href="22_beg_pll_cor.html">Beginner PLL</a>
+                        <a href="22_int_ort_cor.html">Ortega OLL & PBL</a>
+                        <a href="22_adv_cll_cor.html">CLL</a>
+                        <a href="22_mas_eg1_cor.html">EG-1</a>
+                        <a href="22_mas_eg2_cor.html">EG-2</a>
+                        <a href="22_mas_eg_cor.html">Full EG</a>
+                    </div>
+                </div> 
+    
+                <div class="x33pdrop">
+                    <button class="x33pbtn">3x3 Algorithms</button>
+                    <div class="x33pdrop-content">
+                        <a href="33_beg_oll_both.html">Beginner OLL</a>
+                        <a href="33_beg_pll_both.html">Beginner PLL</a>
+                        <a href="33_adv_oll_both.html">Advanced OLL</a>
+                        <a href="33_adv_pll_both.html">Advanced PLL</a>
+                        <a href="33_adv_oll_both.html">Full LL</a>
+                        <a href="33_mas_col_both.html">COLL</a>
+                    </div>
+                </div> 
+    
+                <div class="x44pdrop">
+                    <button class="x44pbtn">4x4+ Algorithms</button>
+                    <div class="x44pdrop-content">
+                        <a href="47_beg_both_parity.html">OLL & PLL Parity</a>
+                        <a href="46_mas_pll_parity.html">Parity + PLL</a>
+                    </div>
+                </div> 
+    
+            </div>
+                
         </header>
     
         <br><br>
@@ -1217,97 +1210,75 @@
         
         <br><br>
         
-        <div id='opr' class='fourfivesixseven_beginner_parity_algs'>
+        <div id='opr' class='begpar_7_css'>
         
         <h3>OLL Parity</h3>
         
-        <img src='47_beg_par_oll_parity.png' class='44fullimgs' alt='OLL Parity' style='height: 160px; width: 160px;'> </img>
+        <img src='47_beg_par_oll_parity.png' class='fourfullimgs' alt='OLL Parity' style='height: 160px; width: 160px;'> </img>
         <br><br>
-        <h3 id='oprt'> <b class='fourfivesixseven_beginner_parity_algs'> r U2 x r U2 r U2 r' U2 l U2 r' U2 r U2 r' U2 r' U2 x' r l' U2 </b> </h3>
-        
-        <button type='button' class='cubealgbutton44' id='completed_opr_' onclick='completed_opr_()' 
-        onmouseover='opr_com_hover()' onmouseout='opr_com_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton44' id='trash_opr_' onclick='trash_opr_()' 
-        onmouseover='opr_del_hover()' onmouseout='opr_del_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton44' id='learn_opr_' onclick='learn_opr_()' 
-        onmouseover='opr_lea_hover()' onmouseout='opr_lea_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton44_none' id='none_opr_' onclick='none_opr_()' 
-        onmouseover='opr_non_hover()' onmouseout='opr_non_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_xmark_none.png'> None 
-        </button>
-        
+        <h3 id='oprt'> <b class='begpar_7_css'> r U2 x r U2 r U2 r' U2 l U2 r' U2 r U2 r' U2 r' U2 x' r l' U2 </b> </h3>
+            
+        <div class="oprdiva" id="oprdiva">
+
+            <div class="oprdropa" id="oprdiva">
+                <button class="oprbtna" id="oprbtna" onmouseover="oprbtna_h()" onmouseout="oprbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                <div class="oprdropa-content">
+                    <a id="oprbtna_a" onclick="oprbtna_a_cl()" onmouseover="oprbtna_a_h()" onmouseout="oprbtna_a_d()">Learning</a>
+                    <a id="oprbtna_b" onclick="oprbtna_b_cl()" onmouseover="oprbtna_b_h()" onmouseout="oprbtna_b_d()">Completed</a>
+                </div>
+            </div>
+
+        </div>
+
         <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton44' style='width:250px;' id='triggeryes_opr_' onclick='triggeryes_opr_()' 
-        onmouseover='opr_ytr_hover()' onmouseout='opr_ytr_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For OLL Parity Only
-        </button>
-        
-        <button type='button' class='cubealgbutton44_trigno' style='width:250px;' id='triggerno_opr_' onclick='triggerno_opr_()' 
-        onmouseover='opr_ntr_hover()' onmouseout='opr_ntr_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_notrig_notrig.png'> Hide Triggers For OLL Parity Only
-        </button>
-        
-        <br>
-        <br>
+
+        <div class="oprdivb" id="oprdivb">
+
+            <div class="oprdropb" id="oprdivb">
+                <button class="oprbtnb" id="oprbtnb" onmouseover="oprbtnb_h()" onmouseout="oprbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                <div class="oprdropb-content">
+                    <a id="oprbtnb_a" onclick="oprbtnb_a_cl()" onmouseover="oprbtnb_a_h()" onmouseout="oprbtnb_a_d()">Hide Triggers</a>
+                </div>
+            </div>
+
+        </div>
         
         </div>
         
         <br><br><br>
         
-        <div id='ppr' class='fourfivesixseven_beginner_parity_algs'>
+        <div id='ppr' class='begpar_7_css'>
         
         <h3>PLL Parity</h3>
         
-        <img src='47_beg_par_pll_parity.png' class='44fullimgs' alt='PLL Parity' style='height: 160px; width: 160px;'> </img>
+        <img src='47_beg_par_pll_parity.png' class='fourfullimgs' alt='PLL Parity' style='height: 160px; width: 160px;'> </img>
         <br><br>
-        <h3 id='pprt'> <b class='fourfivesixseven_beginner_parity_algs'> *Uw2 *Rw2 U2 r2 U2 *Rw2 *Uw2 </b> </h3>
-        
-        <button type='button' class='cubealgbutton44' id='completed_ppr_' onclick='completed_ppr_()' 
-        onmouseover='ppr_com_hover()' onmouseout='ppr_com_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed 
-        </button>
-        
-        <button type='button' class='cubealgbutton44' id='trash_ppr_' onclick='trash_ppr_()' 
-        onmouseover='ppr_del_hover()' onmouseout='ppr_del_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete 
-        </button>
-        
-        <button type='button' class='cubealgbutton44' id='learn_ppr_' onclick='learn_ppr_()' 
-        onmouseover='ppr_lea_hover()' onmouseout='ppr_lea_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning 
-        </button>
-        
-        <button type='button' class='cubealgbutton44_none' id='none_ppr_' onclick='none_ppr_()' 
-        onmouseover='ppr_non_hover()' onmouseout='ppr_non_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_xmark_none.png'> None 
-        </button>
-        
+        <h3 id='pprt'> <b class='begpar_7_css'> *Uw2 *Rw2 U2 r2 U2 *Rw2 *Uw2 </b> </h3>
+            
+        <div class="pprdiva" id="pprdiva">
+
+            <div class="pprdropa" id="pprdiva">
+                <button class="pprbtna" id="pprbtna" onmouseover="pprbtna_h()" onmouseout="pprbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                <div class="pprdropa-content">
+                    <a id="pprbtna_a" onclick="pprbtna_a_cl()" onmouseover="pprbtna_a_h()" onmouseout="pprbtna_a_d()">Learning</a>
+                    <a id="pprbtna_b" onclick="pprbtna_b_cl()" onmouseover="pprbtna_b_h()" onmouseout="pprbtna_b_d()">Completed</a>
+                </div>
+            </div>
+
+        </div>
+
         <br>
-        <br>
-        
-        <button type='button' class='cubealgbutton44' style='width:250px;' id='triggeryes_ppr_' onclick='triggeryes_ppr_()' 
-        onmouseover='ppr_ytr_hover()' onmouseout='ppr_ytr_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For PLL Parity Only
-        </button>
-        
-        <button type='button' class='cubealgbutton44_trigno' style='width:250px;' id='triggerno_ppr_' onclick='triggerno_ppr_()' 
-        onmouseover='ppr_ntr_hover()' onmouseout='ppr_ntr_down()'>
-        <img class='imgbut44' height='20px' width='20px' src='44_notrig_notrig.png'> Hide Triggers For PLL Parity Only
-        </button>
-        
-        <br>
-        <br>
+
+        <div class="pprdivb" id="pprdivb">
+
+            <div class="pprdropb" id="pprdivb">
+                <button class="pprbtnb" id="pprbtnb" onmouseover="pprbtnb_h()" onmouseout="pprbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                <div class="pprdropb-content">
+                    <a id="pprbtnb_a" onclick="pprbtnb_a_cl()" onmouseover="pprbtnb_a_h()" onmouseout="pprbtnb_a_d()">Hide Triggers</a>
+                </div>
+            </div>
+
+        </div>
         
         </div>
         
