@@ -14,15 +14,15 @@ ______
 
 ----------
 
-001638 - 2x2 Beg PLL
-004768 - 2x2 Beg OLL 
-008167 - 2x2 Int Ortega
+001642 - 2x2 Beg PLL
+004782 - 2x2 Beg OLL 
+008191 - 2x2 Int Ortega
 028027 - 2x2 Adv CLL
-028282 - 2x2 Mas EG-1 
+028661 - 2x2 Mas EG-1 
 000627 - 2x2 Mas EG-2 \\
 000000 - 2x2 Mas Full EG \\*
 ______
-070882 - 2x2 Total
+071303 - 2x2 Total
 ______
 
 ----------
@@ -44,12 +44,13 @@ ______
 000421 - Algpage CSS 
 000191 - Algpage &
 000288 - Index $
+000010 - Index &
 ______
-000900 - Others Total
+000910 - Others Total
 ______
 
-207583 - Algorithms Total
-208483 - Grand Total
+208004 - Algorithms Total
+208914 - Grand Total
 
 -----------------------
 
@@ -100,7 +101,7 @@ ___
 
 -----------------------
 
-Avg line for each alg = 579.84
+Avg line for each alg = 581.02
 
 -----------------------
 
