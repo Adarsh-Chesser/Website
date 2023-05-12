@@ -10,13 +10,537 @@
     
     </head>
     
-    <body onload="begpar_4_wprld()">
+    <body onload="begpar_7_wprld()">
         
+        <style>
+
+            /* Document */
+
+            #bodyb {
+            font-family: Arial, Helvetica, sans-serif;
+            }
+
+            div.begpar_7_css {
+            border: 2px solid #B24C33;
+            }
+
+            b.begpar_7_css {
+            padding-left: 5px;
+            color: #660066;
+            }
+
+            .algname22 {
+            color: #FF9900;
+            }
+
+            .two1limgs {
+            height: 125px;
+            width: 125px;
+            padding-left: 5px;
+            }
+
+            /* Header */
+
+            .header_link {
+            overflow: hidden;
+            background-color: #333333;
+            }
+    
+            .header_link a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .x22pdrop, .x33pdrop, .x44pdrop {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .x22pdrop .x22pbtn, .x33pdrop .x33pbtn, .x44pdrop .x44pbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .header_link a:hover, .x22pdrop:hover .x22pbtn, .x33pdrop:hover .x33pbtn, .x44pdrop:hover .x44pbtn {
+            background-color: #FF0000;
+            }
+    
+            .x22pdrop-content, .x33pdrop-content, .x44pdrop-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .x22pdrop-content a, .x33pdrop-content a, .x44pdrop-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .x22pdrop-content a:hover, .x33pdrop-content a:hover, .x44pdrop-content a:hover {
+            background-color: #DDDDDD;
+            color: #FF0000;
+            font-weight: bold;
+            }
+    
+            .x22pdrop:hover .x22pdrop-content, .x33pdrop:hover .x33pdrop-content, .x44pdrop:hover .x44pdrop-content {
+            display: block;
+            }
+
+            /* opr - Style */
+
+            /* Status */
+    
+            .oprdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .oprdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .oprdropa {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .oprdropa .oprbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .oprdiva a:hover {
+            background-color: #FF9900;
+            color: #660066;
+            border: 2px solid #660066;
+            font-weight: bold;
+            }
+
+            .oprdropa:hover .oprbtna {
+            color: #FF9900;
+            border: 2px dotted #FF9900;
+            background-color: #660066;
+            }
+    
+            .oprdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .oprdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .oprdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #660066;
+            font-weight: bold;
+            }
+    
+            .oprdropa:hover .oprdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .oprdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .oprdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .oprdropb {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .oprdropb .oprbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .oprdivb a:hover {
+            background-color: #FF9900;
+            color: #660066;
+            border: 2px solid #660066;
+            font-weight: bold;
+            }
+
+            .oprdropb:hover .oprbtnb {
+            color: #FF9900;
+            border: 2px dotted #FF9900;
+            background-color: #660066;
+            }
+    
+            .oprdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .oprdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .oprdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #660066;
+            }
+    
+            .oprdropb:hover .oprdropb-content {
+            display: block;
+            }
+
+            .oprdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        
+            .oprdropb {
+            float: left;
+            overflow: hidden;
+            }
+        
+            .oprdropb .oprbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+        
+            .oprdivb a:hover {
+            background-color: #FF9900;
+            color: #660066;
+            border: 2px solid #660066;
+            font-weight: bold;
+            }
+    
+            .oprdropb:hover .oprbtnb {
+            color: #FF9900;
+            border: 2px dotted #FF9900;
+            background-color: #660066;
+            }
+        
+            .oprdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+        
+            .oprdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+        
+            .oprdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #660066;
+            font-weight: bold;
+            }
+    
+            .oprdropb:hover .oprdropb-content {
+            display: block;
+            }
+
+            /* ppr - Style */
+
+            /* Status */
+    
+            .pprdiva {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .pprdiva a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .pprdropa {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .pprdropa .pprbtna {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .pprdiva a:hover {
+            background-color: #FF9900;
+            color: #660066;
+            border: 2px solid #660066;
+            font-weight: bold;
+            }
+
+            .pprdropa:hover .pprbtna {
+            color: #FF9900;
+            border: 2px dotted #FF9900;
+            background-color: #660066;
+            }
+    
+            .pprdropa-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .pprdropa-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .pprdropa-content a:hover {
+            background-color: #DDDDDD;
+            color: #660066;
+            font-weight: bold;
+            }
+    
+            .pprdropa:hover .pprdropa-content {
+            display: block;
+            }
+
+            /* Triggers */
+
+            .pprdivb {
+            overflow: hidden;
+            width: fit-content;
+            font-weight: bold;
+            }
+    
+            .pprdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+    
+            .pprdropb {
+            float: left;
+            overflow: hidden;
+            }
+    
+            .pprdropb .pprbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+    
+            .pprdivb a:hover {
+            background-color: #FF9900;
+            color: #660066;
+            border: 2px solid #660066;
+            font-weight: bold;
+            }
+
+            .pprdropb:hover .pprbtnb {
+            color: #FF9900;
+            border: 2px dotted #FF9900;
+            background-color: #660066;
+            }
+    
+            .pprdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            .pprdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+    
+            .pprdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #660066;
+            }
+    
+            .pprdropb:hover .pprdropb-content {
+            display: block;
+            }
+
+            .pprdivb a {
+            float: left;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        
+            .pprdropb {
+            float: left;
+            overflow: hidden;
+            }
+        
+            .pprdropb .pprbtnb {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+        
+            .pprdivb a:hover {
+            background-color: #FF9900;
+            color: #660066;
+            border: 2px solid #660066;
+            font-weight: bold;
+            }
+    
+            .pprdropb:hover .pprbtnb {
+            color: #FF9900;
+            border: 2px dotted #FF9900;
+            background-color: #660066;
+            }
+        
+            .pprdropb-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+        
+            .pprdropb-content a {
+            float: none;
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+        
+            .pprdropb-content a:hover {
+            background-color: #DDDDDD;
+            color: #660066;
+            font-weight: bold;
+            }
+    
+            .pprdropb:hover .pprdropb-content {
+            display: block;
+            }
+    
+        </style>
+          
         <script>
     
             // On Load
 
-            function begpar_4_wprld() {
+            function begpar_7_wprld() {
+            trigger_onload_a();
             paf_part_a();
             atop_style();
             header_style();
@@ -42,6 +566,11 @@
             }
     
             // On Load - Functions
+      
+            function trigger_onload_a() {
+                oprb_var_initiation();
+                pprb_var_initiation();
+                }
     
             function paf_part_a() {
             opr_all();
@@ -54,98 +583,98 @@
             }
             
             function title_colours() {
-            document.getElementById('bodyhone').style.color = '#800000';
-            document.getElementById('bodyhtwo').style.color = '#8C801A';
+            document.getElementById('bodyhone').style.color = '#660066';
+            document.getElementById('bodyhtwo').style.color = '#B24C33';
             }
             
             function introduction_style() {
-            document.getElementById('introp47_a').style.color = '#800000';
-            document.getElementById('introp47_b').style.color = '#800000';
-            document.getElementById('introp47_c').style.color = '#800000';
-            document.getElementById('introp47_d').style.color = '#800000';
-            document.getElementById('introa47_a').style.color = '#99FF33';
-            document.getElementById('introa47_a').style.color = '#99FF33';
-            document.getElementById('introa47_a').style.color = '#99FF33';
-            document.getElementById('introa47_b').style.color = '#99FF33';
-            document.getElementById('introa47_a').style.color = '#99FF33';
-            document.getElementById('introa47_c').style.color = '#99FF33';
-            document.getElementById('introa47_a').style.color = '#99FF33';
-            document.getElementById('introa47_d').style.color = '#99FF33';
-            document.getElementById('introa47_a').style.color = '#99FF33';
-            document.getElementById('introa47_e').style.color = '#99FF33';
-            document.getElementById('introa47_a').style.color = '#99FF33';
+            document.getElementById('introp47_a').style.color = '#660066';
+            document.getElementById('introp47_b').style.color = '#660066';
+            document.getElementById('introp47_c').style.color = '#660066';
+            document.getElementById('introp47_d').style.color = '#660066';
+            document.getElementById('introa47_a').style.color = '#FF9900';
+            document.getElementById('introa47_a').style.color = '#FF9900';
+            document.getElementById('introa47_a').style.color = '#FF9900';
+            document.getElementById('introa47_b').style.color = '#FF9900';
+            document.getElementById('introa47_a').style.color = '#FF9900';
+            document.getElementById('introa47_c').style.color = '#FF9900';
+            document.getElementById('introa47_a').style.color = '#FF9900';
+            document.getElementById('introa47_d').style.color = '#FF9900';
+            document.getElementById('introa47_a').style.color = '#FF9900';
+            document.getElementById('introa47_e').style.color = '#FF9900';
+            document.getElementById('introa47_a').style.color = '#FF9900';
             document.getElementById('introa47_a').style.textDecoration = 'none';
-            document.getElementById('introa47_a').style.color = '#99FF33';
+            document.getElementById('introa47_a').style.color = '#FF9900';
             document.getElementById('introa47_b').style.textDecoration = 'none';
-            document.getElementById('introa47_a').style.color = '#99FF33';
+            document.getElementById('introa47_a').style.color = '#FF9900';
             document.getElementById('introa47_c').style.textDecoration = 'none';
-            document.getElementById('introa47_a').style.color = '#99FF33';
+            document.getElementById('introa47_a').style.color = '#FF9900';
             document.getElementById('introa47_d').style.textDecoration = 'none';
-            document.getElementById('introa47_a').style.color = '#99FF33';
+            document.getElementById('introa47_a').style.color = '#FF9900';
             document.getElementById('introa47_e').style.textDecoration = 'none';
-            document.getElementById('introa47_a').style.color = '#99FF33';
+            document.getElementById('introa47_a').style.color = '#FF9900';
             }
             
             function triggerbutton_colours() {
-            document.getElementById('show_hide_ooa').style.color = '#800000';
-            document.getElementById('show_hide_ooa').style.backgroundColor = '#99FF33';
-            document.getElementById('show_hide_ooa').style.border = '2px solid #800000';
+            document.getElementById('show_hide_ooa').style.color = '#660066';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#FF9900';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #660066';
             document.getElementById('show_hide_ooa').style.width = '250px';
-            document.getElementById('show_hide_oob').style.color = '#800000';
-            document.getElementById('show_hide_oob').style.backgroundColor = '#99FF33';
-            document.getElementById('show_hide_oob').style.border = '2px solid #800000';
+            document.getElementById('show_hide_oob').style.color = '#660066';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#FF9900';
+            document.getElementById('show_hide_oob').style.border = '2px solid #660066';
             document.getElementById('show_hide_oob').style.width = '250px';
             }
 
             // Other Documents Link - Hover
     
             function introa47_a_h() {
-            document.getElementById('introa47_a').style.color = '#8C801A';
+            document.getElementById('introa47_a').style.color = '#B24C33';
             document.getElementById('introa47_a').style.textDecoration = 'none';
             }
     
             function introa47_a_d() {
-            document.getElementById('introa47_a').style.color = '#99FF33';
+            document.getElementById('introa47_a').style.color = '#FF9900';
             document.getElementById('introa47_a').style.textDecoration = 'none';
             }
     
             function introa47_b_h() {
-            document.getElementById('introa47_b').style.color = '#8C801A';
+            document.getElementById('introa47_b').style.color = '#B24C33';
             document.getElementById('introa47_b').style.textDecoration = 'none';
             }
     
             function introa47_b_d() {
-            document.getElementById('introa47_b').style.color = '#99FF33';
+            document.getElementById('introa47_b').style.color = '#FF9900';
             document.getElementById('introa47_b').style.textDecoration = 'none';
             }
     
             function introa47_c_h() {
-            document.getElementById('introa47_c').style.color = '#8C801A';
+            document.getElementById('introa47_c').style.color = '#B24C33';
             document.getElementById('introa47_c').style.textDecoration = 'none';
             }
     
             function introa47_c_d() {
-            document.getElementById('introa47_c').style.color = '#99FF33';
+            document.getElementById('introa47_c').style.color = '#FF9900';
             document.getElementById('introa47_c').style.textDecoration = 'none';
             }
     
             function introa47_d_h() {
-            document.getElementById('introa47_d').style.color = '#8C801A';
+            document.getElementById('introa47_d').style.color = '#B24C33';
             document.getElementById('introa47_d').style.textDecoration = 'none';
             }
     
             function introa47_d_d() {
-            document.getElementById('introa47_d').style.color = '#99FF33';
+            document.getElementById('introa47_d').style.color = '#FF9900';
             document.getElementById('introa47_d').style.textDecoration = 'none';
             }
     
             function introa47_e_h() {
-            document.getElementById('introa47_e').style.color = '#8C801A';
+            document.getElementById('introa47_e').style.color = '#B24C33';
             document.getElementById('introa47_e').style.textDecoration = 'none';
             }
     
             function introa47_e_d() {
-            document.getElementById('introa47_e').style.color = '#99FF33';
+            document.getElementById('introa47_e').style.color = '#FF9900';
             document.getElementById('introa47_e').style.textDecoration = 'none';
             }
     
@@ -164,938 +693,776 @@
             // Trigger Button - Hover
             
             function show_hide_ooa_d() {
-            document.getElementById('show_hide_ooa').style.color = '#800000';
-            document.getElementById('show_hide_ooa').style.backgroundColor = '#99FF33';
-            document.getElementById('show_hide_ooa').style.border = '2px solid #800000';
+            document.getElementById('show_hide_ooa').style.color = '#660066';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#FF9900';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #660066';
             document.getElementById('show_hide_ooa').style.width = '250px';
             }
 
             function show_hide_ooa_h() {
-            document.getElementById('show_hide_ooa').style.color = '#8C801A';
-            document.getElementById('show_hide_ooa').style.backgroundColor = '#800000';
-            document.getElementById('show_hide_ooa').style.border = '2px solid #8C801A';
+            document.getElementById('show_hide_ooa').style.color = '#B24C33';
+            document.getElementById('show_hide_ooa').style.backgroundColor = '#660066';
+            document.getElementById('show_hide_ooa').style.border = '2px solid #B24C33';
             document.getElementById('show_hide_ooa').style.width = '250px';
             }
             
             function show_hide_oob_d() {
-            document.getElementById('show_hide_oob').style.color = '#800000';
-            document.getElementById('show_hide_oob').style.backgroundColor = '#99FF33';
-            document.getElementById('show_hide_oob').style.border = '2px solid #800000';
+            document.getElementById('show_hide_oob').style.color = '#660066';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#FF9900';
+            document.getElementById('show_hide_oob').style.border = '2px solid #660066';
             document.getElementById('show_hide_oob').style.width = '250px';
             }
 
             function show_hide_oob_h() {
-            document.getElementById('show_hide_oob').style.color = '#8C801A';
-            document.getElementById('show_hide_oob').style.backgroundColor = '#800000';
-            document.getElementById('show_hide_oob').style.border = '2px solid #8C801A';
+            document.getElementById('show_hide_oob').style.color = '#B24C33';
+            document.getElementById('show_hide_oob').style.backgroundColor = '#660066';
+            document.getElementById('show_hide_oob').style.border = '2px solid #B24C33';
             document.getElementById('show_hide_oob').style.width = '250px';
             }
             
-            // OLL Parity
-
-            // Style
+            // opr - Script
+            
+            // On Load
             
             function opr_all() {
-            document.getElementById('opr').style.padding = '5px';
-            document.getElementById('opr').style.backgroundColor = '#8C801A';
-            document.getElementById('opr').style.border = '2px solid black';
-            document.getElementById('opr').style.color = '#99FF33';
-            document.getElementById('oprt').style.color = '#800000';
-            document.getElementById('completed_opr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_opr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_opr_').style.backgroundColor = '#800000';
-            document.getElementById('none_opr_').style.backgroundColor = '#575757';
-            opr_com_style();
-            opr_del_style();
-            opr_lea_style();
-            opr_non_style();
-            document.getElementById('triggeryes_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_opr_').style.backgroundColor = '#FFFF00';
-            opr_ytr_style();
-            opr_ntr_style();
+                document.getElementById('opr').style.padding = '5px';
+                document.getElementById('opr').style.border = '2px solid';
+                document.getElementById('opr').style.borderColor = '#660066';
+                document.getElementById('opr').style.backgroundColor = '#B24C33';
+                document.getElementById('opr').style.color = '#FF9900';
+                document.getElementById('oprt').style.color = '#660066';
+                document.getElementById('oprdiva').style.marginRight = 'auto';
+                document.getElementById('oprdivb').style.marginRight = 'auto';
+                document.getElementById('oprdiva').style.marginLeft = '0px';
+                document.getElementById('oprdivb').style.marginLeft = '0px';
+                opra_var_initiation();
+                oprb_var_initiation();
             }
-            
-            function opr_com_style() {
-            document.getElementById('completed_opr_').style.paddingBottom = "12px";
-            document.getElementById('completed_opr_').style.paddingTop = "12px";
-            document.getElementById('completed_opr_').style.paddingLeft = "16px";
-            document.getElementById('completed_opr_').style.paddingRight = "16px";
-            document.getElementById('completed_opr_').style.fontSize = '16px';
-            document.getElementById('completed_opr_').style.border = '2px solid white';
-            document.getElementById('completed_opr_').style.color = 'white';
-            }
-            
-            function opr_del_style() {
-            document.getElementById('trash_opr_').style.paddingBottom = "12px";
-            document.getElementById('trash_opr_').style.paddingTop = "12px";
-            document.getElementById('trash_opr_').style.paddingLeft = "16px";
-            document.getElementById('trash_opr_').style.paddingRight = "16px";
-            document.getElementById('trash_opr_').style.fontSize = '16px';
-            document.getElementById('trash_opr_').style.border = '2px solid white';
-            document.getElementById('trash_opr_').style.color = 'white';
-            }
-            
-            function opr_lea_style() {
-            document.getElementById('learn_opr_').style.paddingBottom = "12px";
-            document.getElementById('learn_opr_').style.paddingTop = "12px";
-            document.getElementById('learn_opr_').style.paddingLeft = "16px";
-            document.getElementById('learn_opr_').style.paddingRight = "16px";
-            document.getElementById('learn_opr_').style.fontSize = '16px';
-            document.getElementById('learn_opr_').style.border = '2px solid white';
-            document.getElementById('learn_opr_').style.color = 'white';
-            }
-            
-            function opr_non_style() {
-            document.getElementById('none_opr_').style.paddingBottom = "12px";
-            document.getElementById('none_opr_').style.paddingTop = "12px";
-            document.getElementById('none_opr_').style.paddingLeft = "16px";
-            document.getElementById('none_opr_').style.paddingRight = "16px";
-            document.getElementById('none_opr_').style.fontSize = '16px';
-            document.getElementById('none_opr_').style.border = '2px solid white';
-            document.getElementById('none_opr_').style.color = 'white';
-            }
-            
-            function opr_ytr_style() {
-            document.getElementById('triggeryes_opr_').style.paddingBottom = "12px";
-            document.getElementById('triggeryes_opr_').style.paddingTop = "12px";
-            document.getElementById('triggeryes_opr_').style.paddingLeft = "16px";
-            document.getElementById('triggeryes_opr_').style.paddingRight = "16px";
-            document.getElementById('triggeryes_opr_').style.fontSize = '16px';
-            document.getElementById('triggeryes_opr_').style.border = '2px solid white';
-            document.getElementById('triggeryes_opr_').style.color = 'white';
-            }
-            
-            function opr_ntr_style() {
-            document.getElementById('triggerno_opr_').style.paddingBottom = "12px";
-            document.getElementById('triggerno_opr_').style.paddingTop = "12px";
-            document.getElementById('triggerno_opr_').style.paddingLeft = "16px";
-            document.getElementById('triggerno_opr_').style.paddingRight = "16px";
-            document.getElementById('triggerno_opr_').style.fontSize = '16px';
-            document.getElementById('triggerno_opr_').style.border = '2px solid #33CCCC';
-            document.getElementById('triggerno_opr_').style.color = '#33CCCC';
-            }
-            
-            // Action Buttons
-            
-            var oprcom = 'no';
-            var oprlea = 'no';
-            var oprdel = 'no';
-            var oprnon = 'yes';
-            
-            function completed_opr_() {
-            document.getElementById('completed_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_done.png'> Completed ";
-            document.getElementById('completed_opr_').style.backgroundColor = '#00B666';
-            opr_del_nor();
-            opr_lea_nor();
-            opr_non_nor();
-            oprcom = 'yes';
-            oprlea = 'no';
-            oprdel = 'no';
-            oprnon = 'no';
-            opr_com_style();
-            opr_del_style();
-            opr_lea_style();
-            opr_non_style();
-            }
-            
-            function trash_opr_() {
-            opr_com_nor();
-            document.getElementById('trash_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_delete.png'> Delete ";
-            document.getElementById('trash_opr_').style.backgroundColor = '#FF0000';
-            opr_lea_nor();
-            opr_non_nor();
-            oprcom = 'no';
-            oprlea = 'no';
-            oprdel = 'yes';
-            oprnon = 'no';
-            opr_com_style();
-            opr_del_style();
-            opr_lea_style();
-            opr_non_style();
-            }
-            
-            function learn_opr_() {
-            opr_com_nor();
-            opr_del_nor();
-            document.getElementById('learn_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_learning.png'> Learning ";
-            document.getElementById('learn_opr_').style.backgroundColor = '#FFCC00';
-            opr_non_nor();
-            oprcom = 'no';
-            oprlea = 'yes';
-            oprdel = 'no';
-            oprnon = 'no';
-            opr_com_style();
-            opr_del_style();
-            opr_lea_style();
-            opr_non_style();
-            }
-            
-            function none_opr_() {
-            opr_com_nor();
-            opr_del_nor();
-            opr_lea_nor();
-            document.getElementById('none_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_none.png'> None ";
-            document.getElementById('none_opr_').style.backgroundColor = '#575757';
-            oprcom = 'no';
-            oprlea = 'no';
-            oprdel = 'no';
-            oprnon = 'yes';
-            opr_com_style();
-            opr_del_style();
-            opr_lea_style();
-            opr_non_style();
-            }
-            
-            function opr_com_nor() {
-            document.getElementById('completed_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            document.getElementById('completed_opr_').style.backgroundColor = '#800000';
-            }
-            
-            function opr_lea_nor() {
-            document.getElementById('learn_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            document.getElementById('learn_opr_').style.backgroundColor = '#800000';
-            }
-            
-            function opr_del_nor() {
-            document.getElementById('trash_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete ";
-            document.getElementById('trash_opr_').style.backgroundColor = '#800000';
-            }
-            
-            function opr_non_nor() {
-            document.getElementById('none_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            document.getElementById('none_opr_').style.backgroundColor = '#800000';
-            }
-            
-            // Hover - Action buttons
-            
-            function opr_com_down() {
-            if (oprcom == 'yes') {
-            document.getElementById('completed_opr_').style.backgroundColor = '#00B666';
-            document.getElementById('completed_opr_').style.border = '2px solid';
-            document.getElementById('completed_opr_').style.borderColor = 'white';
-            document.getElementById('completed_opr_').style.color = 'white';
-            document.getElementById('completed_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_done.png'> Completed ";
-            oprcom = 'yes';
-            } else if (oprcom == 'no') {
-            document.getElementById('completed_opr_').style.backgroundColor = '#800000';
-            document.getElementById('completed_opr_').style.border = '2px solid';
-            document.getElementById('completed_opr_').style.borderColor = 'white';
-            document.getElementById('completed_opr_').style.color = 'white';
-            document.getElementById('completed_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            oprcom = 'no';
-            } else {
-            opr_com_down()
-            }
-            }
-            
-            function opr_com_hover() {
-            if (oprcom == 'yes') {
-            document.getElementById('completed_opr_').style.backgroundColor = '#800000';
-            document.getElementById('completed_opr_').style.border = '2px solid';
-            document.getElementById('completed_opr_').style.borderColor = '#99FF33';
-            document.getElementById('completed_opr_').style.color = '#99FF33';
-            document.getElementById('completed_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            oprcom = 'yes';
-            } else if (oprcom == 'no') {
-            document.getElementById('completed_opr_').style.backgroundColor = '#800000';
-            document.getElementById('completed_opr_').style.border = '2px solid';
-            document.getElementById('completed_opr_').style.borderColor = '#99FF33';
-            document.getElementById('completed_opr_').style.color = '#99FF33';
-            document.getElementById('completed_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            oprcom = 'no';
-            } else {
-            opr_com_hover()
-            }
-            }
-            
-            function opr_del_down() {
-            if (oprdel == 'yes') {
-            document.getElementById('trash_opr_').style.backgroundColor = '#FF0000';
-            document.getElementById('trash_opr_').style.border = '2px solid';
-            document.getElementById('trash_opr_').style.borderColor = 'white';
-            document.getElementById('trash_opr_').style.color = 'white';
-            document.getElementById('trash_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_delete.png'> Delete ";
-            oprdel = 'yes';
-            } else if (oprdel == 'no') {
-            document.getElementById('trash_opr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_opr_').style.border = '2px solid';
-            document.getElementById('trash_opr_').style.borderColor = 'white';
-            document.getElementById('trash_opr_').style.color = 'white';
-            document.getElementById('trash_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete ";
-            oprdel = 'no';
-            } else {
-            opr_del_down()
-            }
-            }
-            
-            function opr_del_hover() {
-            if (oprdel == 'yes') {
-            document.getElementById('trash_opr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_opr_').style.border = '2px solid';
-            document.getElementById('trash_opr_').style.borderColor = '#99FF33';
-            document.getElementById('trash_opr_').style.color = '#99FF33';
-            document.getElementById('trash_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete  ";
-            oprdel = 'yes';
-            } else if (oprdel == 'no') {
-            document.getElementById('trash_opr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_opr_').style.border = '2px solid';
-            document.getElementById('trash_opr_').style.borderColor = '#99FF33';
-            document.getElementById('trash_opr_').style.color = '#99FF33';
-            document.getElementById('trash_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete ";
-            oprdel = 'no';
-            } else {
-            opr_del_hover()
-            }
-            }
-            
-            function opr_lea_down() {
-            if (oprlea == 'yes') {
-            document.getElementById('learn_opr_').style.backgroundColor = '#FFCC00';
-            document.getElementById('learn_opr_').style.border = '2px solid';
-            document.getElementById('learn_opr_').style.borderColor = 'white';
-            document.getElementById('learn_opr_').style.color = 'white';
-            document.getElementById('learn_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_learning.png'> Learning ";
-            oprlea = 'yes';
-            } else if (oprlea == 'no') {
-            document.getElementById('learn_opr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_opr_').style.border = '2px solid';
-            document.getElementById('learn_opr_').style.borderColor = 'white';
-            document.getElementById('learn_opr_').style.color = 'white';
-            document.getElementById('learn_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            oprlea = 'no';
-            } else {
-            opr_lea_down()
-            }
-            }
-            
-            function opr_lea_hover() {
-            if (oprlea == 'yes') {
-            document.getElementById('learn_opr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_opr_').style.border = '2px solid';
-            document.getElementById('learn_opr_').style.borderColor = '#99FF33';
-            document.getElementById('learn_opr_').style.color = '#99FF33';
-            document.getElementById('learn_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            oprlea = 'yes';
-            } else if (oprlea == 'no') {
-            document.getElementById('learn_opr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_opr_').style.border = '2px solid';
-            document.getElementById('learn_opr_').style.borderColor = '#99FF33';
-            document.getElementById('learn_opr_').style.color = '#99FF33';
-            document.getElementById('learn_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            oprlea = 'no';
-            } else {
-            opr_lea_hover()
-            }
-            }
-            
-            function opr_non_down() {
-            if (oprnon == 'yes') {
-            document.getElementById('none_opr_').style.backgroundColor = '#575757';
-            document.getElementById('none_opr_').style.border = '2px solid';
-            document.getElementById('none_opr_').style.borderColor = 'white';
-            document.getElementById('none_opr_').style.color = 'white';
-            document.getElementById('none_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_none.png'> None ";
-            oprnon = 'yes';
-            } else if (oprnon == 'no') {
-            document.getElementById('none_opr_').style.backgroundColor = '#800000';
-            document.getElementById('none_opr_').style.border = '2px solid';
-            document.getElementById('none_opr_').style.borderColor = 'white';
-            document.getElementById('none_opr_').style.color = 'white';
-            document.getElementById('none_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            oprnon = 'no';
-            } else {
-            opr_non_down()
-            }
-            }
-            
-            function opr_non_hover() {
-            if (oprnon == 'yes') {
-            document.getElementById('none_opr_').style.backgroundColor = '#800000';
-            document.getElementById('none_opr_').style.border = '2px solid';
-            document.getElementById('none_opr_').style.borderColor = '#99FF33';
-            document.getElementById('none_opr_').style.color = '#99FF33';
-            document.getElementById('none_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            oprnon = 'yes';
-            } else if (oprnon == 'no') {
-            document.getElementById('none_opr_').style.backgroundColor = '#800000';
-            document.getElementById('none_opr_').style.border = '2px solid';
-            document.getElementById('none_opr_').style.borderColor = '#99FF33';
-            document.getElementById('none_opr_').style.color = '#99FF33';
-            document.getElementById('none_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            oprnon = 'no';
-            } else {
-            opr_non_hover()
-            }
-            }
-            
-            // Triggers
-            
-            var oprytr = 'no';
-            var oprntr = 'yes';
-            
-            function triggeryes_opr_() {
-            document.getElementById('triggeryes_opr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggeryes_opr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggeryes_opr_').style.color = '#33CCCC';
-            document.getElementById('triggerno_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_opr_').style.borderColor = '#FFFFFF';
-            document.getElementById('triggerno_opr_').style.color = '#FFFFFF';
-            document.getElementById('oprt').innerHTML = "(r U2) x (r U2) (r U2) (r' U2) (l U2) (r' U2) (r U2) (r' U2) (r' U2) x' r (l' U2)";
-            document.getElementById('triggeryes_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_bracket.png'> Show Triggers For OLL Parity Only";
-            document.getElementById('triggerno_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For OLL Parity Only";
-            oprytr = 'yes';
-            oprntr = 'no';
-            }
-            
-            function triggerno_opr_() {
-            document.getElementById('triggerno_opr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggerno_opr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggerno_opr_').style.color = '#33CCCC';
-            document.getElementById('triggeryes_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_opr_').style.borderColor = '#FFFFFF';
-            document.getElementById('triggeryes_opr_').style.color = '#FFFFFF';
-            document.getElementById('oprt').innerHTML = "r U2 x r U2 r U2 r' U2 l U2 r' U2 r U2 r' U2 r' U2 x' r l' U2";
-            document.getElementById('triggeryes_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For OLL Parity Only";
-            document.getElementById('triggerno_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_notrig.png'> Hide Triggers For OLL Parity Only";
-            oprytr = 'no';
-            oprntr = 'yes';
-            }
-            
-            // Hover - Triggers
-            
-            function opr_ytr_down() {
-            if (oprytr == 'yes') {
-            document.getElementById('triggeryes_opr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggeryes_opr_').style.border = '2px solid';
-            document.getElementById('triggeryes_opr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggeryes_opr_').style.color = '#33CCCC';
-            document.getElementById('triggeryes_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_bracket.png'> Show Triggers For OLL Parity Only"
-            oprytr = 'yes';
-            } else if (oprytr == 'no') {
-            document.getElementById('triggeryes_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_opr_').style.border = '2px solid';
-            document.getElementById('triggeryes_opr_').style.borderColor = 'white';
-            document.getElementById('triggeryes_opr_').style.color = 'white';
-            document.getElementById('triggeryes_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For OLL Parity Only"
-            oprytr = 'no';
-            } else {
-            opr_ytr_down()
-            }
-            }
-            
-            function opr_ytr_hover() {
-            if (oprytr == 'yes') {
-            document.getElementById('triggeryes_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_opr_').style.border = '2px solid';
-            document.getElementById('triggeryes_opr_').style.borderColor = '#99FF33';
-            document.getElementById('triggeryes_opr_').style.color = '#99FF33';
-            document.getElementById('triggeryes_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For OLL Parity Only"
-            oprytr = 'yes';
-            } else if (oprytr == 'no') {
-            document.getElementById('triggeryes_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_opr_').style.border = '2px solid';
-            document.getElementById('triggeryes_opr_').style.borderColor = '#99FF33';
-            document.getElementById('triggeryes_opr_').style.color = '#99FF33';
-            document.getElementById('triggeryes_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For OLL Parity Only"
-            oprytr = 'no';
-            } else {
-            opr_ytr_hover()
-            }
-            }
-            
-            function opr_ntr_down() {
-            if (oprntr == 'yes') {
-            document.getElementById('triggerno_opr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggerno_opr_').style.border = '2px solid';
-            document.getElementById('triggerno_opr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggerno_opr_').style.color = '#33CCCC';
-            document.getElementById('triggerno_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_notrig.png'> Hide Triggers For OLL Parity Only";
-            oprntr = 'yes';
-            } else if (oprntr == 'no') {
-            document.getElementById('triggerno_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_opr_').style.border = '2px solid';
-            document.getElementById('triggerno_opr_').style.borderColor = 'white';
-            document.getElementById('triggerno_opr_').style.color = 'white';
-            document.getElementById('triggerno_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For OLL Parity Only";
-            oprntr = 'no';
-            } else {
-            opr_ntr_down()
-            }
-            }
-            
-            function opr_ntr_hover() {
-            if (oprntr == 'yes') {
-            document.getElementById('triggerno_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_opr_').style.border = '2px solid';
-            document.getElementById('triggerno_opr_').style.borderColor = '#99FF33';
-            document.getElementById('triggerno_opr_').style.color = '#99FF33';
-            document.getElementById('triggerno_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For OLL Parity Only";
-            oprntr = 'yes';
-            } else if (oprntr == 'no') {
-            document.getElementById('triggerno_opr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_opr_').style.border = '2px solid';
-            document.getElementById('triggerno_opr_').style.borderColor = '#99FF33';
-            document.getElementById('triggerno_opr_').style.color = '#99FF33';
-            document.getElementById('triggerno_opr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For OLL Parity Only";
-            oprntr = 'no';
-            } else {
-            opr_ntr_hover()
-            }
-            }
-            
-            // PLL Parity
 
-            // Style
+            var oprlsa = localStorage.getItem("oprvara");
+            var oprlsb = localStorage.getItem("oprvarb");
+
+            function opra_var_initiation() {
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Learning';
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('oprbtna').style.color = '#660033';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#660033';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('oprbtna').style.color = '#CCCC00';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('oprbtna_b').innerHTML = 'Learning';
+                    document.getElementById('oprbtna').style.color = '#00B666';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#00B666';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    oprlsa = localStorage.getItem("oprvara");
+                    opra_var_initiation();
+                }
+            }
+
+            function oprb_var_initiation() {
+                if (oprlsb == "oprst") {
+                    document.getElementById('oprbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('oprbtnb').style.color = '#FF0080';
+                    document.getElementById('oprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtnb').style.border = '2px solid';
+                    document.getElementById('oprbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('oprbtnb').style.fontWeight = 'bold';
+                    triggeryes_opr_();
+                } else if (oprlsb == "oprht") {
+                    document.getElementById('oprbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('oprbtnb').style.color = '#BF00FF';
+                    document.getElementById('oprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtnb').style.border = '2px solid';
+                    document.getElementById('oprbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('oprbtnb').style.fontWeight = 'bold';
+                    triggerno_opr_();
+                } else {
+                    localStorage.setItem("oprvarb", "oprst");
+                    oprlsb = localStorage.getItem("oprvarb");
+                    oprb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function oprbtna_h() {
+                document.getElementById('oprbtna').style.color = '#660066';
+                document.getElementById('oprbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('oprbtna').style.border = 'double';
+                document.getElementById('oprbtna').style.borderColor = '#FF9900';
+                document.getElementById('oprbtna').style.fontWeight = 'bold';
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_h();
+                }
+            }
+
+            function oprbtna_d() {
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna').style.color = '#660033';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#660033';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    document.getElementById('oprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna').style.color = '#CCCC00';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    document.getElementById('oprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna').style.color = '#00B666';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#00B666';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    document.getElementById('oprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_d();
+                }
+            }
+
+            function oprbtna_a_h() {
+                document.getElementById('oprbtna_a').style.color = '#660066';
+                document.getElementById('oprbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('oprbtna_a').style.border = 'double';
+                document.getElementById('oprbtna_a').style.borderColor = '#FF9900';
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_a_h();
+                }
+            }
+
+            function oprbtna_a_d() {
+                document.getElementById('oprbtna_a').style.color = '#000000';
+                document.getElementById('oprbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('oprbtna_a').style.border = 'none';
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna_a').innerHTML = 'Learning';
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_a_d();
+                }
+            }
+            
+            function oprbtna_b_h() {
+                document.getElementById('oprbtna_b').style.color = '#660066';
+                document.getElementById('oprbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('oprbtna_b').style.border = 'double';
+                document.getElementById('oprbtna_b').style.borderColor = '#FF9900';
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_b_h();
+                }
+            }
+
+            function oprbtna_b_d() {
+                document.getElementById('oprbtna_b').style.color = '#000000';
+                document.getElementById('oprbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('oprbtna_b').style.border = 'none';
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function oprbtna_a_cl() {
+                if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('oprbtna').style.color = '#CCCC00';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("oprvara", "oprlg");
+                    oprlsa = localStorage.getItem("oprvara");
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Learning';
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('oprbtna').style.color = '#660033';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#660033';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("oprvara", "oprnl");
+                    oprlsa = localStorage.getItem("oprvara");
+                } else if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Learning';
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('oprbtna').style.color = '#660033';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#660033';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("oprvara", "oprnl");
+                    oprlsa = localStorage.getItem("oprvara");
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_a_cl();
+                }
+                oprbtna_a_h();
+            }
+
+            function oprbtna_b_cl() {
+                if (oprlsa == "oprcd") {
+                    document.getElementById('oprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('oprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('oprbtna').style.color = '#CCCC00';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("oprvara", "oprlg");
+                    oprlsa = localStorage.getItem("oprvara");
+                } else if (oprlsa == "oprlg") {
+                    document.getElementById('oprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('oprbtna_b').innerHTML = 'Learning';
+                    document.getElementById('oprbtna').style.color = '#00B666';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#00B666';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("oprvara", "oprcd");
+                    oprlsa = localStorage.getItem("oprvara");
+                } else if (oprlsa == "oprnl") {
+                    document.getElementById('oprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('oprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('oprbtna_b').innerHTML = 'Learning';
+                    document.getElementById('oprbtna').style.color = '#00B666';
+                    document.getElementById('oprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtna').style.border = '2px solid';
+                    document.getElementById('oprbtna').style.borderColor = '#00B666';
+                    document.getElementById('oprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("oprvara", "oprcd");
+                    oprlsa = localStorage.getItem("oprvara");
+                } else {
+                    localStorage.setItem("oprvara", "oprnl");
+                    opr_var_initiation();
+                    oprbtna_b_cl();
+                }
+                oprbtna_b_h();
+            }
+            
+            // Triggers - On Hover 
+
+            function oprbtnb_h() {
+                document.getElementById('oprbtnb').style.color = '#660066';
+                document.getElementById('oprbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('oprbtnb').style.border = 'double';
+                document.getElementById('oprbtnb').style.borderColor = '#FF9900';
+                document.getElementById('oprbtnb').style.fontWeight = 'bold';
+            }
+
+            function oprbtnb_d() {
+                if (oprlsb == "oprst") {
+                    document.getElementById('oprbtnb').style.color = '#FF0080';
+                    document.getElementById('oprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtnb').style.border = '2px solid';
+                    document.getElementById('oprbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('oprbtnb').style.fontWeight = 'bold';
+                } else if (oprlsb == "oprht") {
+                    document.getElementById('oprbtnb').style.color = '#BF00FF';
+                    document.getElementById('oprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('oprbtnb').style.border = '2px solid';
+                    document.getElementById('oprbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('oprbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("oprvarb", "oprht");
+                    opr_var_initiation();
+                }
+            }
+            
+            function oprbtnb_a_h() {
+                document.getElementById('oprbtnb_a').style.color = '#660066';
+                document.getElementById('oprbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('oprbtnb_a').style.border = 'double';
+                document.getElementById('oprbtnb_a').style.borderColor = '#FF9900';
+            }
+
+            function oprbtnb_a_d() {
+                document.getElementById('oprbtnb_a').style.color = '#000000';
+                document.getElementById('oprbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('oprbtnb_a').style.border = 'none';
+            }
+            
+            // Triggers - On Click
+
+            function oprbtnb_a_cl() {
+                if (oprlsb == "oprst") {
+                    triggerno_opr_();
+                } else if (oprlsb == "oprht") {
+                    triggeryes_opr_();
+                } else {
+                    localStorage.setItem("oprvarb", "oprst");
+                    opr_var_initiation();
+                    oprbtnb_a_cl();
+                }
+            }
+
+            function triggerno_opr_() {
+                document.getElementById('oprbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('oprbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('oprt').innerHTML = "r U2 x r U2 r U2 r' U2 l U2 r' U2 r U2 r' U2 r' U2 x' r l' U2";
+                document.getElementById('oprbtnb').style.color = '#BF00FF';
+                document.getElementById('oprbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('oprbtnb').style.border = '2px solid';
+                document.getElementById('oprbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('oprbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("oprvarb", "oprht");
+                oprlsb = localStorage.getItem("oprvarb");
+            }
+
+            function triggeryes_opr_() {
+                document.getElementById('oprbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('oprbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('oprt').innerHTML = "(r U2) x (r U2) (r U2) (r' U2) (l U2) (r' U2) (r U2) (r' U2) (r' U2) x' r (l' U2)";
+                document.getElementById('oprbtnb').style.color = '#FF0080';
+                document.getElementById('oprbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('oprbtnb').style.border = '2px solid';
+                document.getElementById('oprbtnb').style.borderColor = '#FF0080';
+                document.getElementById('oprbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("oprvarb", "oprst");
+                oprlsb = localStorage.getItem("oprvarb");
+            }
+
+            // ppr - Script
+            
+            // On Load
             
             function ppr_all() {
-            document.getElementById('ppr').style.padding = '5px';
-            document.getElementById('ppr').style.backgroundColor = '#8C801A';
-            document.getElementById('ppr').style.border = '2px solid black';
-            document.getElementById('ppr').style.color = '#99FF33';
-            document.getElementById('pprt').style.color = '#800000';
-            document.getElementById('completed_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('none_ppr_').style.backgroundColor = '#575757';
-            ppr_com_style();
-            ppr_del_style();
-            ppr_lea_style();
-            ppr_non_style();
-            document.getElementById('triggeryes_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_ppr_').style.backgroundColor = '#FFFF00';
-            ppr_ytr_style();
-            ppr_ntr_style();
+                document.getElementById('ppr').style.padding = '5px';
+                document.getElementById('ppr').style.border = '2px solid';
+                document.getElementById('ppr').style.borderColor = '#660066';
+                document.getElementById('ppr').style.backgroundColor = '#B24C33';
+                document.getElementById('ppr').style.color = '#FF9900';
+                document.getElementById('pprt').style.color = '#660066';
+                document.getElementById('pprdiva').style.marginRight = 'auto';
+                document.getElementById('pprdivb').style.marginRight = 'auto';
+                document.getElementById('pprdiva').style.marginLeft = '0px';
+                document.getElementById('pprdivb').style.marginLeft = '0px';
+                ppra_var_initiation();
+                pprb_var_initiation();
+            }
+
+            var pprlsa = localStorage.getItem("pprvara");
+            var pprlsb = localStorage.getItem("pprvarb");
+
+            function ppra_var_initiation() {
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Learning';
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('pprbtna').style.color = '#660033';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#660033';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('pprbtna').style.color = '#CCCC00';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('pprbtna_b').innerHTML = 'Learning';
+                    document.getElementById('pprbtna').style.color = '#00B666';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#00B666';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    pprlsa = localStorage.getItem("pprvara");
+                    ppra_var_initiation();
+                }
+            }
+
+            function pprb_var_initiation() {
+                if (pprlsb == "pprst") {
+                    document.getElementById('pprbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtnb_a').innerHTML = 'Hide Triggers';
+                    document.getElementById('pprbtnb').style.color = '#FF0080';
+                    document.getElementById('pprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtnb').style.border = '2px solid';
+                    document.getElementById('pprbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('pprbtnb').style.fontWeight = 'bold';
+                    triggeryes_ppr_();
+                } else if (pprlsb == "pprht") {
+                    document.getElementById('pprbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtnb_a').innerHTML = 'Show Triggers';
+                    document.getElementById('pprbtnb').style.color = '#BF00FF';
+                    document.getElementById('pprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtnb').style.border = '2px solid';
+                    document.getElementById('pprbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('pprbtnb').style.fontWeight = 'bold';
+                    triggerno_ppr_();
+                } else {
+                    localStorage.setItem("pprvarb", "pprst");
+                    pprlsb = localStorage.getItem("pprvarb");
+                    pprb_var_initiation();
+                }
+            }
+
+            // Status - On Hover 
+
+            function pprbtna_h() {
+                document.getElementById('pprbtna').style.color = '#660066';
+                document.getElementById('pprbtna').style.backgroundColor = '#F5F5F5';
+                document.getElementById('pprbtna').style.border = 'double';
+                document.getElementById('pprbtna').style.borderColor = '#FF9900';
+                document.getElementById('pprbtna').style.fontWeight = 'bold';
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_h();
+                }
+            }
+
+            function pprbtna_d() {
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna').style.color = '#660033';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#660033';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    document.getElementById('pprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna').style.color = '#CCCC00';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    document.getElementById('pprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna').style.color = '#00B666';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#00B666';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    document.getElementById('pprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_d();
+                }
+            }
+
+            function pprbtna_a_h() {
+                document.getElementById('pprbtna_a').style.color = '#660066';
+                document.getElementById('pprbtna_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('pprbtna_a').style.border = 'double';
+                document.getElementById('pprbtna_a').style.borderColor = '#FF9900';
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna_a').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned <i class="fa-regular fa-circle-xmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_a_h();
+                }
+            }
+
+            function pprbtna_a_d() {
+                document.getElementById('pprbtna_a').style.color = '#000000';
+                document.getElementById('pprbtna_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('pprbtna_a').style.border = 'none';
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna_a').innerHTML = 'Learning';
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_a_d();
+                }
             }
             
-            function ppr_com_style() {
-            document.getElementById('completed_ppr_').style.paddingBottom = "12px";
-            document.getElementById('completed_ppr_').style.paddingTop = "12px";
-            document.getElementById('completed_ppr_').style.paddingLeft = "16px";
-            document.getElementById('completed_ppr_').style.paddingRight = "16px";
-            document.getElementById('completed_ppr_').style.fontSize = '16px';
-            document.getElementById('completed_ppr_').style.border = '2px solid white';
-            document.getElementById('completed_ppr_').style.color = 'white';
+            function pprbtna_b_h() {
+                document.getElementById('pprbtna_b').style.color = '#660066';
+                document.getElementById('pprbtna_b').style.backgroundColor = '#F5F5F5';
+                document.getElementById('pprbtna_b').style.border = 'double';
+                document.getElementById('pprbtna_b').style.borderColor = '#FF9900';
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed <i class="fa-regular fa-square-check fa-sm"></i>';
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna_b').innerHTML = 'Learning <i class="fa-regular fa-bookmark fa-sm"></i>';
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_b_h();
+                }
+            }
+
+            function pprbtna_b_d() {
+                document.getElementById('pprbtna_b').style.color = '#000000';
+                document.getElementById('pprbtna_b').style.backgroundColor = '#FFFFFF';
+                document.getElementById('pprbtna_b').style.border = 'none';
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna_b').innerHTML = 'Learning';
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_b_d();
+                }
+            }
+
+            // Status - On Click
+
+            function pprbtna_a_cl() {
+                if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('pprbtna').style.color = '#CCCC00';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("pprvara", "pprlg");
+                    pprlsa = localStorage.getItem("pprvara");
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Learning';
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('pprbtna').style.color = '#660033';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#660033';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("pprvara", "pprnl");
+                    pprlsa = localStorage.getItem("pprvara");
+                } else if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna').innerHTML = 'Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Learning';
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('pprbtna').style.color = '#660033';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#660033';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("pprvara", "pprnl");
+                    pprlsa = localStorage.getItem("pprvara");
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_a_cl();
+                }
+                pprbtna_a_h();
+            }
+
+            function pprbtna_b_cl() {
+                if (pprlsa == "pprcd") {
+                    document.getElementById('pprbtna').innerHTML = 'Learning <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('pprbtna_b').innerHTML = 'Completed';
+                    document.getElementById('pprbtna').style.color = '#CCCC00';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#CCCC00';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("pprvara", "pprlg");
+                    pprlsa = localStorage.getItem("pprvara");
+                } else if (pprlsa == "pprlg") {
+                    document.getElementById('pprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('pprbtna_b').innerHTML = 'Learning';
+                    document.getElementById('pprbtna').style.color = '#00B666';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#00B666';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("pprvara", "pprcd");
+                    pprlsa = localStorage.getItem("pprvara");
+                } else if (pprlsa == "pprnl") {
+                    document.getElementById('pprbtna').innerHTML = 'Completed <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                    document.getElementById('pprbtna_a').innerHTML = 'Not Learned';
+                    document.getElementById('pprbtna_b').innerHTML = 'Learning';
+                    document.getElementById('pprbtna').style.color = '#00B666';
+                    document.getElementById('pprbtna').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtna').style.border = '2px solid';
+                    document.getElementById('pprbtna').style.borderColor = '#00B666';
+                    document.getElementById('pprbtna').style.fontWeight = 'bold';
+                    localStorage.setItem("pprvara", "pprcd");
+                    pprlsa = localStorage.getItem("pprvara");
+                } else {
+                    localStorage.setItem("pprvara", "pprnl");
+                    ppr_var_initiation();
+                    pprbtna_b_cl();
+                }
+                pprbtna_b_h();
             }
             
-            function ppr_del_style() {
-            document.getElementById('trash_ppr_').style.paddingBottom = "12px";
-            document.getElementById('trash_ppr_').style.paddingTop = "12px";
-            document.getElementById('trash_ppr_').style.paddingLeft = "16px";
-            document.getElementById('trash_ppr_').style.paddingRight = "16px";
-            document.getElementById('trash_ppr_').style.fontSize = '16px';
-            document.getElementById('trash_ppr_').style.border = '2px solid white';
-            document.getElementById('trash_ppr_').style.color = 'white';
+            // Triggers - On Hover 
+
+            function pprbtnb_h() {
+                document.getElementById('pprbtnb').style.color = '#660066';
+                document.getElementById('pprbtnb').style.backgroundColor = '#F5F5F5';
+                document.getElementById('pprbtnb').style.border = 'double';
+                document.getElementById('pprbtnb').style.borderColor = '#FF9900';
+                document.getElementById('pprbtnb').style.fontWeight = 'bold';
+            }
+
+            function pprbtnb_d() {
+                if (pprlsb == "pprst") {
+                    document.getElementById('pprbtnb').style.color = '#FF0080';
+                    document.getElementById('pprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtnb').style.border = '2px solid';
+                    document.getElementById('pprbtnb').style.borderColor = '#FF0080';
+                    document.getElementById('pprbtnb').style.fontWeight = 'bold';
+                } else if (pprlsb == "pprht") {
+                    document.getElementById('pprbtnb').style.color = '#BF00FF';
+                    document.getElementById('pprbtnb').style.backgroundColor = '#FFFFFF';
+                    document.getElementById('pprbtnb').style.border = '2px solid';
+                    document.getElementById('pprbtnb').style.borderColor = '#BF00FF';
+                    document.getElementById('pprbtnb').style.fontWeight = 'bold';
+                } else {
+                    localStorage.setItem("pprvarb", "pprht");
+                    ppr_var_initiation();
+                }
             }
             
-            function ppr_lea_style() {
-            document.getElementById('learn_ppr_').style.paddingBottom = "12px";
-            document.getElementById('learn_ppr_').style.paddingTop = "12px";
-            document.getElementById('learn_ppr_').style.paddingLeft = "16px";
-            document.getElementById('learn_ppr_').style.paddingRight = "16px";
-            document.getElementById('learn_ppr_').style.fontSize = '16px';
-            document.getElementById('learn_ppr_').style.border = '2px solid white';
-            document.getElementById('learn_ppr_').style.color = 'white';
+            function pprbtnb_a_h() {
+                document.getElementById('pprbtnb_a').style.color = '#660066';
+                document.getElementById('pprbtnb_a').style.backgroundColor = '#F5F5F5';
+                document.getElementById('pprbtnb_a').style.border = 'double';
+                document.getElementById('pprbtnb_a').style.borderColor = '#FF9900';
+            }
+
+            function pprbtnb_a_d() {
+                document.getElementById('pprbtnb_a').style.color = '#000000';
+                document.getElementById('pprbtnb_a').style.backgroundColor = '#FFFFFF';
+                document.getElementById('pprbtnb_a').style.border = 'none';
             }
             
-            function ppr_non_style() {
-            document.getElementById('none_ppr_').style.paddingBottom = "12px";
-            document.getElementById('none_ppr_').style.paddingTop = "12px";
-            document.getElementById('none_ppr_').style.paddingLeft = "16px";
-            document.getElementById('none_ppr_').style.paddingRight = "16px";
-            document.getElementById('none_ppr_').style.fontSize = '16px';
-            document.getElementById('none_ppr_').style.border = '2px solid white';
-            document.getElementById('none_ppr_').style.color = 'white';
+            // Triggers - On Click
+
+            function pprbtnb_a_cl() {
+                if (pprlsb == "pprst") {
+                    triggerno_ppr_();
+                } else if (pprlsb == "pprht") {
+                    triggeryes_ppr_();
+                } else {
+                    localStorage.setItem("pprvarb", "pprst");
+                    ppr_var_initiation();
+                    pprbtnb_a_cl();
+                }
             }
-            
-            function ppr_ytr_style() {
-            document.getElementById('triggeryes_ppr_').style.paddingBottom = "12px";
-            document.getElementById('triggeryes_ppr_').style.paddingTop = "12px";
-            document.getElementById('triggeryes_ppr_').style.paddingLeft = "16px";
-            document.getElementById('triggeryes_ppr_').style.paddingRight = "16px";
-            document.getElementById('triggeryes_ppr_').style.fontSize = '16px';
-            document.getElementById('triggeryes_ppr_').style.border = '2px solid white';
-            document.getElementById('triggeryes_ppr_').style.color = 'white';
-            }
-            
-            function ppr_ntr_style() {
-            document.getElementById('triggerno_ppr_').style.paddingBottom = "12px";
-            document.getElementById('triggerno_ppr_').style.paddingTop = "12px";
-            document.getElementById('triggerno_ppr_').style.paddingLeft = "16px";
-            document.getElementById('triggerno_ppr_').style.paddingRight = "16px";
-            document.getElementById('triggerno_ppr_').style.fontSize = '16px';
-            document.getElementById('triggerno_ppr_').style.border = '2px solid #33CCCC';
-            document.getElementById('triggerno_ppr_').style.color = '#33CCCC';
-            }
-            
-            // Action Buttons
-            
-            var pprcom = 'no';
-            var pprlea = 'no';
-            var pprdel = 'no';
-            var pprnon = 'yes';
-            
-            function completed_ppr_() {
-            document.getElementById('completed_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_done.png'> Completed ";
-            document.getElementById('completed_ppr_').style.backgroundColor = '#00B666';
-            ppr_del_nor();
-            ppr_lea_nor();
-            ppr_non_nor();
-            pprcom = 'yes';
-            pprlea = 'no';
-            pprdel = 'no';
-            pprnon = 'no';
-            ppr_com_style();
-            ppr_del_style();
-            ppr_lea_style();
-            ppr_non_style();
-            }
-            
-            function trash_ppr_() {
-            ppr_com_nor();
-            document.getElementById('trash_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_delete.png'> Delete ";
-            document.getElementById('trash_ppr_').style.backgroundColor = '#FF0000';
-            ppr_lea_nor();
-            ppr_non_nor();
-            pprcom = 'no';
-            pprlea = 'no';
-            pprdel = 'yes';
-            pprnon = 'no';
-            ppr_com_style();
-            ppr_del_style();
-            ppr_lea_style();
-            ppr_non_style();
-            }
-            
-            function learn_ppr_() {
-            ppr_com_nor();
-            ppr_del_nor();
-            document.getElementById('learn_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_learning.png'> Learning ";
-            document.getElementById('learn_ppr_').style.backgroundColor = '#FFCC00';
-            ppr_non_nor();
-            pprcom = 'no';
-            pprlea = 'yes';
-            pprdel = 'no';
-            pprnon = 'no';
-            ppr_com_style();
-            ppr_del_style();
-            ppr_lea_style();
-            ppr_non_style();
-            }
-            
-            function none_ppr_() {
-            ppr_com_nor();
-            ppr_del_nor();
-            ppr_lea_nor();
-            document.getElementById('none_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_none.png'> None ";
-            document.getElementById('none_ppr_').style.backgroundColor = '#575757';
-            pprcom = 'no';
-            pprlea = 'no';
-            pprdel = 'no';
-            pprnon = 'yes';
-            ppr_com_style();
-            ppr_del_style();
-            ppr_lea_style();
-            ppr_non_style();
-            }
-            
-            function ppr_com_nor() {
-            document.getElementById('completed_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            document.getElementById('completed_ppr_').style.backgroundColor = '#800000';
-            }
-            
-            function ppr_lea_nor() {
-            document.getElementById('learn_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            document.getElementById('learn_ppr_').style.backgroundColor = '#800000';
-            }
-            
-            function ppr_del_nor() {
-            document.getElementById('trash_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete ";
-            document.getElementById('trash_ppr_').style.backgroundColor = '#800000';
-            }
-            
-            function ppr_non_nor() {
-            document.getElementById('none_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            document.getElementById('none_ppr_').style.backgroundColor = '#800000';
-            }
-            
-            // Hover - Action buttons
-            
-            function ppr_com_down() {
-            if (pprcom == 'yes') {
-            document.getElementById('completed_ppr_').style.backgroundColor = '#00B666';
-            document.getElementById('completed_ppr_').style.border = '2px solid';
-            document.getElementById('completed_ppr_').style.borderColor = 'white';
-            document.getElementById('completed_ppr_').style.color = 'white';
-            document.getElementById('completed_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_done.png'> Completed ";
-            pprcom = 'yes';
-            } else if (pprcom == 'no') {
-            document.getElementById('completed_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('completed_ppr_').style.border = '2px solid';
-            document.getElementById('completed_ppr_').style.borderColor = 'white';
-            document.getElementById('completed_ppr_').style.color = 'white';
-            document.getElementById('completed_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            pprcom = 'no';
-            } else {
-            ppr_com_down()
-            }
-            }
-            
-            function ppr_com_hover() {
-            if (pprcom == 'yes') {
-            document.getElementById('completed_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('completed_ppr_').style.border = '2px solid';
-            document.getElementById('completed_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('completed_ppr_').style.color = '#99FF33';
-            document.getElementById('completed_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            pprcom = 'yes';
-            } else if (pprcom == 'no') {
-            document.getElementById('completed_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('completed_ppr_').style.border = '2px solid';
-            document.getElementById('completed_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('completed_ppr_').style.color = '#99FF33';
-            document.getElementById('completed_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_thumbs_up_normal.png'> Completed ";
-            pprcom = 'no';
-            } else {
-            ppr_com_hover()
-            }
-            }
-            
-            function ppr_del_down() {
-            if (pprdel == 'yes') {
-            document.getElementById('trash_ppr_').style.backgroundColor = '#FF0000';
-            document.getElementById('trash_ppr_').style.border = '2px solid';
-            document.getElementById('trash_ppr_').style.borderColor = 'white';
-            document.getElementById('trash_ppr_').style.color = 'white';
-            document.getElementById('trash_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_delete.png'> Delete ";
-            pprdel = 'yes';
-            } else if (pprdel == 'no') {
-            document.getElementById('trash_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_ppr_').style.border = '2px solid';
-            document.getElementById('trash_ppr_').style.borderColor = 'white';
-            document.getElementById('trash_ppr_').style.color = 'white';
-            document.getElementById('trash_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete ";
-            pprdel = 'no';
-            } else {
-            ppr_del_down()
-            }
-            }
-            
-            function ppr_del_hover() {
-            if (pprdel == 'yes') {
-            document.getElementById('trash_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_ppr_').style.border = '2px solid';
-            document.getElementById('trash_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('trash_ppr_').style.color = '#99FF33';
-            document.getElementById('trash_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete  ";
-            pprdel = 'yes';
-            } else if (pprdel == 'no') {
-            document.getElementById('trash_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('trash_ppr_').style.border = '2px solid';
-            document.getElementById('trash_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('trash_ppr_').style.color = '#99FF33';
-            document.getElementById('trash_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_eye_slash_normal.png'> Delete ";
-            pprdel = 'no';
-            } else {
-            ppr_del_hover()
-            }
-            }
-            
-            function ppr_lea_down() {
-            if (pprlea == 'yes') {
-            document.getElementById('learn_ppr_').style.backgroundColor = '#FFCC00';
-            document.getElementById('learn_ppr_').style.border = '2px solid';
-            document.getElementById('learn_ppr_').style.borderColor = 'white';
-            document.getElementById('learn_ppr_').style.color = 'white';
-            document.getElementById('learn_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_learning.png'> Learning ";
-            pprlea = 'yes';
-            } else if (pprlea == 'no') {
-            document.getElementById('learn_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_ppr_').style.border = '2px solid';
-            document.getElementById('learn_ppr_').style.borderColor = 'white';
-            document.getElementById('learn_ppr_').style.color = 'white';
-            document.getElementById('learn_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            pprlea = 'no';
-            } else {
-            ppr_lea_down()
-            }
-            }
-            
-            function ppr_lea_hover() {
-            if (pprlea == 'yes') {
-            document.getElementById('learn_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_ppr_').style.border = '2px solid';
-            document.getElementById('learn_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('learn_ppr_').style.color = '#99FF33';
-            document.getElementById('learn_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            pprlea = 'yes';
-            } else if (pprlea == 'no') {
-            document.getElementById('learn_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('learn_ppr_').style.border = '2px solid';
-            document.getElementById('learn_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('learn_ppr_').style.color = '#99FF33';
-            document.getElementById('learn_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bookmark_normal.png'> Learning ";
-            pprlea = 'no';
-            } else {
-            ppr_lea_hover()
-            }
-            }
-            
-            function ppr_non_down() {
-            if (pprnon == 'yes') {
-            document.getElementById('none_ppr_').style.backgroundColor = '#575757';
-            document.getElementById('none_ppr_').style.border = '2px solid';
-            document.getElementById('none_ppr_').style.borderColor = 'white';
-            document.getElementById('none_ppr_').style.color = 'white';
-            document.getElementById('none_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_none.png'> None ";
-            pprnon = 'yes';
-            } else if (pprnon == 'no') {
-            document.getElementById('none_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('none_ppr_').style.border = '2px solid';
-            document.getElementById('none_ppr_').style.borderColor = 'white';
-            document.getElementById('none_ppr_').style.color = 'white';
-            document.getElementById('none_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            pprnon = 'no';
-            } else {
-            ppr_non_down()
-            }
-            }
-            
-            function ppr_non_hover() {
-            if (pprnon == 'yes') {
-            document.getElementById('none_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('none_ppr_').style.border = '2px solid';
-            document.getElementById('none_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('none_ppr_').style.color = '#99FF33';
-            document.getElementById('none_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            pprnon = 'yes';
-            } else if (pprnon == 'no') {
-            document.getElementById('none_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('none_ppr_').style.border = '2px solid';
-            document.getElementById('none_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('none_ppr_').style.color = '#99FF33';
-            document.getElementById('none_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_xmark_normal.png'> None ";
-            pprnon = 'no';
-            } else {
-            ppr_non_hover()
-            }
-            }
-            
-            // Triggers
-            
-            var pprytr = 'no';
-            var pprntr = 'yes';
-            
-            function triggeryes_ppr_() {
-            document.getElementById('triggeryes_ppr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggeryes_ppr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggeryes_ppr_').style.color = '#33CCCC';
-            document.getElementById('triggerno_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_ppr_').style.borderColor = '#FFFFFF';
-            document.getElementById('triggerno_ppr_').style.color = '#FFFFFF';
-            document.getElementById('pprt').innerHTML = "*Uw2 *Rw2 (U2 r2 U2) *Rw2 *Uw2";
-            document.getElementById('triggeryes_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_bracket.png'> Show Triggers For PLL Parity Only";
-            document.getElementById('triggerno_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For PLL Parity Only";
-            pprytr = 'yes';
-            pprntr = 'no';
-            }
-            
+
             function triggerno_ppr_() {
-            document.getElementById('triggerno_ppr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggerno_ppr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggerno_ppr_').style.color = '#33CCCC';
-            document.getElementById('triggeryes_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_ppr_').style.borderColor = '#FFFFFF';
-            document.getElementById('triggeryes_ppr_').style.color = '#FFFFFF';
-            document.getElementById('pprt').innerHTML = "*Uw2 *Rw2 U2 r2 U2 *Rw2 *Uw2";
-            document.getElementById('triggeryes_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For PLL Parity Only";
-            document.getElementById('triggerno_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_notrig.png'> Hide Triggers For PLL Parity Only";
-            pprytr = 'no';
-            pprntr = 'yes';
+                document.getElementById('pprbtnb').innerHTML = 'Hide Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('pprbtnb_a').innerHTML = 'Show Triggers';
+                document.getElementById('pprt').innerHTML = "*Uw2 *Rw2 U2 r2 U2 *Rw2 *Uw2";
+                document.getElementById('pprbtnb').style.color = '#BF00FF';
+                document.getElementById('pprbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('pprbtnb').style.border = '2px solid';
+                document.getElementById('pprbtnb').style.borderColor = '#BF00FF';
+                document.getElementById('pprbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("pprvarb", "pprht");
+                pprlsb = localStorage.getItem("pprvarb");
             }
-            
-            // Hover - Triggers
-            
-            function ppr_ytr_down() {
-            if (pprytr == 'yes') {
-            document.getElementById('triggeryes_ppr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggeryes_ppr_').style.border = '2px solid';
-            document.getElementById('triggeryes_ppr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggeryes_ppr_').style.color = '#33CCCC';
-            document.getElementById('triggeryes_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_bracket.png'> Show Triggers For PLL Parity Only"
-            pprytr = 'yes';
-            } else if (pprytr == 'no') {
-            document.getElementById('triggeryes_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_ppr_').style.border = '2px solid';
-            document.getElementById('triggeryes_ppr_').style.borderColor = 'white';
-            document.getElementById('triggeryes_ppr_').style.color = 'white';
-            document.getElementById('triggeryes_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For PLL Parity Only"
-            pprytr = 'no';
-            } else {
-            ppr_ytr_down()
+
+            function triggeryes_ppr_() {
+                document.getElementById('pprbtnb').innerHTML = 'Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i>';
+                document.getElementById('pprbtnb_a').innerHTML = 'Hide Triggers';
+                document.getElementById('pprt').innerHTML = "*Uw2 *Rw2 (U2 r2 U2) *Rw2 *Uw2";
+                document.getElementById('pprbtnb').style.color = '#FF0080';
+                document.getElementById('pprbtnb').style.backgroundColor = '#FFFFFF';
+                document.getElementById('pprbtnb').style.border = '2px solid';
+                document.getElementById('pprbtnb').style.borderColor = '#FF0080';
+                document.getElementById('pprbtnb').style.fontWeight = 'bold';
+                localStorage.setItem("pprvarb", "pprst");
+                pprlsb = localStorage.getItem("pprvarb");
             }
-            }
-            
-            function ppr_ytr_hover() {
-            if (pprytr == 'yes') {
-            document.getElementById('triggeryes_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_ppr_').style.border = '2px solid';
-            document.getElementById('triggeryes_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('triggeryes_ppr_').style.color = '#99FF33';
-            document.getElementById('triggeryes_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For PLL Parity Only"
-            pprytr = 'yes';
-            } else if (pprytr == 'no') {
-            document.getElementById('triggeryes_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggeryes_ppr_').style.border = '2px solid';
-            document.getElementById('triggeryes_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('triggeryes_ppr_').style.color = '#99FF33';
-            document.getElementById('triggeryes_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_bracket_normal.png'> Show Triggers For PLL Parity Only"
-            pprytr = 'no';
-            } else {
-            ppr_ytr_hover()
-            }
-            }
-            
-            function ppr_ntr_down() {
-            if (pprntr == 'yes') {
-            document.getElementById('triggerno_ppr_').style.backgroundColor = '#FFFF00';
-            document.getElementById('triggerno_ppr_').style.border = '2px solid';
-            document.getElementById('triggerno_ppr_').style.borderColor = '#33CCCC';
-            document.getElementById('triggerno_ppr_').style.color = '#33CCCC';
-            document.getElementById('triggerno_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_notrig.png'> Hide Triggers For PLL Parity Only";
-            pprntr = 'yes';
-            } else if (pprntr == 'no') {
-            document.getElementById('triggerno_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_ppr_').style.border = '2px solid';
-            document.getElementById('triggerno_ppr_').style.borderColor = 'white';
-            document.getElementById('triggerno_ppr_').style.color = 'white';
-            document.getElementById('triggerno_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For PLL Parity Only";
-            pprntr = 'no';
-            } else {
-            ppr_ntr_down()
-            }
-            }
-            
-            function ppr_ntr_hover() {
-            if (pprntr == 'yes') {
-            document.getElementById('triggerno_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_ppr_').style.border = '2px solid';
-            document.getElementById('triggerno_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('triggerno_ppr_').style.color = '#99FF33';
-            document.getElementById('triggerno_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For PLL Parity Only";
-            pprntr = 'yes';
-            } else if (pprntr == 'no') {
-            document.getElementById('triggerno_ppr_').style.backgroundColor = '#800000';
-            document.getElementById('triggerno_ppr_').style.border = '2px solid';
-            document.getElementById('triggerno_ppr_').style.borderColor = '#99FF33';
-            document.getElementById('triggerno_ppr_').style.color = '#99FF33';
-            document.getElementById('triggerno_ppr_').innerHTML = "<img class='imgbut44' height='20px' width='20px' src='44_notrig_normal.png'> Hide Triggers For PLL Parity Only";
-            pprntr = 'no';
-            } else {
-            ppr_ntr_hover()
-            }
-            }
-            
-            //Triggers
+
+            // Triggers
             
             function showtrigger_47begpar() {
             triggeryes_opr_();
@@ -1112,8 +1479,8 @@
             }
             
             function changecolor_47begpar() {
-            document.getElementById('oprt').style.color = "#800000";
-            document.getElementById('pprt').style.color = "#800000";
+            document.getElementById('oprt').style.color = "#660066";
+            document.getElementById('pprt').style.color = "#660066";
             }
 
             function paddingalgs_47begpar() {
@@ -1289,7 +1656,7 @@
         <br><br><br>
         
         <footer id='footermain' style='text-align: center;'>
-            
+        
             <p id='footp_a'>Thank you for viewing my page</p>
             
             <p id='footp_b'>Requesting you to visit our page again</p>
@@ -1297,7 +1664,7 @@
             <p id='footp_c'>Email at: <b>adarsh30k@gmail.com</b> </p>
             
         </footer>
-
+        
     </body>
         
 </html>
