@@ -11,14 +11,15 @@ Following algorithm sets have been opened for viewing
 
 * 2x2 Beginner OLL
 * 2x2 Beginner PLL
-* 2x2 Intermediate Ortega OLL & PBL
-* 2x2 Advanced CLL
+* 2x2 Ortega OLL & PBL
+* 2x2 CLL
+* 2x2 EG-1
 * 3x3 Beginner OLL<sup>$$</sup>
 * 3x3 Beginner PLL<sup>$$</sup>
 * 3x3 Advanced OLL<sup>$$</sup>
 * 3x3 Advanced PLL<sup>$$</sup>
-* 3x3 Advanced LL<sup>$$</sup>
-* 4x4+ Beginner Parity Algs
+* 3x3 Full LL<sup>$$</sup>
+* 4x4+ Parity Algs
 
 
 ^ Website is changed to https://adarsh-chesser.github.io/Website/ on 21st April 2023.
