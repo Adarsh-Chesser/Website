@@ -23,7 +23,7 @@
 	}
 
 	.algpageheading33 {
-		border: 3px solid #4C8080;
+		border: 3px solid #738080;
 		padding-left: 5px;
 		background-color: #DDDDDD;
 	}
@@ -32,18 +32,18 @@
 		text-align: center;
 		text-decoration: none;
 		cursor: pointer;
-		background-color: #99CCFF;
-		color: #003300;
-		border: 2px solid #003300;
+		background-color: #66FFFF;
+		color: #800000;
+		border: 2px solid #800000;
 	}
 
 	.button33alglink:hover {
-		background-color: #4C8080;
-		color: #003300;
+		background-color: #738080;
+		color: #800000;
 	}
 
 	.algpageheading44 {
-		border: 3px solid #8C801A;
+		border: 3px solid #B24C33;
 		padding-left: 5px;
 		background-color: #DDDDDD;
 	}
@@ -52,14 +52,14 @@
 		text-align: center;
 		text-decoration: none;
 		cursor: pointer;
-		background-color: #99FF33;
-		color: #800000;
-		border: 2px solid #800000;
+		background-color: #FF9900;
+		color: #660066;
+		border: 2px solid #660066;
 	}
 
 	.button44alglink:hover {
-		background-color: #8C801A;
-		color: #800000;
+		background-color: #B24C33;
+		color: #660066;
 	}
 
 	/* 2x2 Algorithm divs and algs */
@@ -131,72 +131,72 @@
 	/* 3x3 Algorithm divs and algs */
 
 	h3.algname33 {
-		color: #99CCFF;
+		color: #66FFFF;
 	}
 
 	.hoverhthree33 {
-		color: #003300;
+		color: #800000;
 	}
 
 	div.begoll_3_css {
 		border: 2px solid black;
-		background-color: #4C8080;
+		background-color: #738080;
 	}
 
 	b.begoll_3_css {
-		color:#003300;
+		color:#800000;
 		padding-left: 5px;
 	}
 
 	div.begpll_3_css {
 		border: 2px solid black;
-		background-color: #4C8080;
+		background-color: #738080;
 	}
 
 	b.begpll_3_css {
-		color:#003300;
+		color:#800000;
 		padding-left: 5px;
 	}
 
 	div.advoll_3_css {
 		border: 2px solid black;
-		background-color: #4C8080;
+		background-color: #738080;
 	}
 
 	b.advoll_3_css {
-		color:#003300;
+		color:#800000;
 		padding-left: 5px;
 	}
 
 	div.advpll_3_css {
 		border: 2px solid black;
-		background-color: #4C8080;
+		background-color: #738080;
 	}
 
 	b.advpll_3_css {
-		color:#003300;
+		color:#800000;
 		padding-left: 5px;
 	}
 
 	div.advltl_3_css {
 		border: 2px solid black;
-		background-color: #4C8080;
+		background-color: #738080;
 	}
 
 	b.advltl_3_css {
-		color:#003300;
+		color:#800000;
 		padding-left: 5px;
 	}
 
 	/* 4x4+ Algorithm divs and algs */
 
 	div.begpar_7_css {
-		background-color: #99FF33;
+		background-color: #FF9900;
 		border: 2px solid black;
 	}
 
 	b.begpar_7_css {
-		color: #800000;
+		color: #660066;
 		padding-left: 5px;
 	}
 
