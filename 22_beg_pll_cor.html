@@ -45,7 +45,7 @@
 
             .header_link {
             overflow: hidden;
-            background-color: #333333;
+            background-color: #660066;
             }
     
             .header_link a {
@@ -74,7 +74,8 @@
             }
     
             .header_link a:hover, .x22pdrop:hover .x22pbtn, .x33pdrop:hover .x33pbtn, .x44pdrop:hover .x44pbtn {
-            background-color: #FF0000;
+            background-color: #FFCC66;
+            color: #660066;
             }
     
             .x22pdrop-content, .x33pdrop-content, .x44pdrop-content {
@@ -88,7 +89,7 @@
     
             .x22pdrop-content a, .x33pdrop-content a, .x44pdrop-content a {
             float: none;
-            color: #000000;
+            color: #660066;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -96,8 +97,8 @@
             }
     
             .x22pdrop-content a:hover, .x33pdrop-content a:hover, .x44pdrop-content a:hover {
-            background-color: #DDDDDD;
-            color: #FF0000;
+            background-color: #FFCC66;
+            color: #660066;
             font-weight: bold;
             }
     
@@ -555,7 +556,15 @@
             // Header and Footer - Style
     
             function header_style() {
-            document.getElementById('headhone').style.color = '#FF0000';
+            document.getElementById('headhone').style.color = '#CC0000';
+            document.getElementById('headermain').style.backgroundColor = '#CCFFCC';
+            document.getElementById('headermain').style.paddingTop = '1px';
+            document.getElementById('headermain').style.marginLeft = '0';
+            document.getElementById('headermain').style.marginRight = '0';
+            document.getElementById('headermain').style.marginTop = '0';
+            document.getElementById('bodyb').style.margin = '0';
+            document.getElementById('bodyb').style.padding = '0';
+            document.getElementById('bodypaddingdiv').style.padding = '5px';
             }
         
             function footer_style() {
@@ -567,11 +576,11 @@
             }
     
             // On Load - Functions
-              
+            
             function trigger_onload_a() {
-                acsb_var_initiation();
-                dcsb_var_initiation();
-                }
+            acsb_var_initiation();
+            dcsb_var_initiation();
+            }
     
             function plf_part_a() {
             acs_all();
@@ -1523,115 +1532,119 @@
             
         </header>
         
-        <br><br>
-        
-        <h1 style='text-align:center;' id='bodyhone'>2x2</h1>
-        
-        <h2 style='text-align:center;' id='bodyhtwo'><i>Beginner PLL</i> Algorithms </h2>
+        <div id="bodypaddingdiv">
 
-        <br><br>
-        
-        <div id='intro_div'> <b>
-        
-        <p id='introp22_a'>This is the third and final step in beginner solving method. Before this step, do 
-        <a id='introa22_a' href='22_beg_oll_cor.html' alt='OLL' onmouseover='introa22_a_h()' onmouseout='introa22_a_d()'>Beginner OLL</a>.
-        </p>
-        
-        <p id='introp22_b'>Advanced Permutation/Full LL: 
-        <a id='introa22_b' href='22_int_ort_cor.html' alt='Ortega PBL' onmouseover='introa22_b_h()' onmouseout='introa22_b_d()'>Ortega PBL</a>, 
-        <a id='introa22_c' href='22_adv_cll_cor.html' alt='CLL' onmouseover='introa22_c_h()' onmouseout='introa22_c_d()'>CLL</a>, 
-        <a id='introa22_d' href='22_mas_eg1_cor.html' alt='EG-1' onmouseover='introa22_d_h()' onmouseout='introa22_d_d()'>EG-1</a>, 
-        <a id='introa22_e' href='22_mas_eg2_cor.html' alt='EG-2' onmouseover='introa22_e_h()' onmouseout='introa22_e_d()'>EG-2</a>.
-        </p>
-        
-        <button type="button" class='triggerornot22' onclick='showtrigger_22begpll()' id='show_hide_ooa'
-        onmouseover='show_hide_ooa_h()' onmouseout='show_hide_ooa_d()'> <h4> Show triggers(brackets) </h4> </button>
-        <br><br>
-        <button type="button" class='triggerornot22' onclick='hidetrigger_22begpll()' id='show_hide_oob'
-        onmouseover='show_hide_oob_h()' onmouseout='show_hide_oob_d()'> <h4> Hide triggers(no brackets) </h4> </button>
-        <br>
-        
-        </b> </div>
-        
-        <br><br>
-        
-        <div id='acs' class='begpll_2_css'>
-        
-            <h3 class='algname22'>Adjacent Corner Swap</h3>
+            <br><br>
             
-            <img src='22_beg_pll_adjacent-swap.png' class='two1limgs' alt='Adjacent Corner Swap' style='height: 125px; width: 125px;'> </img>
-            <br>
-            <h3 id='acst'> <b class='begpll_2_css'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
+            <h1 style='text-align:center;' id='bodyhone'>2x2</h1>
             
-            <div class="acsdiva" id="acsdiva">
+            <h2 style='text-align:center;' id='bodyhtwo'><i>Beginner PLL</i> Algorithms </h2>
 
-                <div class="acsdropa" id="acsdiva">
-                    <button class="acsbtna" id="acsbtna" onmouseover="acsbtna_h()" onmouseout="acsbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
-                    <div class="acsdropa-content">
-                        <a id="acsbtna_a" onclick="acsbtna_a_cl()" onmouseover="acsbtna_a_h()" onmouseout="acsbtna_a_d()">Learning</a>
-                        <a id="acsbtna_b" onclick="acsbtna_b_cl()" onmouseover="acsbtna_b_h()" onmouseout="acsbtna_b_d()">Completed</a>
-                    </div>
-                </div>
-
-            </div>
-
+            <br><br>
+            
+            <div id='intro_div'> <b>
+            
+            <p id='introp22_a'>This is the third and final step in beginner solving method. Before this step, do 
+            <a id='introa22_a' href='22_beg_oll_cor.html' alt='OLL' onmouseover='introa22_a_h()' onmouseout='introa22_a_d()'>Beginner OLL</a>.
+            </p>
+            
+            <p id='introp22_b'>Advanced Permutation/Full LL: 
+            <a id='introa22_b' href='22_int_ort_cor.html' alt='Ortega PBL' onmouseover='introa22_b_h()' onmouseout='introa22_b_d()'>Ortega PBL</a>, 
+            <a id='introa22_c' href='22_adv_cll_cor.html' alt='CLL' onmouseover='introa22_c_h()' onmouseout='introa22_c_d()'>CLL</a>, 
+            <a id='introa22_d' href='22_mas_eg1_cor.html' alt='EG-1' onmouseover='introa22_d_h()' onmouseout='introa22_d_d()'>EG-1</a>, 
+            <a id='introa22_e' href='22_mas_eg2_cor.html' alt='EG-2' onmouseover='introa22_e_h()' onmouseout='introa22_e_d()'>EG-2</a>.
+            </p>
+            
+            <button type="button" class='triggerornot22' onclick='showtrigger_22begpll()' id='show_hide_ooa'
+            onmouseover='show_hide_ooa_h()' onmouseout='show_hide_ooa_d()'> <h4> Show triggers(brackets) </h4> </button>
+            <br><br>
+            <button type="button" class='triggerornot22' onclick='hidetrigger_22begpll()' id='show_hide_oob'
+            onmouseover='show_hide_oob_h()' onmouseout='show_hide_oob_d()'> <h4> Hide triggers(no brackets) </h4> </button>
             <br>
-
-            <div class="acsdivb" id="acsdivb">
-
-                <div class="acsdropb" id="acsdivb">
-                    <button class="acsbtnb" id="acsbtnb" onmouseover="acsbtnb_h()" onmouseout="acsbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
-                    <div class="acsdropb-content">
-                        <a id="acsbtnb_a" onclick="acsbtnb_a_cl()" onmouseover="acsbtnb_a_h()" onmouseout="acsbtnb_a_d()">Hide Triggers</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        
-        <br><br><br>
-        
-        <div id='dcs' class='begpll_2_css'>
-        
-        <h3 class='algname22'>Diagonal Corner Swap</h3>
-        
-        <img src='22_beg_pll_diagonal-swap.png' class='two1limgs' alt='Diagonal Corner Swap' style='height: 125px; width: 125px;'> </img>
-        <br>
-        <h3 id='dcst'> <b class='begpll_2_css'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
+            
+            </b> </div>
+            
+            <br><br>
+            
+            <div id='acs' class='begpll_2_css'>
+            
+                <h3 class='algname22'>Adjacent Corner Swap</h3>
                 
-            <div class="dcsdiva" id="dcsdiva">
+                <img src='22_beg_pll_adjacent-swap.png' class='two1limgs' alt='Adjacent Corner Swap' style='height: 125px; width: 125px;'> </img>
+                <br>
+                <h3 id='acst'> <b class='begpll_2_css'> R U R' U' R' F R2 U' R' U' R U R' F' </b> </h3>
+                
+                <div class="acsdiva" id="acsdiva">
 
-                <div class="dcsdropa" id="dcsdiva">
-                    <button class="dcsbtna" id="dcsbtna" onmouseover="dcsbtna_h()" onmouseout="dcsbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
-                    <div class="dcsdropa-content">
-                        <a id="dcsbtna_a" onclick="dcsbtna_a_cl()" onmouseover="dcsbtna_a_h()" onmouseout="dcsbtna_a_d()">Learning</a>
-                        <a id="dcsbtna_b" onclick="dcsbtna_b_cl()" onmouseover="dcsbtna_b_h()" onmouseout="dcsbtna_b_d()">Completed</a>
+                    <div class="acsdropa" id="acsdiva">
+                        <button class="acsbtna" id="acsbtna" onmouseover="acsbtna_h()" onmouseout="acsbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                        <div class="acsdropa-content">
+                            <a id="acsbtna_a" onclick="acsbtna_a_cl()" onmouseover="acsbtna_a_h()" onmouseout="acsbtna_a_d()">Learning</a>
+                            <a id="acsbtna_b" onclick="acsbtna_b_cl()" onmouseover="acsbtna_b_h()" onmouseout="acsbtna_b_d()">Completed</a>
+                        </div>
                     </div>
+
+                </div>
+
+                <br>
+
+                <div class="acsdivb" id="acsdivb">
+
+                    <div class="acsdropb" id="acsdivb">
+                        <button class="acsbtnb" id="acsbtnb" onmouseover="acsbtnb_h()" onmouseout="acsbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                        <div class="acsdropb-content">
+                            <a id="acsbtnb_a" onclick="acsbtnb_a_cl()" onmouseover="acsbtnb_a_h()" onmouseout="acsbtnb_a_d()">Hide Triggers</a>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
-
+            
+            <br><br><br>
+            
+            <div id='dcs' class='begpll_2_css'>
+            
+            <h3 class='algname22'>Diagonal Corner Swap</h3>
+            
+            <img src='22_beg_pll_diagonal-swap.png' class='two1limgs' alt='Diagonal Corner Swap' style='height: 125px; width: 125px;'> </img>
             <br>
+            <h3 id='dcst'> <b class='begpll_2_css'> F R U' R' U' R U R' F' R U R' U' R' F R F' </b> </h3>
+                    
+                <div class="dcsdiva" id="dcsdiva">
 
-            <div class="dcsdivb" id="dcsdivb">
-
-                <div class="dcsdropb" id="dcsdivb">
-                    <button class="dcsbtnb" id="dcsbtnb" onmouseover="dcsbtnb_h()" onmouseout="dcsbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
-                    <div class="dcsdropb-content">
-                        <a id="dcsbtnb_a" onclick="dcsbtnb_a_cl()" onmouseover="dcsbtnb_a_h()" onmouseout="dcsbtnb_a_d()">Hide Triggers</a>
+                    <div class="dcsdropa" id="dcsdiva">
+                        <button class="dcsbtna" id="dcsbtna" onmouseover="dcsbtna_h()" onmouseout="dcsbtna_d()">Not Learned <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                        <div class="dcsdropa-content">
+                            <a id="dcsbtna_a" onclick="dcsbtna_a_cl()" onmouseover="dcsbtna_a_h()" onmouseout="dcsbtna_a_d()">Learning</a>
+                            <a id="dcsbtna_b" onclick="dcsbtna_b_cl()" onmouseover="dcsbtna_b_h()" onmouseout="dcsbtna_b_d()">Completed</a>
+                        </div>
                     </div>
+
                 </div>
 
-            </div>
-        
-        </div>
-        
-        <br><br><br>
-        
-        <b><a class='atop' href="#top" id='atop_xxa' onmouseover='atop_xxa_h()' onmouseout='atop_xxa_d()'>Back To Top</a></b>
+                <br>
 
-        <br><br><br>
+                <div class="dcsdivb" id="dcsdivb">
+
+                    <div class="dcsdropb" id="dcsdivb">
+                        <button class="dcsbtnb" id="dcsbtnb" onmouseover="dcsbtnb_h()" onmouseout="dcsbtnb_d()">Show Triggers <i class="fa-solid fa-chevron-down fa-sm"></i></button>
+                        <div class="dcsdropb-content">
+                            <a id="dcsbtnb_a" onclick="dcsbtnb_a_cl()" onmouseover="dcsbtnb_a_h()" onmouseout="dcsbtnb_a_d()">Hide Triggers</a>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+            
+            <br><br><br>
+            
+            <b><a class='atop' href="#top" id='atop_xxa' onmouseover='atop_xxa_h()' onmouseout='atop_xxa_d()'>Back To Top</a></b>
+
+            <br><br><br>
+
+        </div>
         
         <footer id='footermain' style='text-align: center;'>
         
@@ -1639,7 +1652,7 @@
             
             <p id='footp_b'>Requesting you to visit our page again</p>
             
-            <p id='footp_c'>Email at: <b>adarsh30k@gmail.com</b> </p>
+            <p id='footp_c'>Email at: <b>adarsh30k@gmail.com</b> or visit my Github Account <b>Adarsh-Chesser</b> </p>
             
         </footer>
         
