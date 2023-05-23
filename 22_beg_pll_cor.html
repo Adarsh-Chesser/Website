@@ -45,13 +45,13 @@
 
             .header_link {
             overflow: hidden;
-            background-color: #660066;
+            background-color: #000033;
             }
     
             .header_link a {
             float: left;
             font-size: 16px;
-            color: #FFFFFF;
+            color: #CCFFFF;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -66,7 +66,7 @@
             font-size: 16px;  
             border: none;
             outline: none;
-            color: #FFFFFF;
+            color: #CCFFFF;
             padding: 14px 16px;
             background-color: inherit;
             font-family: inherit;
@@ -74,8 +74,8 @@
             }
     
             .header_link a:hover, .x22pdrop:hover .x22pbtn, .x33pdrop:hover .x33pbtn, .x44pdrop:hover .x44pbtn {
-            background-color: #FFCC66;
-            color: #660066;
+            background-color: #CCFFFF;
+            color: #000033;
             }
     
             .x22pdrop-content, .x33pdrop-content, .x44pdrop-content {
@@ -89,7 +89,7 @@
     
             .x22pdrop-content a, .x33pdrop-content a, .x44pdrop-content a {
             float: none;
-            color: #660066;
+            color: #000033;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -97,8 +97,8 @@
             }
     
             .x22pdrop-content a:hover, .x33pdrop-content a:hover, .x44pdrop-content a:hover {
-            background-color: #FFCC66;
-            color: #660066;
+            background-color: #CCFFFF;
+            color: #000033;
             font-weight: bold;
             }
     
@@ -556,8 +556,8 @@
             // Header and Footer - Style
     
             function header_style() {
-            document.getElementById('headhone').style.color = '#CC0000';
-            document.getElementById('headermain').style.backgroundColor= '#CCFFCC';
+            document.getElementById('headhone').style.color = '#000033';
+            document.getElementById('headermain').style.backgroundColor= '#CCFFFF';
             document.getElementById('headermain').style.paddingTop = '1px';
             document.getElementById('headermain').style.marginLeft = '0';
             document.getElementById('headermain').style.marginRight = '0';
@@ -565,6 +565,14 @@
             document.getElementById('bodyb').style.margin = '0';
             document.getElementById('bodyb').style.padding = '0';
             document.getElementById('bodypaddingdiv').style.padding = '5px';
+            document.getElementById('hompbtn').style.borderTop = '1px solid #000033'
+            document.getElementById('x22pbtn').style.borderTop = '1px solid #000033'
+            document.getElementById('x33pbtn').style.borderTop = '1px solid #000033'
+            document.getElementById('x44pbtn').style.borderTop = '1px solid #000033'
+            document.getElementById('hompbtn').style.borderBottom = '1px solid #000033'
+            document.getElementById('x22pbtn').style.borderBottom = '1px solid #000033'
+            document.getElementById('x33pbtn').style.borderBottom = '1px solid #000033'
+            document.getElementById('x44pbtn').style.borderBottom = '1px solid #000033'
             }
         
             function footer_style() {
@@ -1491,12 +1499,14 @@
 
         <h1 id='headhone'>Adarsh Crazy Cubing</h1>
            
-        <div class="header_link">
+        <div class="header_link" id="header_link">
 
+            <div id="hompbtn">
             <a href="index.html">Homepage</a>
+            </div>
 
             <div class="x22pdrop">
-                <button class="x22pbtn">2x2 Algorithms</button>
+                <button class="x22pbtn" id="x22pbtn">2x2 Algorithms <i class="fa-solid fa-caret-down fa-xs" style="color: #66FFFF;"></i></button>
                 <div class="x22pdrop-content">
                     <a href="22_beg_oll_cor.html">Beginner OLL</a>
                     <a href="22_beg_pll_cor.html">Beginner PLL</a>
@@ -1506,10 +1516,10 @@
                     <a href="22_mas_eg2_cor.html">EG-2</a>
                     <a href="22_mas_eg_cor.html">Full EG</a>
                 </div>
-            </div> 
+            </div>
 
             <div class="x33pdrop">
-                <button class="x33pbtn">3x3 Algorithms</button>
+                <button class="x33pbtn" id="x33pbtn">3x3 Algorithms</button>
                 <div class="x33pdrop-content">
                     <a href="33_beg_oll_both.html">Beginner OLL</a>
                     <a href="33_beg_pll_both.html">Beginner PLL</a>
@@ -1521,7 +1531,7 @@
             </div> 
 
             <div class="x44pdrop">
-                <button class="x44pbtn">4x4+ Algorithms</button>
+                <button class="x44pbtn" id="x44pbtn">4x4+ Algorithms</button>
                 <div class="x44pdrop-content">
                     <a href="47_beg_both_parity.html">OLL & PLL Parity</a>
                     <a href="46_mas_pll_parity.html">Parity + PLL</a>
